@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Azure Functions local settings (contains secrets)
+local.settings.json
+.python_packages/
+
+# State files (local dev only — canonical state is in blob)
+.cold_extract_state.json
+.dim_customer_state.json
+.dim_product_state.json
+.*_state.json
+
+# OS
+.DS_Store
+Thumbs.db
