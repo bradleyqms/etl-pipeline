@@ -1,8 +1,14 @@
 name: Deploy to Azure Functions (ETL)
 
 # ──────────────────────────────────────────────
-# Deploys: func-qms-etl-prod
+# Deploys: func-qms-etl-prod  (Flex Consumption plan)
 # Triggers: push to main, or manual dispatch
+#
+# Flex Consumption notes:
+#   - Uses Kudu ZIP deploy (One Deploy), NOT remote build
+#   - host.json MUST be at zip root
+#   - All pip packages MUST be pre-installed in the package
+#   - Auth via RBAC (Azure/login) — no publish profile needed
 # ──────────────────────────────────────────────
 
 on:
@@ -17,6 +23,10 @@ env:
   AZURE_FUNCTIONAPP_NAME: func-qms-etl-prod
   PYTHON_VERSION: '3.11'
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -30,29 +40,45 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Install dependencies
+      - name: Build deployment package
         shell: bash
         run: |
-          pushd azure_functions
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt --target=".python_packages/lib/site-packages"
-          popd
+          # Create a clean staging directory with host.json at root
+          mkdir -p deploy_package
 
-      - name: Prepare deployment package
-        shell: bash
-        run: |
-          # Copy src/ package into azure_functions/ so function_app.py can import it
-          cp -r src/ azure_functions/src/
+          # Copy Azure Functions files (host.json, function_app.py, requirements.txt)
+          cp azure_functions/function_app.py deploy_package/
+          cp azure_functions/host.json deploy_package/
+          cp azure_functions/requirements.txt deploy_package/
+
+          # Copy src/ package so function_app.py can import it
+          cp -r src/ deploy_package/src/
 
           # Create an empty .env so load_dotenv() doesn't crash
-          # (real values come from Application Settings)
-          touch azure_functions/.env
+          # (real values come from Application Settings in Azure)
+          touch deploy_package/.env
+
+          # Install pip packages INTO the package (Flex Consumption has no remote build)
+          cd deploy_package
+          pip install -r requirements.txt --target=".python_packages/lib/site-packages" --quiet
+          cd ..
+
+          echo "=== Deployment package contents ==="
+          find deploy_package -maxdepth 3 -type f | head -40
+          echo "=== host.json at root? ==="
+          ls -la deploy_package/host.json
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy to Azure Functions
         uses: Azure/functions-action@v1
         with:
           app-name: ${{ env.AZURE_FUNCTIONAPP_NAME }}
-          package: azure_functions
-          publish-profile: ${{ secrets.AZURE_FUNCTIONS_PUBLISH_PROFILE }}
-          scm-do-build-during-deployment: true
-          enable-oryx-build: true
+          package: deploy_package
+          scm-do-build-during-deployment: false
+          enable-oryx-build: false
