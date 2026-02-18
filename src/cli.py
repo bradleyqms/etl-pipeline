@@ -77,6 +77,7 @@ def cmd_ingest(args):
         dry_run=args.dry_run,
         include_processed=args.all,
         flat=args.flat,
+        auto_transform=not args.no_transform,
     )
 
     # Summary
@@ -89,6 +90,12 @@ def cmd_ingest(args):
         log.info("  Blob paths:")
         for f in stats["files"]:
             log.info("    → bronze/%s", f)
+    if stats.get("transform"):
+        t = stats["transform"]
+        log.info("  Transform:    %s (%d files, %s rows)",
+                 t.get("status", "?"),
+                 t.get("files_converted", 0),
+                 t.get("total_rows", 0))
     if stats["errors"]:
         log.error("  Errors: %d", len(stats["errors"]))
         for err in stats["errors"]:
@@ -103,11 +110,13 @@ def cmd_transform(args):
     from .transforms import cold_extract_to_parquet
     from .transforms import dim_customer_to_parquet
     from .transforms import dim_product_to_parquet
+    from .transforms import fact_sales_daily_to_parquet
 
     transform_map = {
-        "cold_extract": cold_extract_to_parquet.transform,
-        "dim_customer": dim_customer_to_parquet.transform,
-        "dim_product":  dim_product_to_parquet.transform,
+        "cold_extract":     cold_extract_to_parquet.transform,
+        "fact_sales_daily": fact_sales_daily_to_parquet.transform,
+        "dim_customer":     dim_customer_to_parquet.transform,
+        "dim_product":      dim_product_to_parquet.transform,
     }
 
     if args.pipeline == "all":
@@ -246,18 +255,21 @@ def main():
     # ── ingest ──
     ingest_p = sub.add_parser("ingest", help="Email → Bronze blob ingest")
     ingest_p.add_argument("pipeline",
-                          choices=["cold_extract", "dim_customer", "dim_product",
-                                   "warm_extract", "hot_extract", "dim_salesperson"],
+                          choices=["cold_extract", "fact_sales_daily",
+                                   "dim_customer", "dim_product", "dim_salesperson"],
                           help="Pipeline to run")
     ingest_p.add_argument("--dry-run", action="store_true", help="Preview without uploading")
     ingest_p.add_argument("--all", action="store_true", help="Reprocess all (ignore state)")
     ingest_p.add_argument("--flat", action="store_true", help="No date subfolder")
+    ingest_p.add_argument("--no-transform", action="store_true",
+                          help="Skip auto-transform after ingest")
     ingest_p.set_defaults(func=cmd_ingest)
 
     # ── transform ──
     transform_p = sub.add_parser("transform", help="Bronze CSV → Silver Parquet")
     transform_p.add_argument("pipeline",
-                             choices=["cold_extract", "dim_customer", "dim_product", "all"],
+                             choices=["cold_extract", "fact_sales_daily",
+                                      "dim_customer", "dim_product", "all"],
                              help="Transform to run (or 'all')")
     transform_p.add_argument("--date", help="Specific date folder (YYYY-MM-DD)")
     transform_p.add_argument("--dry-run", action="store_true", help="Preview without writing")
@@ -270,7 +282,8 @@ def main():
     # ── test ──
     test_p = sub.add_parser("test", help="Connection test")
     test_p.add_argument("pipeline",
-                        choices=["cold_extract", "dim_customer", "dim_product"],
+                        choices=["cold_extract", "fact_sales_daily",
+                                 "dim_customer", "dim_product"],
                         help="Pipeline to test")
     test_p.set_defaults(func=cmd_test)
 

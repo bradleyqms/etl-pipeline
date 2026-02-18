@@ -77,8 +77,23 @@ def compression_ratio(original: int, compressed: int) -> str:
 # Read bronze CSV
 # ═════════════════════════════════════════════
 
+EXPECTED_COLUMNS = {
+    "Entity", "DocEntry", "DocNum", "DocDate", "DocType",
+    "Line_ID", "Card Code", "CardCode", "Item Code", "ItemCode",
+    "Description", "Dscription", "Quantity", "Net Revenue",
+    "SlpCode", "UpdateDate",
+}
+
+
 def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
-    """Download a CSV from bronze and parse with correct sep/encoding."""
+    """Download a CSV from bronze and parse with correct sep/encoding.
+
+    Tries separators in order (= , ; tab |).  After parsing, validates
+    that the resulting column names look like cold-extract columns AND
+    that key columns have sensible dtypes.  This prevents false positives
+    when comma-separated German decimals (e.g. ``3,000000``) inflate the
+    column count with a ``,`` separator.
+    """
     blob_data = client.download_blob(blob_name).readall()
 
     for encoding in ["utf-8", "latin-1", "cp1252"]:
@@ -91,14 +106,32 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
                     low_memory=False,
                     nrows=5,
                 )
-                if len(df.columns) > 1:
-                    df = pd.read_csv(
-                        io.BytesIO(blob_data),
-                        sep=sep,
-                        encoding=encoding,
-                        low_memory=False,
-                    )
-                    return df
+                if len(df.columns) <= 1:
+                    continue
+
+                # Validate: real columns should be in the expected set.
+                real_cols = [c for c in df.columns if not c.startswith("Unnamed")]
+                known = sum(1 for c in real_cols if c in EXPECTED_COLUMNS)
+
+                # Require at least 10 of the 13 expected columns to match.
+                if known < 10:
+                    continue
+
+                # Validate data sanity: if German-decimal commas inflated
+                # the data, the Entity column will be numeric (DocNum
+                # values bleed in) instead of a string.  Check that
+                # Entity looks like a string column.
+                entity_col = df.get("Entity")
+                if entity_col is not None and entity_col.dtype != object:
+                    continue
+
+                df = pd.read_csv(
+                    io.BytesIO(blob_data),
+                    sep=sep,
+                    encoding=encoding,
+                    low_memory=False,
+                )
+                return df
             except Exception:
                 continue
     return None
@@ -239,52 +272,150 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
                 "available": sorted_dates}
 
     blobs = dates[target_date]
-    results = []
+    file_results = []
+    all_dfs = []
 
     log.info("cold_extract transform — %d CSVs for %s", len(blobs), target_date)
 
+    # ── Phase 1: Parse all bronze CSVs ──
     for b in sorted(blobs, key=lambda x: x.name):
         short = b.name.split("/")[-1]
         csv_size = b.size or 0
 
         df_raw = read_bronze_csv(client, b.name)
         if df_raw is None:
-            results.append({"file": short, "status": "parse_error"})
+            file_results.append({"file": short, "status": "parse_error"})
             continue
 
         df = clean_dataframe(df_raw, b.name)
+        all_dfs.append(df)
+        file_results.append({
+            "file": short,
+            "status": "parsed",
+            "rows": df.shape[0],
+            "csv_bytes": csv_size,
+        })
+        log.info("  ✅ %s — %d rows", short, len(df))
 
-        parquet_name = short.replace(".csv", ".parquet").lower()
+    if not all_dfs:
+        return {"status": "error", "message": "No CSVs could be parsed",
+                "details": file_results}
+
+    # ── Phase 2: Combine + validate + deduplicate ──
+    combined = pd.concat(all_dfs, ignore_index=True)
+    rows_before = len(combined)
+
+    # Detect data issues: files whose doc_date year doesn't match filename year
+    warnings = []
+    for r in file_results:
+        if r["status"] != "parsed":
+            continue
+        fname = r["file"]  # e.g. "COLD_EXTRACT_AG_2025.csv"
+        # Extract expected year from filename
+        parts = fname.replace(".csv", "").split("_")
+        file_year = parts[-1] if parts[-1].isdigit() else None
+        if not file_year:
+            continue
+        # Check actual doc_date year range for this source
+        mask = combined["_source_file"] == fname
+        src_dates = combined.loc[mask, "doc_date"].dropna()
+        if src_dates.empty:
+            continue
+        actual_years = src_dates.dt.year.unique()
+        if int(file_year) not in actual_years:
+            msg = (f"{fname}: filename says {file_year} but data contains "
+                   f"years {sorted(actual_years.tolist())} — possible wrong export")
+            warnings.append(msg)
+            log.warning("  ⚠️  %s", msg)
+
+    # Deduplicate by (entity, doc_entry, line_num), keeping last occurrence.
+    # Files are sorted alphabetically, so within the same entity a 2025 file
+    # comes after a 2024 file — if they contain different data the 2025 row
+    # wins.  If a file is an exact duplicate (like AG_2025 == AG_2024), the
+    # dedup simply collapses it to one copy.
+    DEDUP_KEYS = ["entity", "doc_entry", "line_num"]
+    combined = combined.sort_values(
+        DEDUP_KEYS + ["doc_date"], na_position="first",
+    )
+    combined = combined.drop_duplicates(subset=DEDUP_KEYS, keep="last")
+    rows_after = len(combined)
+    rows_dropped = rows_before - rows_after
+    if rows_dropped:
+        log.info("  🔄 Deduplicated: %d → %d rows (%d duplicates removed)",
+                 rows_before, rows_after, rows_dropped)
+
+    # ── Phase 3: Write per-entity/year parquets ──
+    results = []
+    total_pq = 0
+    combined["_year"] = combined["doc_date"].dt.year
+
+    for (entity, year), group_df in combined.groupby(["entity", "_year"], observed=True):
+        group_df = group_df.drop(columns=["_year"])
+        parquet_name = f"cold_extract_{str(entity).lower()}_{int(year)}.parquet"
         silver_path = f"{SILVER_PREFIX}/{target_date}/{parquet_name}"
 
         if dry_run:
-            log.info("  [DRY RUN] Would write %s → %s (%d rows)", short, silver_path, len(df))
+            log.info("  [DRY RUN] Would write %s (%d rows)", silver_path, len(group_df))
             written = 0
         else:
-            written = write_parquet_to_blob(client, df, silver_path)
-            log.info("  📦 %s → %s (%s)", short, silver_path, fmt_size(written))
+            written = write_parquet_to_blob(client, group_df, silver_path)
+            log.info("  📦 %s (%d rows, %s)", silver_path, len(group_df), fmt_size(written))
 
+        total_pq += written
         results.append({
-            "file": short,
-            "status": "converted",
-            "rows": df.shape[0],
-            "csv_bytes": csv_size,
+            "entity": str(entity),
+            "year": int(year),
+            "rows": len(group_df),
             "parquet_bytes": written,
             "silver_path": silver_path,
         })
 
-    total_rows = sum(r.get("rows", 0) for r in results)
-    total_csv = sum(r.get("csv_bytes", 0) for r in results)
-    total_pq = sum(r.get("parquet_bytes", 0) for r in results)
+    total_csv = sum(r.get("csv_bytes", 0) for r in file_results)
+
+    # ── Phase 4: Cleanup stale silver parquets ──
+    # Remove any parquets in this date folder that weren't just written.
+    # This handles renamed files, old naming conventions, and orphaned
+    # parquets from previous runs (e.g. cold_extract_ag_2025.parquet
+    # left over from the old 1-per-CSV naming).
+    written_paths = {r["silver_path"] for r in results}
+    stale_deleted = []
+
+    if not dry_run:
+        existing_silver = [
+            b for b in client.list_blobs(
+                name_starts_with=f"{SILVER_PREFIX}/{target_date}/"
+            )
+            if b.name.endswith(".parquet")
+        ]
+        for b in existing_silver:
+            if b.name not in written_paths:
+                try:
+                    client.delete_blob(b.name)
+                    stale_deleted.append(b.name)
+                    log.info("  🗑️  Deleted stale: %s", b.name)
+                except Exception as e:
+                    log.warning("  ⚠️  Failed to delete %s: %s", b.name, e)
+
+        if stale_deleted:
+            log.info("  Cleanup: removed %d stale parquet(s)", len(stale_deleted))
+        else:
+            log.info("  Cleanup: silver layer is clean — no stale files")
 
     return {
         "status": "ok",
         "pipeline": "cold_extract",
         "date": target_date,
-        "files_converted": len([r for r in results if r["status"] == "converted"]),
-        "total_rows": total_rows,
+        "bronze_files": len([r for r in file_results if r["status"] == "parsed"]),
+        "silver_files": len(results),
+        "files_converted": len(results),
+        "total_rows_before_dedup": rows_before,
+        "total_rows": rows_after,
+        "duplicates_removed": rows_dropped,
         "total_csv_bytes": total_csv,
         "total_parquet_bytes": total_pq,
         "compression_ratio": f"{(1 - total_pq / total_csv) * 100:.1f}%" if total_csv else "N/A",
-        "details": results,
+        "stale_deleted": stale_deleted,
+        "warnings": warnings,
+        "bronze_details": file_results,
+        "silver_details": results,
     }

@@ -58,18 +58,18 @@ class TestGetPipeline:
 class TestListPipelines:
     """list_pipelines() returns all defined pipelines."""
 
-    def test_returns_all_six_pipelines(self):
+    def test_returns_all_five_pipelines(self):
         result = list_pipelines()
-        assert len(result) == 6
+        assert len(result) == 5
 
     def test_includes_active_pipelines(self):
         result = list_pipelines()
-        for name in ["cold_extract", "dim_customer", "dim_product"]:
+        for name in ["cold_extract", "fact_sales_daily", "dim_customer", "dim_product"]:
             assert name in result
 
     def test_includes_planned_pipelines(self):
         result = list_pipelines()
-        for name in ["warm_extract", "hot_extract", "dim_salesperson"]:
+        for name in ["dim_salesperson"]:
             assert name in result
             assert "PLANNED" in result[name]
 

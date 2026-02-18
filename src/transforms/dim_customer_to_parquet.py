@@ -73,7 +73,7 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
     blob_data = client.download_blob(blob_name).readall()
 
     # Dim_customer CSVs use comma separator with trailing comma
-    for encoding in ["utf-8", "latin-1", "cp1252"]:
+    for encoding in ["utf-8-sig", "utf-8", "latin-1", "cp1252"]:
         for sep in [",", "=", ";", "\t", "|"]:
             try:
                 df = pd.read_csv(
@@ -90,6 +90,23 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
                         encoding=encoding,
                         low_memory=False,
                     )
+                    # SAP sometimes exports first 11 columns as Column1..Column11
+                    # (missing the field-level aliases). Remap to the correct names.
+                    if "Column1" in df.columns:
+                        remap = {
+                            "Column1":  "Entity",
+                            "Column2":  "CardCode",
+                            "Column3":  "CardName",
+                            "Column4":  "BillToStreet",
+                            "Column5":  "BillToCity",
+                            "Column6":  "BillToZip",
+                            "Column7":  "BillToCountry",
+                            "Column8":  "ShipToStreet",
+                            "Column9":  "ShipToCity",
+                            "Column10": "ShipToZip",
+                            "Column11": "ShipToCountry",
+                        }
+                        df.rename(columns=remap, inplace=True)
                     return df
             except Exception:
                 continue
