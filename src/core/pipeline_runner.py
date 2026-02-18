@@ -29,11 +29,31 @@ from .blob_client import (
 log = logging.getLogger(__name__)
 
 
+def run_transform(transform_name: str, date: str | None = None) -> dict:
+    """Run a Bronze → Silver transform by name. Returns result dict."""
+    from ..transforms import cold_extract_to_parquet
+    from ..transforms import dim_customer_to_parquet
+    from ..transforms import dim_product_to_parquet
+    from ..transforms import fact_sales_daily_to_parquet
+
+    transform_map = {
+        "cold_extract":     cold_extract_to_parquet.transform,
+        "dim_customer":     dim_customer_to_parquet.transform,
+        "dim_product":      dim_product_to_parquet.transform,
+        "fact_sales_daily": fact_sales_daily_to_parquet.transform,
+    }
+    if transform_name not in transform_map:
+        raise KeyError(f"Unknown transform '{transform_name}'. "
+                       f"Available: {', '.join(transform_map)}")
+    return transform_map[transform_name](date=date)
+
+
 def process_emails(
     cfg: dict,
     dry_run: bool = False,
     include_processed: bool = False,
     flat: bool = False,
+    auto_transform: bool = True,
 ) -> dict:
     """
     Main email → blob pipeline.
@@ -42,6 +62,10 @@ def process_emails(
       tenant_id, client_id, client_secret, mailbox,
       subject_filter, mail_folder, storage_account, storage_key,
       container, blob_prefix, state_blob_path
+
+    If ``auto_transform`` is True and the pipeline has a ``transform_name``,
+    the corresponding Bronze → Silver transform runs automatically after
+    new files are uploaded.
     """
     pipeline_name = cfg.get("subject_filter", "?")
 
@@ -143,5 +167,33 @@ def process_emails(
             error = f"Error on '{subject}': {e}"
             log.error("  ❌ %s", error)
             stats["errors"].append(error)
+
+    # ── Auto-transform: Bronze CSV → Silver Parquet ──
+    transform_name = cfg.get("transform_name")
+    if (
+        auto_transform
+        and not dry_run
+        and transform_name
+        and stats["files_uploaded"] > 0
+        and not stats["errors"]
+    ):
+        log.info("─" * 50)
+        log.info("Auto-transform: %s — Bronze CSV → Silver Parquet", transform_name)
+        try:
+            result = run_transform(transform_name)
+            stats["transform"] = result
+            log.info(
+                "Auto-transform complete: status=%s, files=%d, rows=%s",
+                result.get("status"),
+                result.get("files_converted", 0),
+                result.get("total_rows", 0),
+            )
+        except Exception as e:
+            error = f"Auto-transform '{transform_name}' failed: {e}"
+            log.error("  ❌ %s", error)
+            stats["errors"].append(error)
+            stats["transform"] = {"status": "error", "error": str(e)}
+    elif auto_transform and transform_name and stats["files_uploaded"] == 0:
+        log.info("Auto-transform skipped: no new files uploaded")
 
     return stats

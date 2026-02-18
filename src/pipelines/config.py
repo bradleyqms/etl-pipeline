@@ -43,23 +43,17 @@ PIPELINES = {
         "state_blob_path": "state/cold_extract_state.json",
         "state_file":      _STATE_DIR / ".cold_extract_state.json",
         "silver_prefix":   "silver/cold_extract",
+        "transform_name":  "cold_extract",
         "description":     "Sales transactions (6-hourly cold extract)",
     },
-    "warm_extract": {
-        "subject_filter":  "Warm_Extract",
-        "blob_prefix":     "warm_extract",
-        "state_blob_path": "state/warm_extract_state.json",
-        "state_file":      _STATE_DIR / ".warm_extract_state.json",
-        "silver_prefix":   "silver/warm_extract",
-        "description":     "Sales transactions (last 90 days, every 3 hours) [PLANNED]",
-    },
-    "hot_extract": {
-        "subject_filter":  "Hot_Extract",
-        "blob_prefix":     "hot_extract",
-        "state_blob_path": "state/hot_extract_state.json",
-        "state_file":      _STATE_DIR / ".hot_extract_state.json",
-        "silver_prefix":   "silver/hot_extract",
-        "description":     "Sales transactions (today, every 30 min) [PLANNED]",
+    "fact_sales_daily": {
+        "subject_filter":  "FACT_SALES_DAILY_INCREMENTAL",
+        "blob_prefix":     "fact_sales_daily",
+        "state_blob_path": "state/fact_sales_daily_state.json",
+        "state_file":      _STATE_DIR / ".fact_sales_daily_state.json",
+        "silver_prefix":   "silver/fact_sales_daily",
+        "transform_name":  "fact_sales_daily",
+        "description":     "Sales transactions (daily incremental, all entities)",
     },
 
     # ── Dimension tables ──────────────────────
@@ -69,6 +63,7 @@ PIPELINES = {
         "state_blob_path": "state/dim_customer_state.json",
         "state_file":      _STATE_DIR / ".dim_customer_state.json",
         "silver_prefix":   "silver/dim_customer",
+        "transform_name":  "dim_customer",
         "description":     "Customer master (4 entities: GmbH, UK, USA, AG)",
     },
     "dim_product": {
@@ -77,6 +72,7 @@ PIPELINES = {
         "state_blob_path": "state/dim_product_state.json",
         "state_file":      _STATE_DIR / ".dim_product_state.json",
         "silver_prefix":   "silver/dim_product",
+        "transform_name":  "dim_product",
         "description":     "Product master (all entities combined)",
     },
     "dim_salesperson": {
