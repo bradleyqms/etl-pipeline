@@ -29,16 +29,16 @@ COLD_EXTRACT_CSV = (
 DIM_CUSTOMER_CSV = (
     '"Entity","CardCode","CardName","BillToStreet","BillToCity","BillToZip",'
     '"BillToCountry","ShipToStreet","ShipToCity","ShipToZip","ShipToCountry",'
-    '"GroupCode","Territory","SlpCode","CreateDate","UpdateDate","validFor"\n'
+    '"GroupCode","GroupName","TerritoryID","SlpCode","CreateDate","UpdateDate","IsActive"\n'
     '"GmbH","10001","Acme Corp","123 Main St","Berlin","10115",'
     '"DE","123 Main St","Berlin","10115","DE",'
-    '"100","1","7","01.06.2022 00:00:00","15.01.2023 00:00:00","Y"\n'
+    '"100","Retail","1","7","2022-06-01","2023-01-15","Y"\n'
     '"GmbH","10002","Schmidt, Mueller & Co.","Bahnhofstr. 5","München","80331",'
     '"DE","Bahnhofstr. 5","München","80331","DE",'
-    '"100","1","12","10.03.2021 00:00:00","20.11.2023 00:00:00","N"\n'
+    '"100","Retail","1","12","2021-03-10","2023-11-20","N"\n'
     '"GmbH","10003","Test ""Quoted"" Name","Hauptstr. 1","Frankfurt, Main","60311",'
     '"DE","Hauptstr. 1","Frankfurt, Main","60311","DE",'
-    '"200","2","7","25.12.2020 00:00:00","01.01.2024 00:00:00","Y"\n'
+    '"200","Wholesale","2","7","2020-12-25","2024-01-01","Y"\n'
 ).encode("utf-8")
 
 
@@ -47,18 +47,22 @@ DIM_CUSTOMER_CSV = (
 # ═════════════════════════════════════════════
 
 DIM_PRODUCT_CSV = (
-    '"Entity","ItemCode","Description","ItemGroup","IsInventory","IsSalesItem",'
-    '"IsActive","U_Guidanceline","U_Kontrollfeld","PriceListNum","PriceListName",'
-    '"CreateDate","UpdateDate"\n'
+    '"Entity","ItemCode","Description","ItemGroup","IsActive","Webshop_Active",'
+    '"WS_Active_Flag","Is_Prov","Status","Parent_Item","Weight_SU_kg",'
+    '"Weight_Primary_g","Weight_Secondary_g","Content_ML","Content_GR",'
+    '"ProductLine","Name_EN","Variant_Dim1","CreateDate"\n'
     '"GmbH","SKU-001","Face Cream 50ml","100","Y","Y",'
-    '"Y","Premium","DERM","1","Base Price",'
-    '"01.01.2020 00:00:00","15.06.2023 00:00:00"\n'
+    '"Y","N","Active","","0.5",'
+    '"50","200","50","",'
+    '"Skincare","Face Cream 50ml EN","","2020-01-01"\n'
     '"GmbH","SKU-002","Eye Serum 15ml","100","Y","Y",'
-    '"Y","Standard","COSM","1","Base Price",'
-    '"15.03.2021 00:00:00","20.11.2023 00:00:00"\n'
-    '"GmbH","SKU-003","Body Lotion 200ml","200","N","/",'\
-    '"Y","Economy","BODY","2","Retail",'
-    '"10.06.2019 00:00:00","01.01.2024 00:00:00"\n'
+    '"Y","N","Active","","0.2",'
+    '"15","100","15","",'
+    '"Skincare","Eye Serum 15ml EN","15ml","2021-03-15"\n'
+    '"GmbH","SKU-003","Body Lotion 200ml","200","N","N",'
+    '"N","N","Inactive","SKU-001","1.0",'
+    '"200","500","","200",'
+    '"Body","Body Lotion 200ml EN","","2019-06-10"\n'
 ).encode("utf-8")
 
 

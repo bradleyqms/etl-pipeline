@@ -14,19 +14,17 @@ Functions:
   2.  cold_extract_http         — HTTP manual trigger
   3.  fact_sales_daily_timer    — Timer (Mon-Fri 07:30 UTC): FACT_SALES_DAILY_INCREMENTAL → Bronze
   4.  fact_sales_daily_http     — HTTP manual trigger
-  5.  dim_customer_timer        — Timer (Mon-Fri 07:30 UTC): Dim_Customer_Extract Email → Bronze
-  6.  dim_customer_http         — HTTP manual trigger
-  7.  dim_product_timer         — Timer (Mon-Fri 07:30 UTC): dim_product_master Email → Bronze
-  8.  dim_product_http          — HTTP manual trigger
+  5.  dim_tables_timer         — Timer (Mon-Fri 07:30 UTC): dim_tables Email → Bronze Blob
+  6.  dim_tables_http           — HTTP manual trigger
+  7.  parquet_dim_tables_timer  — Timer (Mon-Fri 07:35 UTC): Dim CSVs → Parquet
+  8.  parquet_dim_tables_http   — HTTP manual trigger
   9.  parquet_cold_timer        — Timer (1st of month 09:05 UTC): Cold CSV → Parquet
   10. parquet_cold_http         — HTTP manual trigger
   11. parquet_daily_timer       — Timer (Mon-Fri 07:35 UTC): Daily CSV → Parquet
   12. parquet_daily_http        — HTTP manual trigger
-  13. parquet_dim_customer_timer — Timer (Mon-Fri 07:35 UTC): Customer CSV → Parquet
-  14. parquet_dim_customer_http — HTTP manual trigger
-  15. parquet_dim_product_timer — Timer (Mon-Fri 07:35 UTC): Product CSV → Parquet
-  16. parquet_dim_product_http  — HTTP manual trigger
-  17. health                    — HTTP GET: Health check / status
+  13. parquet_dim_tables_timer  — Timer (Mon-Fri 07:35 UTC): All Dim CSVs → Parquet
+  14. parquet_dim_tables_http   — HTTP manual trigger
+  15. health                    — HTTP GET: Health check / status
 
 Architecture:
   SAP B1 (CRON) → Email → Graph API → Bronze (CSV) → Silver (Parquet) → Power BI
@@ -85,15 +83,13 @@ def _run_ingest(pipeline_name: str, include_processed: bool = False,
 def _run_transform(pipeline_name: str, date: str | None = None) -> dict:
     """Run a Bronze → Silver transform by name."""
     from src.transforms import cold_extract_to_parquet
-    from src.transforms import dim_customer_to_parquet
-    from src.transforms import dim_product_to_parquet
+    from src.transforms import dim_tables_to_parquet
     from src.transforms import fact_sales_daily_to_parquet
 
     transform_map = {
         "cold_extract":     cold_extract_to_parquet.transform,
         "fact_sales_daily": fact_sales_daily_to_parquet.transform,
-        "dim_customer":     dim_customer_to_parquet.transform,
-        "dim_product":      dim_product_to_parquet.transform,
+        "dim_tables":       dim_tables_to_parquet.transform,
     }
     fn = transform_map[pipeline_name]
     return fn(date=date)
@@ -367,7 +363,7 @@ def health(req: func.HttpRequest) -> func.HttpResponse:
 
     # Pipeline state from blob
     state_info = {}
-    for name in ["cold_extract", "fact_sales_daily", "dim_customer", "dim_product"]:
+    for name in ["cold_extract", "fact_sales_daily", "dim_tables"]:
         try:
             cfg = get_pipeline(name)
             state = load_state(cfg)
@@ -383,7 +379,7 @@ def health(req: func.HttpRequest) -> func.HttpResponse:
         "function_app": "func-qms-etl-prod",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "python_version": sys.version,
-        "functions": 17,
+        "functions": 13,
         "environment_variables": env_check,
         "state": state_info,
         "pipelines": {

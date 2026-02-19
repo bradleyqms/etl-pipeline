@@ -32,7 +32,7 @@ class TestReadBronzeCSV:
         df = read_bronze_csv(client, "test.csv")
 
         real_cols = [c for c in df.columns if not c.startswith("Unnamed")]
-        assert len(real_cols) == 13
+        assert len(real_cols) == 19  # v2 schema
 
     def test_item_codes_parsed(self):
         client = MockContainerClient({"test.csv": DIM_PRODUCT_CSV})
@@ -61,10 +61,12 @@ class TestCleanDataframe:
 
         expected = [
             "entity", "item_code", "description", "item_group",
-            "is_inventory", "is_sales_item", "is_active",
-            "guidanceline", "kontrollfeld",
-            "price_list_num", "price_list_name",
-            "create_date", "update_date",
+            "is_active", "webshop_active", "ws_active_flag", "is_provisional",
+            "status", "parent_item",
+            "weight_su_kg", "weight_primary_g", "weight_secondary_g",
+            "content_ml", "content_gr",
+            "product_line", "name_en", "variant_dim1",
+            "create_date",
         ]
         for col in expected:
             assert col in df.columns, f"Missing column: {col}"
@@ -73,15 +75,19 @@ class TestCleanDataframe:
         df = clean_dataframe(raw_df, "test.csv")
 
         assert pd.api.types.is_datetime64_any_dtype(df["create_date"])
-        assert pd.api.types.is_datetime64_any_dtype(df["update_date"])
         assert df["create_date"].iloc[0] == pd.Timestamp("2020-01-01")
-        assert df["update_date"].iloc[2] == pd.Timestamp("2024-01-01")
+        assert df["create_date"].iloc[2] == pd.Timestamp("2019-06-10")
 
     def test_numeric_downcast(self, raw_df):
         df = clean_dataframe(raw_df, "test.csv")
 
-        for col in ["item_group", "price_list_num"]:
-            assert df[col].dtype.name == "Int32", f"{col} should be Int32"
+        assert df["item_group"].dtype.name == "Int32"
+
+    def test_weight_content_floats(self, raw_df):
+        df = clean_dataframe(raw_df, "test.csv")
+
+        for col in ["weight_su_kg", "weight_primary_g", "weight_secondary_g"]:
+            assert df[col].dtype.name == "float64", f"{col} should be float64"
 
     def test_item_code_is_string(self, raw_df):
         df = clean_dataframe(raw_df, "test.csv")
@@ -95,25 +101,26 @@ class TestCleanDataframe:
         """'Y' should stay 'Y'."""
         df = clean_dataframe(raw_df, "test.csv")
 
-        assert df["is_inventory"].iloc[0] == "Y"
-        assert df["is_sales_item"].iloc[0] == "Y"
         assert df["is_active"].iloc[0] == "Y"
+        assert df["webshop_active"].iloc[0] == "Y"
+        assert df["ws_active_flag"].iloc[0] == "Y"
 
     def test_boolean_flag_normalisation_n(self, raw_df):
         """'N' should stay 'N'."""
         df = clean_dataframe(raw_df, "test.csv")
-        assert df["is_inventory"].iloc[2] == "N"
+        assert df["is_active"].iloc[2] == "N"
+        assert df["webshop_active"].iloc[2] == "N"
 
-    def test_boolean_flag_normalisation_slash(self, raw_df):
-        """SAP uses '/' to mean 'Y' — should be normalised to 'Y'."""
+    def test_product_line_is_string(self, raw_df):
         df = clean_dataframe(raw_df, "test.csv")
-        assert df["is_sales_item"].iloc[2] == "Y"
+        values = df["product_line"].tolist()
+        assert "Skincare" in values
+        assert "Body" in values
 
-    def test_guidanceline_is_string(self, raw_df):
+    def test_name_en_is_string(self, raw_df):
         df = clean_dataframe(raw_df, "test.csv")
-        values = df["guidanceline"].tolist()
-        assert "Premium" in values
-        assert "Standard" in values
+        values = df["name_en"].tolist()
+        assert "Face Cream 50ml EN" in values
 
     def test_source_file_metadata(self, raw_df):
         df = clean_dataframe(raw_df, "dim_product/2026-02-17/dim_product_master.csv")

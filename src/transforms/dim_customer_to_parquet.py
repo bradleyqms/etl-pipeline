@@ -2,13 +2,13 @@
 transforms/dim_customer_to_parquet.py — Bronze CSV → Silver Parquet
 
 Customer master dimension table.
-Bronze: bronze/dim_customer/{date}/ — 4 CSVs (GmbH, UK, USA, AG)
+Bronze: bronze/dim_tables/{date}/ — 4 CSVs (GmbH, UK, USA, AG)
 Silver: silver/dim_customer/{date}/  — per-entity parquets + latest.parquet (combined, deduped)
 
-Columns (from SAP B1 dim_customer extract):
-  Entity, CardCode, CardName, BillToStreet, BillToCity, BillToZip,
+Columns (from SAP B1 dim_customer extract v2 — all entities now have named headers):
+  Entity, CardCode, CardName, GroupName, BillToStreet, BillToCity, BillToZip,
   BillToCountry, ShipToStreet, ShipToCity, ShipToZip, ShipToCountry,
-  GroupCode, Territory, SlpCode, CreateDate, UpdateDate, validFor
+  TerritoryID, SlpCode, CreateDate, UpdateDate, IsActive
 """
 
 import io
@@ -30,11 +30,12 @@ BRONZE_PREFIX = "dim_customer"
 SILVER_PREFIX = "silver/dim_customer"
 RECOMMENDED_CODEC = "zstd"
 
-# Final clean column names (snake_case)
+# Final clean column names (snake_case) — v2 schema (all entities have named headers)
 FINAL_COLUMNS = {
     "Entity":        "entity",
     "CardCode":      "card_code",
     "CardName":      "card_name",
+    "GroupName":     "group_name",       # NEW: customer group label (Vertrieb/Customers/Kunden)
     "BillToStreet":  "bill_to_street",
     "BillToCity":    "bill_to_city",
     "BillToZip":     "bill_to_zip",
@@ -43,12 +44,15 @@ FINAL_COLUMNS = {
     "ShipToCity":    "ship_to_city",
     "ShipToZip":     "ship_to_zip",
     "ShipToCountry": "ship_to_country",
-    "GroupCode":     "group_code",
-    "Territory":     "territory",
+    "TerritoryID":   "territory_id",     # RENAMED from Territory
     "SlpCode":       "slp_code",
     "CreateDate":    "create_date",
     "UpdateDate":    "update_date",
-    "validFor":      "valid_for",
+    "IsActive":      "is_active",        # RENAMED from validFor
+    # Legacy fallbacks (v1 schema — keep for backward compat with old bronze files)
+    "GroupCode":     "group_code",
+    "Territory":     "territory_id",
+    "validFor":      "is_active",
 }
 
 
@@ -90,8 +94,8 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
                         encoding=encoding,
                         low_memory=False,
                     )
-                    # SAP sometimes exports first 11 columns as Column1..Column11
-                    # (missing the field-level aliases). Remap to the correct names.
+                    # Legacy fallback: SAP v1 exported first 11 cols as Column1..Column11
+                    # v2 exports all named headers — keep this for old bronze files only.
                     if "Column1" in df.columns:
                         remap = {
                             "Column1":  "Entity",
@@ -128,13 +132,13 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
     # Rename to final snake_case
     df.rename(columns=FINAL_COLUMNS, inplace=True)
 
-    # Parse German-format dates: "02.01.2023 00:00:00" → datetime
+    # Parse dates — v2 exports ISO (2026-01-19), v1 was German (19.01.2026 00:00:00)
     for col in ["create_date", "update_date"]:
         if col in df.columns and df[col].dtype == object:
-            df[col] = pd.to_datetime(df[col], format="%d.%m.%Y %H:%M:%S", errors="coerce")
+            df[col] = pd.to_datetime(df[col], errors="coerce")
 
     # Downcast numeric types
-    for col in ["group_code", "territory", "slp_code"]:
+    for col in ["group_code", "territory_id", "slp_code"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int32")
 
@@ -146,10 +150,14 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
     if "entity" in df.columns:
         df["entity"] = df["entity"].astype("category")
 
-    # valid_for: normalise "Y"/"N"/"/""  → boolean-ish string
-    if "valid_for" in df.columns:
-        df["valid_for"] = (
-            df["valid_for"]
+    # group_name as string (Vertrieb / Customers / Kunden)
+    if "group_name" in df.columns:
+        df["group_name"] = df["group_name"].astype(str).replace({"nan": None, "None": None})
+
+    # is_active: normalise Y/N (v2) and legacy validFor formats
+    if "is_active" in df.columns:
+        df["is_active"] = (
+            df["is_active"]
             .astype(str)
             .str.strip()
             .str.upper()

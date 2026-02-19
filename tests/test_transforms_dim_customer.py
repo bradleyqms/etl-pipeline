@@ -2,7 +2,7 @@
 Tests for src/transforms/dim_customer_to_parquet.py
 
 Tests read_bronze_csv (comma separator with RFC 4180 quoted fields)
-and clean_dataframe (column renaming, date parsing, downcasting, valid_for normalisation).
+and clean_dataframe (column renaming, date parsing, downcasting, is_active normalisation).
 """
 
 import io
@@ -56,7 +56,7 @@ class TestReadBronzeCSV:
         df = read_bronze_csv(client, "test.csv")
 
         real_cols = [c for c in df.columns if not c.startswith("Unnamed")]
-        assert len(real_cols) == 17
+        assert len(real_cols) == 18  # v2: added GroupName
 
 
 # ═════════════════════════════════════════════
@@ -78,8 +78,8 @@ class TestCleanDataframe:
             "entity", "card_code", "card_name",
             "bill_to_street", "bill_to_city", "bill_to_zip", "bill_to_country",
             "ship_to_street", "ship_to_city", "ship_to_zip", "ship_to_country",
-            "group_code", "territory", "slp_code",
-            "create_date", "update_date", "valid_for",
+            "group_code", "group_name", "territory_id", "slp_code",
+            "create_date", "update_date", "is_active",
         ]
         for col in expected:
             assert col in df.columns, f"Missing column: {col}"
@@ -95,7 +95,7 @@ class TestCleanDataframe:
     def test_numeric_downcast_group_code(self, raw_df):
         df = clean_dataframe(raw_df, "test.csv")
 
-        for col in ["group_code", "territory", "slp_code"]:
+        for col in ["group_code", "territory_id", "slp_code"]:
             assert df[col].dtype.name == "Int32", f"{col} should be Int32"
 
     def test_card_code_is_string(self, raw_df):
@@ -106,11 +106,11 @@ class TestCleanDataframe:
         df = clean_dataframe(raw_df, "test.csv")
         assert df["entity"].dtype.name == "category"
 
-    def test_valid_for_normalisation(self, raw_df):
+    def test_is_active_normalisation(self, raw_df):
         """Y stays Y, N stays N."""
         df = clean_dataframe(raw_df, "test.csv")
 
-        values = df["valid_for"].tolist()
+        values = df["is_active"].tolist()
         assert values[0] == "Y"
         assert values[1] == "N"
         assert values[2] == "Y"

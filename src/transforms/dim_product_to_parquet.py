@@ -2,13 +2,14 @@
 transforms/dim_product_to_parquet.py — Bronze CSV → Silver Parquet
 
 Product master dimension table.
-Bronze: bronze/dim_product/{date}/  — single CSV (all entities combined)
+Bronze: bronze/dim_tables/{date}/  — single CSV (all entities combined)
 Silver: silver/dim_product/{date}/  — per-entity parquets + latest.parquet
 
-Columns (from SAP B1 dim_product_master extract):
-  Entity, ItemCode, Description, ItemGroup, IsInventory, IsSalesItem,
-  IsActive, U_Guidanceline, U_Kontrollfeld, PriceListNum, PriceListName,
-  CreateDate, UpdateDate
+Columns (from SAP B1 dim_product_master extract v2):
+  Entity, ItemCode, Description, ItemGroup, IsActive, Webshop_Active,
+  WS_Active_Flag, Is_Prov, Status, Parent_Item, Weight_SU_kg,
+  Weight_Primary_g, Weight_Secondary_g, Content_ML, Content_GR,
+  ProductLine, Name_EN, Variant_Dim1, CreateDate
 """
 
 import io
@@ -30,21 +31,35 @@ BRONZE_PREFIX = "dim_product"
 SILVER_PREFIX = "silver/dim_product"
 RECOMMENDED_CODEC = "zstd"
 
-# Final clean column names (snake_case)
+# Final clean column names (snake_case) — v2 schema
 FINAL_COLUMNS = {
-    "Entity":          "entity",
-    "ItemCode":        "item_code",
-    "Description":     "description",
-    "ItemGroup":       "item_group",
-    "IsInventory":     "is_inventory",
-    "IsSalesItem":     "is_sales_item",
-    "IsActive":        "is_active",
-    "U_Guidanceline":  "guidanceline",
-    "U_Kontrollfeld":  "kontrollfeld",
-    "PriceListNum":    "price_list_num",
-    "PriceListName":   "price_list_name",
-    "CreateDate":      "create_date",
-    "UpdateDate":      "update_date",
+    "Entity":              "entity",
+    "ItemCode":            "item_code",
+    "Description":         "description",
+    "ItemGroup":           "item_group",
+    "IsActive":            "is_active",
+    "Webshop_Active":      "webshop_active",      # NEW: active on webshop
+    "WS_Active_Flag":      "ws_active_flag",      # NEW: webshop active flag
+    "Is_Prov":             "is_provisional",      # NEW: provisional item
+    "Status":              "status",              # NEW: item status
+    "Parent_Item":         "parent_item",         # NEW: parent SKU for variants
+    "Weight_SU_kg":        "weight_su_kg",        # NEW: shipping unit weight
+    "Weight_Primary_g":    "weight_primary_g",    # NEW: primary pack weight
+    "Weight_Secondary_g":  "weight_secondary_g",  # NEW: secondary pack weight
+    "Content_ML":          "content_ml",          # NEW: volume ml
+    "Content_GR":          "content_gr",          # NEW: weight gr
+    "ProductLine":         "product_line",        # NEW: product line / brand
+    "Name_EN":             "name_en",             # NEW: English product name
+    "Variant_Dim1":        "variant_dim1",        # NEW: variant dimension
+    "CreateDate":          "create_date",
+    # Legacy v1 fallbacks — kept for backward compat with old bronze files
+    "IsInventory":         "is_inventory",
+    "IsSalesItem":         "is_sales_item",
+    "U_Guidanceline":      "guidanceline",
+    "U_Kontrollfeld":      "kontrollfeld",
+    "PriceListNum":        "price_list_num",
+    "PriceListName":       "price_list_name",
+    "UpdateDate":          "update_date",
 }
 
 
@@ -107,15 +122,21 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
     # Rename to final snake_case
     df.rename(columns=FINAL_COLUMNS, inplace=True)
 
-    # Parse German-format dates: "02.01.2023 00:00:00" → datetime
+    # Parse dates — v2 exports ISO (2018-11-05), v1 was German format
     for col in ["create_date", "update_date"]:
         if col in df.columns and df[col].dtype == object:
-            df[col] = pd.to_datetime(df[col], format="%d.%m.%Y %H:%M:%S", errors="coerce")
+            df[col] = pd.to_datetime(df[col], errors="coerce")
 
     # Downcast numeric types
     for col in ["item_group", "price_list_num"]:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce").astype("Int32")
+
+    # Weight / content fields as float
+    for col in ["weight_su_kg", "weight_primary_g", "weight_secondary_g",
+                "content_ml", "content_gr"]:
+        if col in df.columns:
+            df[col] = pd.to_numeric(df[col], errors="coerce").astype("float64")
 
     # item_code as string (leading zeros, mixed types)
     if "item_code" in df.columns:
@@ -125,8 +146,9 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
     if "entity" in df.columns:
         df["entity"] = df["entity"].astype("category")
 
-    # Boolean-ish flags: normalise "/" → "Y", missing → None
-    for col in ["is_inventory", "is_sales_item", "is_active"]:
+    # Boolean-ish Y/N flags
+    for col in ["is_active", "is_inventory", "is_sales_item",
+                "webshop_active", "ws_active_flag", "is_provisional"]:
         if col in df.columns:
             df[col] = (
                 df[col]
@@ -136,8 +158,9 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
                 .replace({"Y": "Y", "N": "N", "/": "Y", "NONE": None, "NAN": None})
             )
 
-    # guidanceline / kontrollfeld as string (custom UDF fields)
-    for col in ["guidanceline", "kontrollfeld"]:
+    # String fields
+    for col in ["guidanceline", "kontrollfeld", "product_line", "name_en",
+                "variant_dim1", "status", "parent_item"]:
         if col in df.columns:
             df[col] = df[col].astype(str).replace({"nan": None, "None": None})
 

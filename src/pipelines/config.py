@@ -57,31 +57,16 @@ PIPELINES = {
     },
 
     # ── Dimension tables ──────────────────────
-    "dim_customer": {
-        "subject_filter":  "Dim_Customer_Extract",
-        "blob_prefix":     "dim_customer",
-        "state_blob_path": "state/dim_customer_state.json",
-        "state_file":      _STATE_DIR / ".dim_customer_state.json",
-        "silver_prefix":   "silver/dim_customer",
-        "transform_name":  "dim_customer",
-        "description":     "Customer master (4 entities: GmbH, UK, USA, AG)",
-    },
-    "dim_product": {
-        "subject_filter":  "dim_product_master",
-        "blob_prefix":     "dim_product",
-        "state_blob_path": "state/dim_product_state.json",
-        "state_file":      _STATE_DIR / ".dim_product_state.json",
-        "silver_prefix":   "silver/dim_product",
-        "transform_name":  "dim_product",
-        "description":     "Product master (all entities combined)",
-    },
-    "dim_salesperson": {
-        "subject_filter":  "Dim_Salesperson_Extract",
-        "blob_prefix":     "dim_salesperson",
-        "state_blob_path": "state/dim_salesperson_state.json",
-        "state_file":      _STATE_DIR / ".dim_salesperson_state.json",
-        "silver_prefix":   "silver/dim_salesperson",
-        "description":     "Salesperson master [PLANNED]",
+    # All dim tables arrive in one email (subject: dim_tables) from SAP dispatcher.
+    # The dim_tables transform routes each file to the correct silver subfolder.
+    "dim_tables": {
+        "subject_filter":  "dim_tables",
+        "blob_prefix":     "dim_tables",
+        "state_blob_path": "state/dim_tables_state.json",
+        "state_file":      _STATE_DIR / ".dim_tables_state.json",
+        "silver_prefix":   "silver/dim_tables",
+        "transform_name":  "dim_tables",
+        "description":     "All dimension tables: customer (4 entities), product, salesperson",
     },
 }
 
