@@ -25,6 +25,8 @@ from ..core.blob_client import get_container_client
 from . import dim_customer_to_parquet as _cust
 from . import dim_product_to_parquet as _prod
 from . import dim_salesperson_to_parquet as _slp
+from . import enrich_dim_customer as _enrich_cust
+from . import enrich_dim_product as _enrich_prod
 
 log = logging.getLogger(__name__)
 
@@ -72,11 +74,12 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     """Route bronze/dim_tables CSVs to their respective silver sub-transforms.
 
     Each CSV is processed independently:
-      - dim_customer_*   → dim_customer sub-transform (column-fix aware)
-      - dim_product_*    → dim_product sub-transform
+      - dim_customer_*   → dim_customer sub-transform → enrich_dim_customer
+      - dim_product_*    → dim_product sub-transform  → enrich_dim_product
       - dim_salesperson  → dim_salesperson sub-transform
 
-    A combined latest.parquet is written per dim type.
+    A combined latest.parquet is written per dim type, then the enrichment
+    transform runs automatically to produce latest_enriched.parquet.
     """
     container = get_container_client()
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -173,6 +176,20 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         log.info("    -> %s (%s, %d rows)", latest_path, _fmt_size(size), len(combined))
         silver_written.append({"dim": "customer", "rows": len(combined), "path": latest_path})
 
+        # ── Enrich dim_customer ──
+        log.info("  Running enrich_dim_customer...")
+        try:
+            enrich_result = _enrich_cust.transform(dry_run=dry_run)
+            log.info("    -> %s (%d rows, market_group coverage %.1f%%)",
+                     enrich_result.get("output_path", "?"),
+                     enrich_result.get("total_rows", 0),
+                     enrich_result.get("market_group", {}).get("pct", 0))
+            silver_written.append({"dim": "customer_enriched",
+                                   "rows": enrich_result.get("total_rows", 0),
+                                   "path": enrich_result.get("output_path", "?")})
+        except Exception as exc:
+            log.error("  enrich_dim_customer failed: %s", exc)
+
     # ── Write dim_product silver ──
     if product_frames:
         combined = pd.concat(product_frames, ignore_index=True)
@@ -186,6 +203,20 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         size = _write_parquet(container, combined, latest_path)
         log.info("    -> %s (%s, %d rows)", latest_path, _fmt_size(size), len(combined))
         silver_written.append({"dim": "product", "rows": len(combined), "path": latest_path})
+
+        # ── Enrich dim_product ──
+        log.info("  Running enrich_dim_product...")
+        try:
+            enrich_result = _enrich_prod.transform(dry_run=dry_run)
+            log.info("    -> %s (%d rows, %d sellable)",
+                     enrich_result.get("output_path", "?"),
+                     enrich_result.get("total_rows", 0),
+                     enrich_result.get("sellable_rows", 0))
+            silver_written.append({"dim": "product_enriched",
+                                   "rows": enrich_result.get("total_rows", 0),
+                                   "path": enrich_result.get("output_path", "?")})
+        except Exception as exc:
+            log.error("  enrich_dim_product failed: %s", exc)
 
     # ── Write dim_salesperson silver ──
     if salesperson_frames:
