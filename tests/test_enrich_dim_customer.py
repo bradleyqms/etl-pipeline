@@ -47,13 +47,13 @@ class TestDeriveRow:
 
     def test_ag_entity_dach(self):
         mg, ch, reg, cg = _derive_row("AG", "21001", "Kunden", 1, "CH")
-        assert mg == "Germany"
-        assert reg == "DACH"
+        assert mg == "Core Markets"
+        assert reg == "Switzerland"
         assert cg == ENTITY_COMPANY_MAP["AG"]
 
     def test_ag_entity_non_dach(self):
         mg, ch, reg, cg = _derive_row("AG", "21050", "Kunden", 1, "FR")
-        assert mg == "Germany"
+        assert mg == "Core Markets"
         assert reg == "International"
 
     def test_uk_entity(self):
@@ -90,10 +90,10 @@ class TestDeriveRow:
 
     # ── GmbH — territory_id ────────────────────────────────────────────────
 
-    def test_gmbh_territory_8_is_dach(self):
+    def test_gmbh_territory_8_is_germany_region(self):
         mg, _, reg, _ = _derive_row("GmbH", "40001", "Endverbraucher", 8, "DE")
-        assert mg == "Germany"
-        assert reg == "DACH"
+        assert mg == "Core Markets"
+        assert reg == "Germany"
 
     def test_gmbh_territory_3_export(self):
         mg, _, reg, _ = _derive_row("GmbH", "20001", "Kunden", 3, "US")
@@ -121,9 +121,10 @@ class TestDeriveRow:
         assert mg == "UK"
         assert reg == "UK"
 
-    def test_country_de_falls_back_to_germany(self):
+    def test_country_de_falls_back_to_core_markets(self):
         mg, _, reg, _ = _derive_row("GmbH", "20001", "Kunden", None, "DE")
-        assert mg == "Germany"
+        assert mg == "Core Markets"
+        assert reg == "Germany"
 
     def test_unknown_country_fallback(self):
         mg, _, reg, _ = _derive_row("GmbH", "20001", "Kunden", None, "ZZ")

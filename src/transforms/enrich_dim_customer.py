@@ -92,31 +92,31 @@ ENTITY_MAPPINGS_PATH = (
 
 # GmbH territory_id → market_group + region
 TERRITORY_MAP: dict[int, tuple[str, str]] = {
-    8:  ("Germany",     "DACH"),          # B2C Endverbraucher (DACH + EU consumers)
-    1:  ("Germany",     "Germany"),
-    2:  ("Germany",     "Germany"),
-    4:  ("Germany",     "Germany"),
-    5:  ("Germany",     "Germany"),
-    3:  ("Export",      "International"),
-    6:  ("Export",      "Americas"),
-    11: ("Core Markets","Benelux"),
-    12: ("Germany",     "DACH"),          # CH/AT overlap
-    15: ("Core Markets","Nordics"),
-    21: ("Core Markets","France"),
-    22: ("Core Markets","Spain"),
-    23: ("Core Markets","Italy"),
-    24: ("Export",      "Eastern Europe"),
-    26: ("Export",      "Export - Other ROW"),
-    27: ("Export",      "Distributor - APAC"),
-    28: ("Export",      "Distributor - Other ROW"),
+    8:  ("Core Markets", "Germany"),      # B2C Endverbraucher (DACH consumers)
+    1:  ("Core Markets", "Germany"),
+    2:  ("Core Markets", "Germany"),
+    4:  ("Core Markets", "Germany"),
+    5:  ("Core Markets", "Germany"),
+    3:  ("Export",       "International"),
+    6:  ("Export",       "Americas"),
+    11: ("Core Markets", "Benelux"),
+    12: ("Core Markets", "Switzerland"),
+    15: ("Core Markets", "Nordics"),
+    21: ("Core Markets", "France"),
+    22: ("Core Markets", "Spain"),
+    23: ("Core Markets", "Italy"),
+    24: ("Export",       "Eastern Europe"),
+    26: ("Export",       "Export - Other ROW"),
+    27: ("Export",       "Distributor - APAC"),
+    28: ("Export",       "Distributor - Other ROW"),
 }
 
 # bill_to_country (ISO-2) → (market_group, region)
 COUNTRY_MAP: dict[str, tuple[str, str]] = {
-    "DE": ("Germany",      "Germany"),
-    "AT": ("Germany",      "DACH"),
-    "CH": ("Germany",      "DACH"),
-    "LI": ("Germany",      "DACH"),
+    "DE": ("Core Markets", "Germany"),
+    "AT": ("Core Markets", "Germany"),      # Austria billed under Germany region
+    "CH": ("Core Markets", "Switzerland"),
+    "LI": ("Core Markets", "Switzerland"),
     "GB": ("UK",           "UK"),
     "IE": ("Core Markets", "UK"),
     "US": ("USA",          "USA"),
@@ -126,7 +126,7 @@ COUNTRY_MAP: dict[str, tuple[str, str]] = {
     "LU": ("Core Markets", "Benelux"),
     "FR": ("Core Markets", "France"),
     "ES": ("Core Markets", "Spain"),
-    "ESX":("Core Markets", "Spain"),       # Canaries
+    "ESX":("Core Markets", "Spain"),        # Canaries
     "IT": ("Core Markets", "Italy"),
     "SE": ("Core Markets", "Nordics"),
     "NO": ("Core Markets", "Nordics"),
@@ -264,8 +264,8 @@ def _derive_row(entity: str, card_code: str, group_name, territory_id, bill_to_c
     if entity == "AG":
         # Swiss entity — wholesale/spa Kunden (mostly DACH)
         channel = GROUP_NAME_CHANNEL.get(group_name, "B2B Trade")
-        region  = "DACH" if bill_country in ("CH", "DE", "AT", "LI") else "International"
-        return "Germany", channel, region, company_group
+        region  = "Switzerland" if bill_country in ("CH", "LI") else "Germany" if bill_country in ("DE", "AT") else "International"
+        return "Core Markets", channel, region, company_group
 
     if entity == "UK":
         # All UK entity accounts → UK market
