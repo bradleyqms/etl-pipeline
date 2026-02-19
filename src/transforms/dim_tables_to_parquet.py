@@ -190,7 +190,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     # ── Write dim_salesperson silver ──
     if salesperson_frames:
         combined = pd.concat(salesperson_frames, ignore_index=True)
-        combined.drop_duplicates(subset=["slp_code"], keep="last", inplace=True)
+        combined.drop_duplicates(subset=["entity", "slp_code"], keep="last", inplace=True)
 
         blob_path = f"silver/dim_salesperson/{target_date}/dim_salesperson.parquet"
         size = _write_parquet(container, combined, blob_path)
