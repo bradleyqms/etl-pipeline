@@ -32,15 +32,13 @@ log = logging.getLogger(__name__)
 def run_transform(transform_name: str, date: str | None = None) -> dict:
     """Run a Bronze → Silver transform by name. Returns result dict."""
     from ..transforms import cold_extract_to_parquet
-    from ..transforms import dim_customer_to_parquet
-    from ..transforms import dim_product_to_parquet
+    from ..transforms import dim_tables_to_parquet
     from ..transforms import fact_sales_daily_to_parquet
 
     transform_map = {
         "cold_extract":     cold_extract_to_parquet.transform,
-        "dim_customer":     dim_customer_to_parquet.transform,
-        "dim_product":      dim_product_to_parquet.transform,
         "fact_sales_daily": fact_sales_daily_to_parquet.transform,
+        "dim_tables":       dim_tables_to_parquet.transform,
     }
     if transform_name not in transform_map:
         raise KeyError(f"Unknown transform '{transform_name}'. "

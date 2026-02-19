@@ -4,12 +4,11 @@ cli.py — Unified CLI entry point for QMS ETL Pipeline
 
 Usage:
   python -m src.cli ingest cold_extract              # Email → Bronze (state-tracked)
-  python -m src.cli ingest dim_customer --dry-run     # Preview dim_customer ingest
-  python -m src.cli ingest dim_product --all          # Re-process all dim_product emails
+  python -m src.cli ingest dim_tables --dry-run       # Preview all dim tables ingest
+  python -m src.cli ingest fact_sales_daily --all     # Re-process all daily emails
 
   python -m src.cli transform cold_extract            # Bronze CSV → Silver Parquet
-  python -m src.cli transform dim_customer            # Customer master → Parquet
-  python -m src.cli transform dim_product             # Product master → Parquet
+  python -m src.cli transform dim_tables              # All dim tables → Parquet
   python -m src.cli transform all                     # Run all transforms
 
   python -m src.cli list                              # List all pipelines
@@ -108,15 +107,13 @@ def cmd_ingest(args):
 def cmd_transform(args):
     """Run a Bronze → Silver parquet transform."""
     from .transforms import cold_extract_to_parquet
-    from .transforms import dim_customer_to_parquet
-    from .transforms import dim_product_to_parquet
+    from .transforms import dim_tables_to_parquet
     from .transforms import fact_sales_daily_to_parquet
 
     transform_map = {
         "cold_extract":     cold_extract_to_parquet.transform,
         "fact_sales_daily": fact_sales_daily_to_parquet.transform,
-        "dim_customer":     dim_customer_to_parquet.transform,
-        "dim_product":      dim_product_to_parquet.transform,
+        "dim_tables":       dim_tables_to_parquet.transform,
     }
 
     if args.pipeline == "all":
@@ -255,8 +252,7 @@ def main():
     # ── ingest ──
     ingest_p = sub.add_parser("ingest", help="Email → Bronze blob ingest")
     ingest_p.add_argument("pipeline",
-                          choices=["cold_extract", "fact_sales_daily",
-                                   "dim_customer", "dim_product", "dim_salesperson"],
+                          choices=["cold_extract", "fact_sales_daily", "dim_tables"],
                           help="Pipeline to run")
     ingest_p.add_argument("--dry-run", action="store_true", help="Preview without uploading")
     ingest_p.add_argument("--all", action="store_true", help="Reprocess all (ignore state)")
@@ -269,7 +265,7 @@ def main():
     transform_p = sub.add_parser("transform", help="Bronze CSV → Silver Parquet")
     transform_p.add_argument("pipeline",
                              choices=["cold_extract", "fact_sales_daily",
-                                      "dim_customer", "dim_product", "all"],
+                                      "dim_tables", "all"],
                              help="Transform to run (or 'all')")
     transform_p.add_argument("--date", help="Specific date folder (YYYY-MM-DD)")
     transform_p.add_argument("--dry-run", action="store_true", help="Preview without writing")
@@ -282,8 +278,7 @@ def main():
     # ── test ──
     test_p = sub.add_parser("test", help="Connection test")
     test_p.add_argument("pipeline",
-                        choices=["cold_extract", "fact_sales_daily",
-                                 "dim_customer", "dim_product"],
+                        choices=["cold_extract", "fact_sales_daily", "dim_tables"],
                         help="Pipeline to test")
     test_p.set_defaults(func=cmd_test)
 

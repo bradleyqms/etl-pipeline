@@ -36,17 +36,17 @@ class TestGetPipeline:
         monkeypatch.setenv("GRAPH_TENANT_ID", "my-tenant-123")
         monkeypatch.setenv("PA_MAILBOX_ADDRESS", "ops@test.com")
 
-        cfg = get_pipeline("dim_customer")
+        cfg = get_pipeline("dim_tables")
         assert cfg["tenant_id"] == "my-tenant-123"
         assert cfg["mailbox"] == "ops@test.com"
 
     def test_pipeline_specific_fields(self, monkeypatch):
         """Pipeline-specific config (subject_filter, blob_prefix) must be present."""
         monkeypatch.setenv("GRAPH_TENANT_ID", "t")
-        cfg = get_pipeline("dim_product")
+        cfg = get_pipeline("dim_tables")
 
-        assert cfg["subject_filter"] == "dim_product_master"
-        assert cfg["blob_prefix"] == "dim_product"
+        assert cfg["subject_filter"] == "dim_tables"
+        assert cfg["blob_prefix"] == "dim_tables"
         assert "state_blob_path" in cfg
 
     def test_unknown_pipeline_raises_key_error(self):
@@ -58,20 +58,14 @@ class TestGetPipeline:
 class TestListPipelines:
     """list_pipelines() returns all defined pipelines."""
 
-    def test_returns_all_five_pipelines(self):
+    def test_returns_all_three_pipelines(self):
         result = list_pipelines()
-        assert len(result) == 5
+        assert len(result) == 3
 
     def test_includes_active_pipelines(self):
         result = list_pipelines()
-        for name in ["cold_extract", "fact_sales_daily", "dim_customer", "dim_product"]:
+        for name in ["cold_extract", "fact_sales_daily", "dim_tables"]:
             assert name in result
-
-    def test_includes_planned_pipelines(self):
-        result = list_pipelines()
-        for name in ["dim_salesperson"]:
-            assert name in result
-            assert "PLANNED" in result[name]
 
     def test_every_pipeline_has_description(self):
         result = list_pipelines()
