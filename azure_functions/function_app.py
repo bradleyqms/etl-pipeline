@@ -65,6 +65,41 @@ log = logging.getLogger("qms-etl")
 # HELPERS — run pipelines
 # ═════════════════════════════════════════════
 
+def _extract_file_name(result: dict) -> str | None:
+    """Extract the primary failing filename from a pipeline result dict.
+
+    Prefers the first dead-letter entry's source blob name (most informative).
+    Falls back to the last successfully ingested blob path for ingest results.
+    """
+    dead_letters = result.get("dead_letter_files") or []
+    if dead_letters:
+        source = dead_letters[0].get("source_blob", "")
+        return source.rsplit("/", 1)[-1] if source else None
+    # For ingest results the failing file isn't captured cleanly — skip gracefully
+    return None
+
+
+def _send_alert_if_needed(pipeline_name: str, result: dict) -> None:
+    from src.core.alerting import send_failure_alert, should_send_failure_alert
+    from src.pipelines.config import get_pipeline
+
+    if not should_send_failure_alert(result):
+        return
+
+    cfg = get_pipeline(pipeline_name)
+    try:
+        send_failure_alert(
+            cfg,
+            pipeline_name=pipeline_name,
+            result=result,
+            environment=os.getenv("ENVIRONMENT", "prod"),
+            run_date=result.get("date"),
+            file_name=_extract_file_name(result),
+        )
+    except Exception as exc:
+        log.warning("%s alert send failed: %s", pipeline_name, exc)
+
+
 def _run_ingest(pipeline_name: str, include_processed: bool = False,
                 auto_transform: bool = True) -> dict:
     """Run an email → blob ingest pipeline by name.
@@ -76,8 +111,10 @@ def _run_ingest(pipeline_name: str, include_processed: bool = False,
     from src.core.pipeline_runner import process_emails
 
     cfg = get_pipeline(pipeline_name)
-    return process_emails(cfg, dry_run=False, include_processed=include_processed,
-                          auto_transform=auto_transform)
+    result = process_emails(cfg, dry_run=False, include_processed=include_processed,
+                            auto_transform=auto_transform)
+    _send_alert_if_needed(pipeline_name, result)
+    return result
 
 
 def _run_transform(pipeline_name: str, date: str | None = None) -> dict:
@@ -92,7 +129,9 @@ def _run_transform(pipeline_name: str, date: str | None = None) -> dict:
         "dim_tables":       dim_tables_to_parquet.transform,
     }
     fn = transform_map[pipeline_name]
-    return fn(date=date)
+    result = fn(date=date)
+    _send_alert_if_needed(pipeline_name, result)
+    return result
 
 
 # ═════════════════════════════════════════════

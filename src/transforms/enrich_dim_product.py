@@ -55,6 +55,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp
 
 log = logging.getLogger(__name__)
 
@@ -288,7 +289,7 @@ def enrich(df: pd.DataFrame) -> pd.DataFrame:
 # Main transform
 # ═════════════════════════════════════════════
 
-def transform(dry_run: bool = False) -> dict:
+def transform(dry_run: bool = False, etl_load_timestamp: str | None = None) -> dict:
     """Read silver dim_product, enrich, write back as latest_enriched.parquet."""
     client = get_container_client()
 
@@ -296,7 +297,8 @@ def transform(dry_run: bool = False) -> dict:
     df = pq.read_table(io.BytesIO(raw)).to_pandas()
     log.info("Loaded %d dim_product rows from %s", len(df), SILVER_PATH)
 
-    enriched = enrich(df)
+    etl_load_timestamp = etl_load_timestamp or current_utc_timestamp()
+    enriched = add_etl_load_timestamp(enrich(df), etl_load_timestamp)
 
     total     = len(enriched)
     sellable  = int(enriched["is_sellable"].sum())

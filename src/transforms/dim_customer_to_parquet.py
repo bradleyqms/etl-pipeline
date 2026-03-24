@@ -20,6 +20,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.dead_letter import quarantine_blob
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp, validate_dataframe
 
 log = logging.getLogger(__name__)
 
@@ -53,6 +55,13 @@ FINAL_COLUMNS = {
     "GroupCode":     "group_code",
     "Territory":     "territory_id",
     "validFor":      "is_active",
+}
+
+# Validation constants (used by transform() and re-exportable)
+CUSTOMER_VALIDATION = {
+    "required_columns": {"entity", "card_code", "card_name"},
+    "datetime_columns": {"create_date", "update_date"},
+    "non_null_columns": {"card_code"},
 }
 
 
@@ -134,7 +143,7 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
 
     # Parse dates — v2 exports ISO (2026-01-19), v1 was German (19.01.2026 00:00:00)
     for col in ["create_date", "update_date"]:
-        if col in df.columns and df[col].dtype == object:
+        if col in df.columns and pd.api.types.is_string_dtype(df[col]):
             df[col] = pd.to_datetime(df[col], errors="coerce")
 
     # Downcast numeric types
@@ -144,7 +153,7 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
 
     # card_code as string (leading zeros possible)
     if "card_code" in df.columns:
-        df["card_code"] = df["card_code"].astype(str).replace({"nan": None, "None": None})
+        df["card_code"] = df["card_code"].map(lambda value: None if pd.isna(value) else str(value)).astype(object)
 
     # entity as category (low cardinality: GmbH, UK, US, AG)
     if "entity" in df.columns:
@@ -189,7 +198,7 @@ def write_parquet_to_blob(client, df: pd.DataFrame, blob_path: str, codec: str =
 # Main transform
 # ═════════════════════════════════════════════
 
-def transform(date: str | None = None, dry_run: bool = False) -> dict:
+def transform(date: str | None = None, dry_run: bool = False, etl_load_timestamp: str | None = None) -> dict:
     """Convert bronze/dim_customer CSVs → silver/dim_customer parquet.
 
     Creates:
@@ -199,6 +208,9 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     Deduplication: keeps latest row per (card_code, entity) by update_date.
     """
     client = get_container_client()
+    etl_load_timestamp = etl_load_timestamp or current_utc_timestamp()
+    dead_letter_files: list[dict] = []
+    data_quality_warnings: list[dict] = []
 
     # Discover bronze CSVs
     all_blobs = list(client.list_blobs(name_starts_with=f"{BRONZE_PREFIX}/"))
@@ -231,13 +243,45 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         short = b.name.split("/")[-1]
         csv_size = b.size or 0
 
+        raw_bytes = client.download_blob(b.name).readall()
         df_raw = read_bronze_csv(client, b.name)
         if df_raw is None:
             log.warning("  ⚠️ Could not parse %s — skipping", short)
             results.append({"file": short, "status": "parse_error"})
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="dim_customer",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_bytes,
+                        run_date=target_date,
+                        reason="parse_error",
+                        details=[{"code": "parse_error", "message": f"Could not parse: {short}"}],
+                    )
+                )
             continue
 
         df = clean_dataframe(df_raw, b.name)
+        validation = validate_dataframe(df, **CUSTOMER_VALIDATION)
+        data_quality_warnings.extend(validation.warnings)
+        if not validation.is_valid:
+            log.warning("  ⚠️ Validation failed for %s — quarantining", short)
+            results.append({"file": short, "status": "validation_error", "errors": validation.errors})
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="dim_customer",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_bytes,
+                        run_date=target_date,
+                        reason="schema_validation_failed",
+                        details=validation.errors,
+                    )
+                )
+            continue
+
         all_dfs.append(df)
 
         # Per-entity parquet
@@ -249,7 +293,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
             log.info("  [DRY RUN] Would write %s → %s (%d rows)", short, silver_path, len(df))
             written = 0
         else:
-            written = write_parquet_to_blob(client, df, silver_path)
+            written = write_parquet_to_blob(client, add_etl_load_timestamp(df, etl_load_timestamp), silver_path)
             log.info("  📦 %s → %s (%s, %d rows)", short, silver_path, fmt_size(written), len(df))
 
         results.append({
@@ -274,7 +318,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         combined.reset_index(drop=True, inplace=True)
 
         latest_path = f"{SILVER_PREFIX}/latest.parquet"
-        written = write_parquet_to_blob(client, combined, latest_path)
+        written = write_parquet_to_blob(client, add_etl_load_timestamp(combined, etl_load_timestamp), latest_path)
         log.info("  📦 Combined → %s (%s, %d rows)", latest_path, fmt_size(written), len(combined))
 
         latest_stats = {
@@ -302,4 +346,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         "compression_ratio": f"{(1 - total_pq / total_csv) * 100:.1f}%" if total_csv else "N/A",
         "latest": latest_stats,
         "details": results,
+        "etl_load_timestamp": etl_load_timestamp,
+        "dead_letter_files": dead_letter_files,
+        "data_quality_warnings": data_quality_warnings,
     }

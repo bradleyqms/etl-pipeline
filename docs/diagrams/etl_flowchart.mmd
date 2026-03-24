@@ -1,0 +1,96 @@
+flowchart LR
+  subgraph S[Sources]
+    SAP1[SAP B1 Report Dispatcher\nCold_Extract monthly]
+    SAP2[SAP B1 Report Dispatcher\nFACT_SALES_DAILY_INCREMENTAL Mon-Fri]
+    SAP3[SAP B1 Report Dispatcher\ndim_tables Mon-Fri\ncustomer + product + salesperson CSVs]
+    M365[Microsoft 365 Mailbox\nfolder: SAP Reports]
+  end
+
+  SAP1 --> M365
+  SAP2 --> M365
+  SAP3 --> M365
+
+  subgraph I[Ingestion Layer]
+    G[Graph API\nemail search + attachment download]
+    R[process_emails engine\nsrc/core/pipeline_runner.py]
+    ST[State Tracking\nbronze/state/pipeline_state.json]
+  end
+
+  M365 --> G --> R
+  ST <--> R
+
+  subgraph B[Bronze Blob Container: bronze]
+    B1[cold_extract/DATE/*.csv]
+    B2[fact_sales_daily/DATE/*.csv]
+    B3[dim_tables/DATE/*.csv]
+  end
+
+  R --> B1
+  R --> B2
+  R --> B3
+
+  subgraph T
+    T1[src/transforms/cold_extract_to_parquet.py\nparse + normalize + dedup\nkey: entity, doc_entry, line_num\nwrite per entity+year parquet]
+    T2[src/transforms/fact_sales_daily_to_parquet.py\nparse + normalize + dedup\nkey: entity, doc_entry, line_num\nwrite per entity parquet\ncleanup stale files]
+    TO[src/transforms/dim_tables_to_parquet.py\nfilename routing orchestrator]
+    TC[src/transforms/dim_customer_to_parquet.py]
+    TP[src/transforms/dim_product_to_parquet.py]
+    TS[src/transforms/dim_salesperson_to_parquet.py]
+  end
+
+  B1 --> T1
+  B2 --> T2
+  B3 --> TO
+  TO --> TC
+  TO --> TP
+  TO --> TS
+
+  subgraph E[Business Enrichment]
+    EC[src/transforms/enrich_dim_customer.py\nadds market_group, channel, region, company_group\nuses entity_mappings.csv + rules]
+    EP[src/transforms/enrich_dim_product.py\nadds product_line_clean, product_category, sku_type, is_sellable, item_code_prefix]
+  end
+
+  TC --> EC
+  TP --> EP
+
+  subgraph SV[Silver Outputs]
+    S1[silver/cold_extract/DATE/\nfact_sales_ENTITY_YEAR.parquet]
+    S2[silver/fact_sales_daily/DATE/\nfact_sales_daily_ENTITY.parquet]
+    S3[silver/dim_customer/latest.parquet]
+    S4[silver/dim_customer/latest_enriched.parquet]
+    S5[silver/dim_product/latest.parquet]
+    S6[silver/dim_product/latest_enriched.parquet]
+    S7[silver/dim_salesperson/latest.parquet]
+  end
+
+  T1 --> S1
+  T2 --> S2
+  TC --> S3
+  EC --> S4
+  TP --> S5
+  EP --> S6
+  TS --> S7
+
+  subgraph C[Consumption]
+    PBI[Power BI / Analytics]
+  end
+
+  S1 --> PBI
+  S2 --> PBI
+  S4 --> PBI
+  S6 --> PBI
+  S7 --> PBI
+
+  subgraph F[Orchestration]
+    CLI[CLI\nsrc/cli.py]
+    AF[Azure Functions timers + HTTP triggers]
+  end
+
+  CLI --> R
+  CLI --> T1
+  CLI --> T2
+  CLI --> TO
+  AF --> R
+  AF --> T1
+  AF --> T2
+  AF --> TO

@@ -72,6 +72,7 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp
 
 log = logging.getLogger(__name__)
 
@@ -337,8 +338,8 @@ def enrich(df: pd.DataFrame, entity_mappings: pd.DataFrame | None) -> pd.DataFra
 
     # Strip whitespace from entity_mappings values (source has trailing spaces)
     for col in ["market_group", "channel", "region", "company_group"]:
-        if col in df.columns and df[col].dtype == object:
-            df[col] = df[col].str.strip()
+        if col in df.columns:
+            df[col] = df[col].map(lambda value: value.strip() if isinstance(value, str) else value)
 
     # Drop working columns
     drop_cols = ["em_market_group", "em_channel", "em_region", "em_company_group",
@@ -352,7 +353,7 @@ def enrich(df: pd.DataFrame, entity_mappings: pd.DataFrame | None) -> pd.DataFra
 # Main transform
 # ═════════════════════════════════════════════
 
-def transform(dry_run: bool = False) -> dict:
+def transform(dry_run: bool = False, etl_load_timestamp: str | None = None) -> dict:
     """Read silver dim_customer, enrich, write back as latest_enriched.parquet."""
 
     client = get_container_client()
@@ -368,7 +369,8 @@ def transform(dry_run: bool = False) -> dict:
     log.info("entity_mappings loaded: %d rows", em_rows)
 
     # Enrich
-    enriched = enrich(df, em)
+    etl_load_timestamp = etl_load_timestamp or current_utc_timestamp()
+    enriched = add_etl_load_timestamp(enrich(df, em), etl_load_timestamp)
 
     # Coverage stats
     total = len(enriched)

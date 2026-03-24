@@ -26,11 +26,17 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.dead_letter import quarantine_blob
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp, validate_dataframe
 from .cold_extract_to_parquet import (
     clean_dataframe,
     write_parquet_to_blob,
     fmt_size,
     RECOMMENDED_CODEC,
+    REQUIRED_CLEAN_COLUMNS,
+    DATETIME_VALIDATION_COLUMNS,
+    NUMERIC_VALIDATION_COLUMNS,
+    NON_NULL_VALIDATION_COLUMNS,
 )
 
 log = logging.getLogger(__name__)
@@ -71,7 +77,7 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
 
                 # Validate: Entity should be a string column (CH, GmbH, etc.)
                 entity_col = df.get("Entity")
-                if entity_col is not None and entity_col.dtype != object:
+                if entity_col is not None and not pd.api.types.is_string_dtype(entity_col):
                     continue
 
                 df = pd.read_csv(
@@ -125,6 +131,9 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     blobs = dates[target_date]
     file_results = []
     all_dfs = []
+    dead_letter_files = []
+    data_quality_warnings = []
+    etl_load_timestamp = current_utc_timestamp()
 
     log.info("fact_sales_daily transform — %d CSVs for %s", len(blobs), target_date)
 
@@ -132,15 +141,54 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     for b in sorted(blobs, key=lambda x: x.name):
         short = b.name.split("/")[-1]
         csv_size = b.size or 0
+        raw_blob = client.download_blob(b.name).readall()
 
         df_raw = read_bronze_csv(client, b.name)
         if df_raw is None:
             file_results.append({"file": short, "status": "parse_error"})
             log.error("  ❌ %s — could not parse", short)
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="fact_sales_daily",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_blob,
+                        run_date=target_date,
+                        reason="parse_error",
+                        details=[{"code": "parse_error", "message": "Could not parse source CSV"}],
+                    )
+                )
             continue
 
         df = clean_dataframe(df_raw, b.name)
+        validation = validate_dataframe(
+            df,
+            required_columns=REQUIRED_CLEAN_COLUMNS,
+            datetime_columns=DATETIME_VALIDATION_COLUMNS,
+            numeric_columns=NUMERIC_VALIDATION_COLUMNS,
+            non_null_columns=NON_NULL_VALIDATION_COLUMNS,
+        )
+        if not validation.is_valid:
+            file_results.append({"file": short, "status": "validation_error", "errors": validation.errors})
+            data_quality_warnings.extend(validation.warnings)
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="fact_sales_daily",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_blob,
+                        run_date=target_date,
+                        reason="schema_validation_failed",
+                        details=validation.errors,
+                    )
+                )
+            log.warning("  ⚠️ %s failed validation and was quarantined", short)
+            continue
+
         all_dfs.append(df)
+        data_quality_warnings.extend(validation.warnings)
         file_results.append({
             "file": short,
             "status": "parsed",
@@ -176,6 +224,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     total_pq = 0
 
     for entity, group_df in combined.groupby("entity", observed=True):
+        group_df = add_etl_load_timestamp(group_df, etl_load_timestamp)
         parquet_name = f"fact_sales_daily_{str(entity).lower()}.parquet"
         silver_path = f"{SILVER_PREFIX}/{target_date}/{parquet_name}"
 
@@ -235,6 +284,9 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         "total_parquet_bytes": total_pq,
         "compression_ratio": f"{(1 - total_pq / total_csv) * 100:.1f}%" if total_csv else "N/A",
         "stale_deleted": stale_deleted,
+        "dead_letter_files": dead_letter_files,
+        "data_quality_warnings": data_quality_warnings,
+        "etl_load_timestamp": etl_load_timestamp,
         "bronze_details": file_results,
         "silver_details": results,
     }

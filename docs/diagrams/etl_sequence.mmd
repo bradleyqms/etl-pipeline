@@ -1,0 +1,33 @@
+sequenceDiagram
+  autonumber
+  participant SAP as SAP B1 Dispatcher
+  participant M365 as Microsoft 365 Mailbox
+  participant AF as Azure Function Timer
+  participant G as Graph API
+  participant PR as process_emails()
+  participant B as Azure Blob bronze/
+  participant T as Transform Modules
+  participant S as Azure Blob silver/
+  participant PBI as Power BI
+
+  SAP->>M365: Send report email with CSV attachments
+  AF->>G: Poll folder SAP Reports by subject filter
+  G-->>PR: Return matching emails and attachments metadata
+  PR->>PR: Load state (processed message IDs)
+  alt New message IDs exist
+    loop For each attachment
+      PR->>B: Upload raw CSV to bronze pipeline DATE path
+    end
+    PR->>B: Save updated state JSON to bronze state path
+    PR->>T: Auto-trigger pipeline transform
+    T->>B: Read bronze CSV files
+    T->>T: Parse, normalize, deduplicate
+    alt Pipeline is dim_tables
+      T->>T: Route files to customer/product/salesperson transforms
+      T->>T: Run customer and product enrichment
+    end
+    T->>S: Write silver parquet outputs
+    S-->>PBI: Dataset refresh reads latest parquet outputs
+  else No new message IDs
+    PR-->>AF: Skip ingest and skip transform
+  end
