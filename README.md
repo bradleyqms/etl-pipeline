@@ -4,6 +4,8 @@ Automated ETL pipeline that reads SAP B1 Report Dispatcher emails from Microsoft
 
 ## Architecture
 
+Detailed architecture page: [docs/ETL_ARCHITECTURE.md](docs/ETL_ARCHITECTURE.md)
+
 ```
 SAP B1 (CRON)
     │ daily email (07:30 UTC Mon–Fri)
@@ -258,9 +260,52 @@ python -m src.cli ingest cold_extract --no-transform # Ingest only, skip Silver 
 python -m src.cli transform cold_extract
 python -m src.cli transform fact_sales_daily
 python -m src.cli transform dim_tables
+
+# Governed monetization sidecar (separate from production ETL routing)
+python -m src.experiments.governed_monetization_sidecar \
+    --source-run-dir outputs/experiment/azure_live_run_2026-03-06 \
+    --run-id governed_2026-03-06 \
+    --phase all
+
+# Optional manual governance decisions + external customer attributes (email join)
+python -m src.experiments.governed_monetization_sidecar \
+    --source-run-dir outputs/experiment/azure_live_run_2026-03-06 \
+    --run-id governed_2026-03-06_reviewed \
+    --accepted-merges-csv outputs/experiment/governed/governed_2026-03-06/governance/accepted_merges.csv \
+    --customer-attributes-csv inputs/customer_attributes.csv
+
 python -m src.cli transform all
 python -m src.cli transform cold_extract --date 2026-02-17
 ```
+
+### Governed Sidecar Contract (v1)
+
+The sidecar publishes run-scoped artifacts at:
+
+`outputs/experiment/governed/<run_id>/`
+
+Subfolders:
+
+- `governance/` → `canonical_match_table.csv`, `match_review_samples.csv`, `accepted_merges.csv`, `golden_id_linkage.csv`
+- `sales/` → `propensity_gap_analysis.csv`, `churn_early_warning.csv`
+- `marketing/` → `lookalike_segments.json`, `cluster_audience.csv`
+- `ops/` → `stockout_substitutes.csv`, `duplicate_rate_kpi.csv`, `pricing_exception_report.csv`
+- `contracts/` → `schema_manifest.json`, `column_dictionary.csv`
+- `meta/` → `run_metadata.json`, `verifications.json`
+
+### Governance Lifecycle
+
+- `match_review_samples.csv` is the review queue generated from explainability outputs.
+- `accepted_merges.csv` is manual governance input (`decision=ACCEPTED` controls merges).
+- `golden_id_linkage.csv` is generated from manual accepted pairs only.
+
+### Sidecar Boundaries (No Production Routing Changes)
+
+The governed sidecar is intentionally isolated and does not modify production ETL execution routing. The following files remain out-of-scope and unchanged by sidecar operation:
+
+- `src/cli.py`
+- `src/pipelines/config.py`
+- `azure_functions/function_app.py`
 
 ### 3. Run Enrichment (manual)
 
@@ -291,6 +336,54 @@ python -m pytest tests/ -v
 python -m pytest tests/test_enrich_dim_customer.py -v   # 26 enrichment tests
 python -m pytest tests/test_enrich_dim_product.py -v    # 37 enrichment tests
 ```
+
+### 5. Validate Data Lake Layout
+
+Use the new helper under `src.tools.datalake_structure_assessment` to confirm the Azure container follows the documented Bronze/Silver hierarchy and the enriched Parquets exist.
+
+```bash
+# Ensure credentials are populated in .env first (same as other workflows)
+python -m src.tools.datalake_structure_assessment
+```
+
+The command checks every canonical prefix described in the README (`cold_extract`, `fact_sales_daily`, `dim_tables`, `state`, `silver/...`) as well as the customer/product enriched Parquet assets. Any missing expectations are printed and the script exits with a non-zero status so automation can fail fast.
+
+### 6. Run Entity Resolution Side-Car (Phase 4)
+
+Phase 4 provides isolated input discovery, normalization, candidate blocking, scoring, and explainability artifacts for analyst review. It does not modify pipeline registry/dispatch or Azure Function routes.
+
+```bash
+# Install dedicated experiment dependencies
+pip install -r requirements.experiments.txt
+
+# Show available experiment options
+python -m src.experiments.entity_resolution --help
+
+# Validate configuration + output path only
+python -m src.experiments.entity_resolution --dry-run
+
+# Execute end-to-end side-car experiment
+python -m src.experiments.entity_resolution \
+    --dim-customer-path silver/dim_customer/latest.parquet \
+    --dim-product-path silver/dim_product/latest.parquet \
+    --fact-daily-glob "silver/fact_sales_daily/*/*.parquet" \
+    --fact-cold-glob "silver/cold_extract/*/*.parquet"
+```
+
+By default, outputs are written under `outputs/experiment/` as local artifacts.
+
+Phase 4 review artifacts:
+
+- `match_review_samples.csv` — side-by-side pair review table with confidence labels, reason text, matched tokens, total score, and component scores.
+- `run_summary.log` — thresholds, runtime, input/candidate/accepted/cluster counts, and top diagnostics.
+- `behavioral_twins.md` — ranked examples under **Product Twins** and **Customer Overlaps** for business readability.
+
+Recommended triage flow:
+
+1. Start with `match_review_samples.csv` and filter `confidence_label` = `HIGH` for likely matches.
+2. Review `MEDIUM` rows using `match_reason`, `matched_tokens`, and component score columns.
+3. Use `run_summary.log` to confirm thresholds and check candidate/accepted volumes are plausible.
+4. Share `behavioral_twins.md` with non-engineering stakeholders for quick plausibility checks.
 
 **Test coverage:**
 

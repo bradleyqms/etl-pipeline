@@ -22,6 +22,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.dead_letter import quarantine_blob
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp, validate_dataframe
 from . import dim_customer_to_parquet as _cust
 from . import dim_product_to_parquet as _prod
 from . import dim_salesperson_to_parquet as _slp
@@ -32,6 +34,24 @@ log = logging.getLogger(__name__)
 
 BRONZE_PREFIX = "dim_tables"
 RECOMMENDED_CODEC = "zstd"
+
+CUSTOMER_VALIDATION = {
+    "required_columns": {"entity", "card_code", "card_name", "group_name", "territory_id", "slp_code", "create_date", "update_date", "is_active"},
+    "datetime_columns": {"create_date", "update_date"},
+    "numeric_columns": {"territory_id", "slp_code"},
+    "non_null_columns": {"entity", "card_code", "card_name"},
+}
+PRODUCT_VALIDATION = {
+    "required_columns": {"entity", "item_code", "description", "item_group", "is_active", "product_line", "create_date"},
+    "datetime_columns": {"create_date"},
+    "numeric_columns": {"item_group"},
+    "non_null_columns": {"entity", "item_code", "description"},
+}
+SALESPERSON_VALIDATION = {
+    "required_columns": {"entity", "slp_code", "slp_name", "is_active"},
+    "numeric_columns": {"slp_code", "commission"},
+    "non_null_columns": {"entity", "slp_code", "slp_name"},
+}
 
 
 # ─────────────────────────────────────────────
@@ -83,6 +103,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     """
     container = get_container_client()
     run_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    etl_load_timestamp = current_utc_timestamp()
 
     # Discover all CSVs under bronze/dim_tables/
     all_blobs = list(container.list_blobs(name_starts_with=f"{BRONZE_PREFIX}/"))
@@ -115,6 +136,8 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
 
     results = []
     skipped = []
+    dead_letter_files = []
+    data_quality_warnings = []
 
     for blob_info in blobs:
         blob_name = blob_info.name
@@ -130,27 +153,126 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         blob_data = container.download_blob(blob_name).readall()
 
         if route == "customer":
-            df = _cust.read_bronze_csv(container, blob_name)
-            if df is not None:
-                df = _cust.clean_dataframe(df, blob_name)
-                customer_frames.append(df)
-                results.append({"file": file_name, "route": "customer", "rows": len(df)})
-                log.info("  dim_customer ← %s (%d rows)", file_name, len(df))
+            df_raw = _cust.read_bronze_csv(container, blob_name)
+            if df_raw is None:
+                results.append({"file": file_name, "route": "customer", "status": "parse_error"})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="parse_error",
+                            details=[{"code": "parse_error", "message": "Could not parse dim_customer CSV"}],
+                        )
+                    )
+                continue
+
+            df = _cust.clean_dataframe(df_raw, blob_name)
+            validation = validate_dataframe(df, **CUSTOMER_VALIDATION)
+            data_quality_warnings.extend(validation.warnings)
+            if not validation.is_valid:
+                results.append({"file": file_name, "route": "customer", "status": "validation_error", "errors": validation.errors})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="schema_validation_failed",
+                            details=validation.errors,
+                        )
+                    )
+                continue
+
+            customer_frames.append(df)
+            results.append({"file": file_name, "route": "customer", "status": "converted", "rows": len(df)})
+            log.info("  dim_customer ← %s (%d rows)", file_name, len(df))
 
         elif route == "product":
-            df = _prod.read_bronze_csv(container, blob_name)
-            if df is not None:
-                df = _prod.clean_dataframe(df, blob_name)
-                product_frames.append(df)
-                results.append({"file": file_name, "route": "product", "rows": len(df)})
-                log.info("  dim_product  ← %s (%d rows)", file_name, len(df))
+            df_raw = _prod.read_bronze_csv(container, blob_name)
+            if df_raw is None:
+                results.append({"file": file_name, "route": "product", "status": "parse_error"})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="parse_error",
+                            details=[{"code": "parse_error", "message": "Could not parse dim_product CSV"}],
+                        )
+                    )
+                continue
+
+            df = _prod.clean_dataframe(df_raw, blob_name)
+            validation = validate_dataframe(df, **PRODUCT_VALIDATION)
+            data_quality_warnings.extend(validation.warnings)
+            if not validation.is_valid:
+                results.append({"file": file_name, "route": "product", "status": "validation_error", "errors": validation.errors})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="schema_validation_failed",
+                            details=validation.errors,
+                        )
+                    )
+                continue
+
+            product_frames.append(df)
+            results.append({"file": file_name, "route": "product", "status": "converted", "rows": len(df)})
+            log.info("  dim_product  ← %s (%d rows)", file_name, len(df))
 
         elif route == "salesperson":
             df = _slp.parse_csv(blob_data, blob_name)
-            if df is not None:
-                salesperson_frames.append(df)
-                results.append({"file": file_name, "route": "salesperson", "rows": len(df)})
-                log.info("  dim_slp      ← %s (%d rows)", file_name, len(df))
+            if df is None:
+                results.append({"file": file_name, "route": "salesperson", "status": "parse_error"})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="parse_error",
+                            details=[{"code": "parse_error", "message": "Could not parse dim_salesperson CSV"}],
+                        )
+                    )
+                continue
+
+            validation = validate_dataframe(df, **SALESPERSON_VALIDATION)
+            data_quality_warnings.extend(validation.warnings)
+            if not validation.is_valid:
+                results.append({"file": file_name, "route": "salesperson", "status": "validation_error", "errors": validation.errors})
+                if not dry_run:
+                    dead_letter_files.append(
+                        quarantine_blob(
+                            container,
+                            pipeline="dim_tables",
+                            source_blob_name=blob_name,
+                            raw_bytes=blob_data,
+                            run_date=target_date,
+                            reason="schema_validation_failed",
+                            details=validation.errors,
+                        )
+                    )
+                continue
+
+            salesperson_frames.append(df)
+            results.append({"file": file_name, "route": "salesperson", "status": "converted", "rows": len(df)})
+            log.info("  dim_slp      ← %s (%d rows)", file_name, len(df))
 
     if dry_run:
         return {"status": "dry_run", "would_process": results, "skipped": skipped}
@@ -167,11 +289,13 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
             src = df["_source_file"].iloc[0] if "_source_file" in df.columns else "unknown"
             stem = PurePosixPath(src).stem
             blob_path = f"silver/dim_customer/{target_date}/{stem}.parquet"
-            size = _write_parquet(container, df, blob_path)
-            log.info("    -> %s (%s, %d rows)", blob_path, _fmt_size(size), len(df))
+            stamped = add_etl_load_timestamp(df, etl_load_timestamp)
+            size = _write_parquet(container, stamped, blob_path)
+            log.info("    -> %s (%s, %d rows)", blob_path, _fmt_size(size), len(stamped))
 
         # Combined latest
         latest_path = "silver/dim_customer/latest.parquet"
+        combined = add_etl_load_timestamp(combined, etl_load_timestamp)
         size = _write_parquet(container, combined, latest_path)
         log.info("    -> %s (%s, %d rows)", latest_path, _fmt_size(size), len(combined))
         silver_written.append({"dim": "customer", "rows": len(combined), "path": latest_path})
@@ -179,7 +303,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         # ── Enrich dim_customer ──
         log.info("  Running enrich_dim_customer...")
         try:
-            enrich_result = _enrich_cust.transform(dry_run=dry_run)
+            enrich_result = _enrich_cust.transform(dry_run=dry_run, etl_load_timestamp=etl_load_timestamp)
             log.info("    -> %s (%d rows, market_group coverage %.1f%%)",
                      enrich_result.get("output_path", "?"),
                      enrich_result.get("total_rows", 0),
@@ -196,18 +320,19 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         combined.drop_duplicates(subset=["item_code"], keep="last", inplace=True)
 
         blob_path = f"silver/dim_product/{target_date}/dim_product_master.parquet"
-        size = _write_parquet(container, combined, blob_path)
-        log.info("    -> %s (%s, %d rows)", blob_path, _fmt_size(size), len(combined))
+        stamped = add_etl_load_timestamp(combined, etl_load_timestamp)
+        size = _write_parquet(container, stamped, blob_path)
+        log.info("    -> %s (%s, %d rows)", blob_path, _fmt_size(size), len(stamped))
 
         latest_path = "silver/dim_product/latest.parquet"
-        size = _write_parquet(container, combined, latest_path)
-        log.info("    -> %s (%s, %d rows)", latest_path, _fmt_size(size), len(combined))
+        size = _write_parquet(container, stamped, latest_path)
+        log.info("    -> %s (%s, %d rows)", latest_path, _fmt_size(size), len(stamped))
         silver_written.append({"dim": "product", "rows": len(combined), "path": latest_path})
 
         # ── Enrich dim_product ──
         log.info("  Running enrich_dim_product...")
         try:
-            enrich_result = _enrich_prod.transform(dry_run=dry_run)
+            enrich_result = _enrich_prod.transform(dry_run=dry_run, etl_load_timestamp=etl_load_timestamp)
             log.info("    -> %s (%d rows, %d sellable)",
                      enrich_result.get("output_path", "?"),
                      enrich_result.get("total_rows", 0),
@@ -224,6 +349,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         combined.drop_duplicates(subset=["entity", "slp_code"], keep="last", inplace=True)
 
         blob_path = f"silver/dim_salesperson/{target_date}/dim_salesperson.parquet"
+        combined = add_etl_load_timestamp(combined, etl_load_timestamp)
         size = _write_parquet(container, combined, blob_path)
         log.info("    -> %s (%s, %d rows)", blob_path, _fmt_size(size), len(combined))
 
@@ -241,4 +367,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         "silver_written": silver_written,
         "total_rows": total_rows,
         "files_converted": len(silver_written),
+        "dead_letter_files": dead_letter_files,
+        "data_quality_warnings": data_quality_warnings,
+        "etl_load_timestamp": etl_load_timestamp,
     }

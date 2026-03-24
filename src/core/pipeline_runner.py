@@ -75,6 +75,7 @@ def process_emails(
         "files_uploaded":   0,
         "errors":           [],
         "files":            [],
+        "date":             None,
     }
 
     # 1. Authenticate
@@ -123,6 +124,7 @@ def process_emails(
             email.get("from", {}).get("emailAddress", {}).get("address", "?")
         )
         email_date = received[:10] if len(received) >= 10 else "unknown"
+        stats["date"] = email_date
 
         log.info("─" * 50)
         log.info("Processing: '%s' from %s (%s)", subject, sender, received)

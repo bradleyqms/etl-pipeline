@@ -19,6 +19,8 @@ import pyarrow as pa
 import pyarrow.parquet as pq
 
 from ..core.blob_client import get_container_client
+from ..core.dead_letter import quarantine_blob
+from ..core.validation import add_etl_load_timestamp, current_utc_timestamp, validate_dataframe
 
 log = logging.getLogger(__name__)
 
@@ -84,6 +86,15 @@ EXPECTED_COLUMNS = {
     "SlpCode", "UpdateDate",
 }
 
+REQUIRED_CLEAN_COLUMNS = {
+    "entity", "doc_entry", "doc_num", "doc_date", "doc_type",
+    "line_num", "card_code", "item_code", "description",
+    "quantity", "net_revenue", "slp_code", "update_date",
+}
+DATETIME_VALIDATION_COLUMNS = {"doc_date", "update_date"}
+NUMERIC_VALIDATION_COLUMNS = {"doc_entry", "doc_num", "line_num", "quantity", "net_revenue", "slp_code"}
+NON_NULL_VALIDATION_COLUMNS = {"entity", "doc_entry", "line_num", "doc_date", "net_revenue"}
+
 
 def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
     """Download a CSV from bronze and parse with correct sep/encoding.
@@ -122,7 +133,7 @@ def read_bronze_csv(client, blob_name: str) -> pd.DataFrame | None:
                 # values bleed in) instead of a string.  Check that
                 # Entity looks like a string column.
                 entity_col = df.get("Entity")
-                if entity_col is not None and entity_col.dtype != object:
+                if entity_col is not None and not pd.api.types.is_string_dtype(entity_col):
                     continue
 
                 df = pd.read_csv(
@@ -157,7 +168,7 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
 
     # Parse German-format decimals: "1,000000" → 1.0
     for col in ["quantity", "net_revenue"]:
-        if col in df.columns and df[col].dtype == object:
+        if col in df.columns and pd.api.types.is_string_dtype(df[col]):
             df[col] = (
                 df[col]
                 .astype(str)
@@ -168,7 +179,7 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
 
     # Parse dates: "02.01.2023 00:00:00" → datetime
     for col in ["doc_date", "update_date"]:
-        if col in df.columns and df[col].dtype == object:
+        if col in df.columns and pd.api.types.is_string_dtype(df[col]):
             df[col] = pd.to_datetime(df[col], format="%d.%m.%Y %H:%M:%S", errors="coerce")
 
     # Downcast numeric types
@@ -274,6 +285,9 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     blobs = dates[target_date]
     file_results = []
     all_dfs = []
+    dead_letter_files = []
+    data_quality_warnings = []
+    etl_load_timestamp = current_utc_timestamp()
 
     log.info("cold_extract transform — %d CSVs for %s", len(blobs), target_date)
 
@@ -281,14 +295,53 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
     for b in sorted(blobs, key=lambda x: x.name):
         short = b.name.split("/")[-1]
         csv_size = b.size or 0
+        raw_blob = client.download_blob(b.name).readall()
 
         df_raw = read_bronze_csv(client, b.name)
         if df_raw is None:
             file_results.append({"file": short, "status": "parse_error"})
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="cold_extract",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_blob,
+                        run_date=target_date,
+                        reason="parse_error",
+                        details=[{"code": "parse_error", "message": "Could not parse source CSV"}],
+                    )
+                )
             continue
 
         df = clean_dataframe(df_raw, b.name)
+        validation = validate_dataframe(
+            df,
+            required_columns=REQUIRED_CLEAN_COLUMNS,
+            datetime_columns=DATETIME_VALIDATION_COLUMNS,
+            numeric_columns=NUMERIC_VALIDATION_COLUMNS,
+            non_null_columns=NON_NULL_VALIDATION_COLUMNS,
+        )
+        if not validation.is_valid:
+            file_results.append({"file": short, "status": "validation_error", "errors": validation.errors})
+            data_quality_warnings.extend(validation.warnings)
+            if not dry_run:
+                dead_letter_files.append(
+                    quarantine_blob(
+                        client,
+                        pipeline="cold_extract",
+                        source_blob_name=b.name,
+                        raw_bytes=raw_blob,
+                        run_date=target_date,
+                        reason="schema_validation_failed",
+                        details=validation.errors,
+                    )
+                )
+            log.warning("  ⚠️ %s failed validation and was quarantined", short)
+            continue
+
         all_dfs.append(df)
+        data_quality_warnings.extend(validation.warnings)
         file_results.append({
             "file": short,
             "status": "parsed",
@@ -351,6 +404,7 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
 
     for (entity, year), group_df in combined.groupby(["entity", "_year"], observed=True):
         group_df = group_df.drop(columns=["_year"])
+        group_df = add_etl_load_timestamp(group_df, etl_load_timestamp)
         parquet_name = f"cold_extract_{str(entity).lower()}_{int(year)}.parquet"
         silver_path = f"{SILVER_PREFIX}/{target_date}/{parquet_name}"
 
@@ -416,6 +470,9 @@ def transform(date: str | None = None, dry_run: bool = False) -> dict:
         "compression_ratio": f"{(1 - total_pq / total_csv) * 100:.1f}%" if total_csv else "N/A",
         "stale_deleted": stale_deleted,
         "warnings": warnings,
+        "data_quality_warnings": data_quality_warnings,
+        "dead_letter_files": dead_letter_files,
+        "etl_load_timestamp": etl_load_timestamp,
         "bronze_details": file_results,
         "silver_details": results,
     }
