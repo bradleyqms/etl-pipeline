@@ -7,7 +7,13 @@ import pandas as pd
 import pyarrow.parquet as pq
 
 from tests.conftest import COLD_EXTRACT_CSV, DIM_CUSTOMER_CSV, DIM_PRODUCT_CSV, MockContainerClient
-from src.core.alerting import build_failure_alert, send_failure_alert, should_send_failure_alert
+from src.core.alerting import (
+    _compute_alert_key,
+    build_failure_alert,
+    send_failure_alert,
+    should_send_failure_alert,
+    _load_alert_dedupe,
+)
 from src.core.validation import add_etl_load_timestamp, validate_dataframe
 from src.transforms import cold_extract_to_parquet, dim_tables_to_parquet
 from src.transforms import dim_customer_to_parquet, dim_product_to_parquet
@@ -317,4 +323,145 @@ class TestAlertDelivery:
     def test_should_not_alert_for_clean_result(self):
         result = {"status": "ok", "errors": [], "dead_letter_files": []}
         assert should_send_failure_alert(result) is False
+
+    def test_send_failure_alert_saves_dedupe_state_after_send(self, monkeypatch):
+        """Dedupe state must be saved after a successful send."""
+        monkeypatch.setenv("ALERT_ENABLED", "true")
+        monkeypatch.setenv("ALERT_EMAIL_TO", "ops@example.com")
+        monkeypatch.setattr("src.core.alerting.get_graph_token", lambda cfg: "fake-token")
+
+        mock_response = MagicMock()
+        mock_response.raise_for_status.return_value = None
+        monkeypatch.setattr("src.core.alerting.requests.post", lambda *a, **kw: mock_response)
+
+        saved = {}
+        monkeypatch.setattr("src.core.alerting._load_alert_dedupe", lambda cfg, name: {})
+        monkeypatch.setattr(
+            "src.core.alerting._save_alert_dedupe",
+            lambda cfg, name, key: saved.update({"key": key}),
+        )
+
+        cfg = {"mailbox": "sap@example.com", "tenant_id": "t", "client_id": "c", "client_secret": "s"}
+        send_failure_alert(
+            cfg,
+            pipeline_name="cold_extract",
+            result={"errors": ["col missing"], "dead_letter_files": []},
+            environment="prod",
+            run_date="2026-03-24",
+        )
+
+        assert "key" in saved
+        assert saved["key"].startswith("cold_extract:2026-03-24:")
+
+
+class TestAlertDedupe:
+    """Alert deduplication — identical failure keys must suppress retransmit."""
+
+    def _result_with_dead_letter(self, source_blob: str = "cold_extract/2026-03-24/bad.csv") -> dict:
+        return {
+            "status": "ok",
+            "errors": [],
+            "dead_letter_files": [{"source_blob": source_blob, "reason": "validation_failed"}],
+            "date": "2026-03-24",
+        }
+
+    def test_compute_alert_key_is_stable(self):
+        """Same pipeline/date/result should always produce the same key."""
+        result = self._result_with_dead_letter()
+        k1 = _compute_alert_key("cold_extract", "2026-03-24", result)
+        k2 = _compute_alert_key("cold_extract", "2026-03-24", result)
+        assert k1 == k2
+        assert k1.startswith("cold_extract:2026-03-24:")
+
+    def test_compute_alert_key_differs_for_different_source_blobs(self):
+        """A new failing file on the same date must yield a different key."""
+        result_a = self._result_with_dead_letter("path/to/file_a.csv")
+        result_b = self._result_with_dead_letter("path/to/file_b.csv")
+        assert _compute_alert_key("cold_extract", "2026-03-24", result_a) != \
+               _compute_alert_key("cold_extract", "2026-03-24", result_b)
+
+    def test_compute_alert_key_differs_for_different_dates(self):
+        result = self._result_with_dead_letter()
+        assert _compute_alert_key("cold_extract", "2026-03-24", result) != \
+               _compute_alert_key("cold_extract", "2026-03-25", result)
+
+    def test_send_failure_alert_suppresses_duplicate_key(self, monkeypatch):
+        """If the stored key matches, no POST should be made and return is False."""
+        monkeypatch.setenv("ALERT_ENABLED", "true")
+        monkeypatch.setenv("ALERT_EMAIL_TO", "ops@example.com")
+
+        result = self._result_with_dead_letter()
+        matching_key = _compute_alert_key("cold_extract", "2026-03-24", result)
+
+        monkeypatch.setattr(
+            "src.core.alerting._load_alert_dedupe",
+            lambda cfg, name: {"last_key": matching_key},
+        )
+
+        post_called = []
+        monkeypatch.setattr("src.core.alerting.requests.post", lambda *a, **kw: post_called.append(1))
+
+        cfg = {"mailbox": "x@x.com", "tenant_id": "t", "client_id": "c", "client_secret": "s"}
+        sent = send_failure_alert(
+            cfg,
+            pipeline_name="cold_extract",
+            result=result,
+            environment="prod",
+            run_date="2026-03-24",
+        )
+
+        assert sent is False
+        assert not post_called
+
+    def test_send_failure_alert_fires_when_key_changes(self, monkeypatch):
+        """A different key (new file failing) must not be suppressed."""
+        monkeypatch.setenv("ALERT_ENABLED", "true")
+        monkeypatch.setenv("ALERT_EMAIL_TO", "ops@example.com")
+        monkeypatch.setattr("src.core.alerting.get_graph_token", lambda cfg: "t")
+        monkeypatch.setattr("src.core.alerting._save_alert_dedupe", lambda *a: None)
+
+        result = self._result_with_dead_letter("path/to/new_file.csv")
+        # Stored key is from a different failing file
+        old_key = _compute_alert_key("cold_extract", "2026-03-24", self._result_with_dead_letter("path/to/old_file.csv"))
+        monkeypatch.setattr("src.core.alerting._load_alert_dedupe", lambda cfg, name: {"last_key": old_key})
+
+        mock_response = MagicMock()
+        mock_response.raise_for_status.return_value = None
+        monkeypatch.setattr("src.core.alerting.requests.post", lambda *a, **kw: mock_response)
+
+        cfg = {"mailbox": "x@x.com", "tenant_id": "t", "client_id": "c", "client_secret": "s"}
+        sent = send_failure_alert(
+            cfg,
+            pipeline_name="cold_extract",
+            result=result,
+            environment="prod",
+            run_date="2026-03-24",
+        )
+
+        assert sent is True
+
+
+class TestFileNameExtraction:
+    """_extract_file_name (function_app helper) — verify dead-letter and empty cases."""
+
+    def test_extracts_filename_from_dead_letter_source_blob(self):
+        from azure_functions.function_app import _extract_file_name
+
+        result = {
+            "dead_letter_files": [
+                {"source_blob": "cold_extract/2026-03-24/bad_file.csv", "reason": "validation_failed"},
+                {"source_blob": "cold_extract/2026-03-24/another_bad.csv", "reason": "parse_error"},
+            ]
+        }
+        assert _extract_file_name(result) == "bad_file.csv"
+
+    def test_returns_none_when_no_dead_letters(self):
+        from azure_functions.function_app import _extract_file_name
+
+        assert _extract_file_name({"status": "ok", "errors": ["something"]}) is None
+
+    def test_returns_none_for_empty_result(self):
+        from azure_functions.function_app import _extract_file_name
+
+        assert _extract_file_name({}) is None
 

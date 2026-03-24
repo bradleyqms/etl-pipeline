@@ -65,6 +65,20 @@ log = logging.getLogger("qms-etl")
 # HELPERS — run pipelines
 # ═════════════════════════════════════════════
 
+def _extract_file_name(result: dict) -> str | None:
+    """Extract the primary failing filename from a pipeline result dict.
+
+    Prefers the first dead-letter entry's source blob name (most informative).
+    Falls back to the last successfully ingested blob path for ingest results.
+    """
+    dead_letters = result.get("dead_letter_files") or []
+    if dead_letters:
+        source = dead_letters[0].get("source_blob", "")
+        return source.rsplit("/", 1)[-1] if source else None
+    # For ingest results the failing file isn't captured cleanly — skip gracefully
+    return None
+
+
 def _send_alert_if_needed(pipeline_name: str, result: dict) -> None:
     from src.core.alerting import send_failure_alert, should_send_failure_alert
     from src.pipelines.config import get_pipeline
@@ -80,6 +94,7 @@ def _send_alert_if_needed(pipeline_name: str, result: dict) -> None:
             result=result,
             environment=os.getenv("ENVIRONMENT", "prod"),
             run_date=result.get("date"),
+            file_name=_extract_file_name(result),
         )
     except Exception as exc:
         log.warning("%s alert send failed: %s", pipeline_name, exc)
