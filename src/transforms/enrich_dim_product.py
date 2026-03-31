@@ -146,6 +146,44 @@ PRODUCT_LINE_CATEGORY: dict[str, str] = {
     "ISOVERKAUF":          "Uncategorised",
 }
 
+# product_line_clean value → sales channel classification for reporting
+# Retail  : packaged skincare products sold direct to consumers / retailers
+# Professional : treatment / spa-consumable products sold to spa professionals
+# Other   : packaging, promotional bundles, accessories, non-sellable items
+# Update this dict whenever new product lines are added to the catalogue.
+SKU_CHANNEL_MAP: dict[str, str] = {
+    # ── Retail skincare lines ──────────────────────────────────────────────
+    "Age Prevent":           "Retail",
+    "Hydromax":              "Retail",
+    "Derma Expert":          "Retail",
+    "Derma Expert Face":     "Retail",
+    "Derma Expert Body":     "Retail",
+    "Derma Restore":         "Retail",
+    "Epigen Protect":        "Retail",
+    "Precision Care":        "Retail",
+    "Collagen System":       "Retail",
+    "Body Balance":          "Retail",
+    "Active Glow":           "Retail",
+    # ── Professional / spa treatment lines ───────────────────────────────
+    "Core System":           "Professional",
+    "Exfoliant System":      "Professional",
+    "Cleanse System":        "Professional",
+    "Oxygen":                "Professional",
+    "Treatment Accessories": "Professional",
+    "Professional Equipment": "Professional",
+    # ── Other / non-product ──────────────────────────────────────────────
+    "Offers":                "Other",
+    "Sets":                  "Other",
+    "Other":                 "Other",
+    "Packaging":             "Other",
+    "Packaging (Legacy)":    "Other",
+    "Accessories":           "Other",
+    "Info Cards":            "Other",
+    "Displays":              "Other",
+    "Posters":               "Other",
+    "Merchandising":         "Other",
+}
+
 # Keywords in product_line (UPPER) that imply non-sellable sku_type
 _PACKAGING_KW   = {"VERPACKUNG", "PACKAGING", "OLD PACKAGING", "INFOKARTE",
                    "AUFSTELLER", "POSTER", "POSTERSCHIENE"}
@@ -279,7 +317,10 @@ def enrich(df: pd.DataFrame) -> pd.DataFrame:
         )
     ]
 
-    # 6. item_code_prefix — first 2 chars for analysis
+    # 6. sku_channel — Retail / Professional / Other (from SKU_CHANNEL_MAP)
+    df["sku_channel"] = df["product_line_clean"].map(SKU_CHANNEL_MAP).fillna("Other")
+
+    # 7. item_code_prefix — first 2 chars for analysis
     df["item_code_prefix"] = df["item_code"].str[:2].str.upper()
 
     return df
