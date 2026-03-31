@@ -1,0 +1,69 @@
+customer_code,customer_name,customer_region,sales_person,new_door_year,is_active,cluster_2025,cluster_2026,growth_class,actual_2025,budget_2026_total,source_sheet,source_file_name,extract_type
+25001,Four Seasons Hotel Philadelphia; PA,Northeast,Marcus,2021,,A,A+,Grow,26036.49,30000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25037,Equinox Holdings Inc; Boston,Northeast,Marcus,2023,,B,C,Maintain,5249.319999999999,6000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25045,dba Haven Spa,Northeast,Marcus,2024,,NKD24,C,Maintain,5838.02,6000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25049,Four Seasons Baltimore; MD,Northeast,Marcus,2024,,NKD24,A+,Grow,14251.070000000002,20000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25061,Equinox Holdings Inc; Washington DC,Northeast,Marcus,2025,,NKD25,C,Maintain,6871.790000000001,7000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25062,Equinox Holdings Inc; SPA Retail Washington DC,Northeast,Marcus,2025,,NKD25,C,Maintain,3844.76,5000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25070,Renaissance Hotel Partners LLC,Northeast,Marcus,2025,,NKD25,A++,Grow,19760.0,25000.0,Northeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25039,Four Seasons Hotel Austin; DTRS Austin LLC,Central,Emily,2024,,NKD24,Lost,Lose,2153.52,,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25044,The Elms Hotel and Spa; Missouri,Central,Emily,2024,,NKD24,A,Grow,26752.850000000002,28000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25050,"Mokara Hotel & Spa, Omni Hotels Management Corp.",Central,Emily,2024,,NKD24,A+,Grow,7207.32,12000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25054,Four Seasons Hotel Nashville; TN,Southeast,Emily,2024,,NKD24,A+,Grow,26549.660000000003,30000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25056,AMI LLC Bergamos Retreat,Central,Emily,2024,,NKD24,A+++,Grow,35149.62,50000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25068,321 Skin Glow LLC,Central,Emily,2025,,NKD25,B,Grow,9538.0,12000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25071,Nerdium LLC; Texas,Central,Emily,2025,,NKD25,B,Grow,5488.99,10000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25073,Mario Tricoci Hair Salons & Day Spas,Central,Emily,2025,,NKD25,A,Grow,8904.0,20000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25074,"Houstonian Campus, LLC",Central,Emily,2025,,NKD25,A++,Grow,6178.28,12000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25060,Nashville Hospitality/DBA Westin,Southeast,Emily,2025,,NKD25,B,Grow,10814.48,12000.0,Central,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25012,"Rosewood Sense Spa, CA",West,Erin,2022,,A+,Lost,Lose,52636.33000000001,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25027,San Manuel Entert.; Yaamava Resort; Highland,West,Erin,2022,,A+,A+++,Grow,113790.06999999999,120000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25032,Four Seasons Hotel Las Vegas,West,Erin,2023,,A+,A+,Grow,44420.92999999999,50000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25038,"Lemon & Honey Day Spa; Orange, CA",West,Erin,2023,,A,B,Maintain,13457.210000000001,13000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25004,Teton Mountain Lodge,West,Erin,2021,,B,C,Maintain,6008.52,6000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25000,West Coast Lifestyles Inc.; CA,West,Erin,2021,,C,Lost,Lose,737.0,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25015,Gateway Canyon Resort & Spa; CO,West,Erin,2022,,C,C,,1573.68,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25036,MacArthur Place; LÁuberge de Sonoma LLC; CA,West,Erin,2023,,C,C,,654.34,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25046,"Beverly Wilshire,Four Seasons Hotel, CA",West,Erin,2024,,NKD24,Lost,Lose,1551.69,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25052,Rosewood Miramar Beach; CA,West,Erin,2024,,NKD24,Lost,Lose,0.0,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25053,"Bonnie Frances Skin;Phoenix, AZ",West,Erin,2024,,NKD24,C,Maintain,1846.6399999999999,2000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25058,"Five Point Five, Inc.",West,Erin,2024,,NKD24,C,Maintain,3996.0,4000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25059,Red Rock Tivoli Aestetics,West,Erin,2024,,NKD24,C,Maintain,5002.82,5000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25064,Embracing the Dance of Healing,West,Erin,2025,,NKD25,Lost,Lose,2111.76,,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25065,"Cupid Lift Inc., West Hollywood",West,Erin,2025,,NKD25,C,Maintain,4155.0,5000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25066,ARIA Resort & Casino; Las Vegas,West,Erin,2025,,NKD25,A+++,Grow,20154.800000000003,30000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25067,"The Ritz-Carlton, Half Moon Bay LLC",West,Erin,2025,,NKD25,A+++,Grow,25962.32,30000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25072,Balboa Bay Club Ventures LLC,West,Erin,2025,,NKD25,B,Grow,8683.91,12000.0,West,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25010,"Four Seasons Hotel, Fort Lauderdale; FL",Southeast,Bethany,2022,,A,A+++,Grow,37341.28,45000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25002,Porto Vita/Villa Grande Club; Fl,Southeast,Bethany,2021,,B,A,Grow,25700.67,27000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25016,"Williams Island POA, Inc.Florida",Southeast,Bethany,2022,,B,C,Maintain,3383.2200000000003,5000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25026,JW Marriott Miami Turnberry,Southeast,Bethany,2023,,C,C,Maintain,3885.2,5000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25029,Ana Molinari Inc.; FL,Southeast,Bethany,2023,,C,C,Maintain,4862.18,5000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25040,"AMG Investments LLC, Hurram Hammam; Fl",Southeast,Bethany,2023,,C,B,Maintain,9408.99,10000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25043,"Jupiter Island Holdings, Inc.; Fl",Southeast,Bethany,2023,,C,C,Maintain,3635.0,5000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25008,"Stars Skincare Med Spa, Florida",Southeast,Bethany,2021,,,Lost,Lose,0.0,,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25024,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",Southeast,Bethany,2022,,,Lost,Lose,0.0,,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25047,"Four Seasons Resort Orlando,FL",Southeast,Bethany,2024,,NKD24,A+,Grow,29214.710000000003,35000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25055,USREC Banyan Cay Resort LLC,Southeast,Bethany,2024,,NKD24,B,Grow,3791.52,12000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25063,Equinox Holdings Inc; Miami,Southeast,Bethany,2025,,NKD25,B,Grow,7189.44,10000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25069,Simply Bliss SkinCare LLC,Southeast,Bethany,2025,,NKD25,C,Maintain,343.0,1000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25076,Costa d' Este Beach Resort & Spa,Other,Bethany,2025,,NKD25,B,Grow,3193.01,12000.0,Southeast,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25035,Rosewood Little Dix Bay; Helen Lugo,Other,Melissa,2023,,B,Lost,Lose,0.0,,Other,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25042,Eau Spa Palm Beach; Fl,Southeast,Bethany,2023,,A,A+++,Grow,63209.73999999999,70000.0,Other,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25075,Wyndham Grand Rio Mar Hotel,Other,Melissa,2025,,NKD25,A,Grow,14403.8,20000.0,Other,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25003,The resort at Longboat Key CLub; Florida,Southeast,Lisa,2021,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25009,Glo Rejuvenation; Oregon,West,Amy,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25011,D&G Global Inc.; Claire Gobler; CA,West,Amy,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25013,Gurney ´s Inn Resort & Spa LLC; NY,Central,Emily,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25018,Iridescent LLC; Big-Bang; Miiami; Paula,Southeast,Lisa,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25019,Banyan Cay Res.; W Palm Beach; Melissa,Southeast,Lisa,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25020,Faena Hotel Miami Beach; FL,Southeast,Lisa,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25021,TALISKER CLUB; Holly Arndt,Central,Amy,,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25022,Beating Hearts; Dallas; Lori Feste,Central,Amy,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25023,HLP Hotels LLC DBA Lost Pines; Texas,Central,Amy,2022,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25025,"ARCH Amenity Group, Florida",Southeast,Lisa,,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25028,Jenny Y Yu; MD FACS PLLC,Northeast,Emily,2023,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25033,Body Works Day Spa; Stewart Manor,Northeast,Emily,2023,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25034,"Live Love Spa; Tustin, CA",Other,Melissa,2023,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25041,Agata Sokolowska; IL,Central,Emily,2023,No,,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot
+25057,Waldorf Astoria Spa Chicago,Central,Emily,2024,No,NKD24,Lost,Lose,0.0,0.0,Lost,20260324T164535Z_2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,us_budget_v2_customer_snapshot

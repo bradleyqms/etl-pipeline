@@ -1,0 +1,30 @@
+model Model
+	culture: en-GB
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-GB
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Fact Budget","Dim Customer","Fact Sales","Dim Date","Dim Salesperson","Dim Product"]
+
+annotation PBI_ProTooling = ["MCP-PBIModeling"]
+
+ref table 'Fact Budget'
+ref table DateTableTemplate_974e782d-5655-4e40-8fda-e89977551a55
+ref table LocalDateTable_881a7537-6cdc-4c57-862e-c916090118af
+ref table 'Dim Customer'
+ref table 'Fact Sales'
+ref table LocalDateTable_29d952fb-57e7-40c5-bab7-3e0a56d69bac
+ref table 'Dim Date'
+ref table LocalDateTable_1e8f56e3-4db6-4cf4-bde7-801dcc9520c7
+ref table 'Dim Salesperson'
+ref table 'Dim Product'
+ref table _Measures
+ref table 'Time Intelligence'
+
+ref cultureInfo en-GB
+

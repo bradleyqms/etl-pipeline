@@ -1,0 +1,9 @@
+cluster,definition,extract_type
+A+++,QMS Key Account with a target / potential > $100k per year,us_budget_v2_definition_map
+A++,QMS Key Account with a target / potential $50k - $100k per year,us_budget_v2_definition_map
+A+,QMS Key Account with a target / potential $30k - $50k per year,us_budget_v2_definition_map
+A,"Non-key account, with 2025 sales > $20k or 2026 target >$20k",us_budget_v2_definition_map
+B,"Non-key account, with 2025 sales > $10k or 2026 target >$10k",us_budget_v2_definition_map
+C,"Non-key account, with 2025 sales < $10k or 2026 target <$10k",us_budget_v2_definition_map
+Lost,"Lost door, no budget",us_budget_v2_definition_map
+NKD26,New door won in 2026,us_budget_v2_definition_map

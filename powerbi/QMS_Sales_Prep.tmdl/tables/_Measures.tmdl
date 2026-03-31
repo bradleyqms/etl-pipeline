@@ -1,0 +1,153 @@
+table _Measures
+	lineageTag: 7239962e-7568-4783-a691-73c0b1b0acd5
+
+	measure '% of Total Revenue' = DIVIDE([Net Revenue EUR], CALCULATE([Net Revenue EUR], ALL('Dim Product')))
+		formatString: 0.0%
+		lineageTag: 71a2925e-3317-4eb8-9939-dd51f46422db
+
+	/// YTD net revenue in EUR.
+	measure 'Net Revenue EUR' = CALCULATE(SUM('Fact Sales'[Revenue EUR]))
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 3f66b469-21b0-45f6-a062-125954f56d43
+
+	measure 'Budget 26 EUR' = SUM('Fact Budget'[Budget Amount EUR])
+		formatString: #,0.00\ "€";-#,0.00\ "€";#,0.00\ "€"
+		lineageTag: 46588254-810e-4f9c-b5a1-9e21077c8739
+
+	measure 'Net Revenue EUR PY' = CALCULATE([Net Revenue EUR], SAMEPERIODLASTYEAR('Dim Date'[Date]))
+		formatString: #,##0 €
+		lineageTag: 257f7f71-3193-47aa-9271-0c0e1d0098fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Units = SUM('Fact Sales'[Quantity])
+		formatString: #,##0
+		lineageTag: a0caf990-0700-4f6e-9736-bcfc4bd91439
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'vs Budget' = [Net Revenue EUR] - [Budget 26 EUR]
+		formatString: #,##0 €
+		lineageTag: 383b131d-c922-4262-a72b-85a1bd57bb2b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'vs Budget %' = DIVIDE([vs Budget], [Budget 26 EUR])
+		formatString: 0.0%
+		lineageTag: 199fe96d-4413-43a0-9bc4-4b361eb961cc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'vs PY' = [Net Revenue EUR] - [Net Revenue EUR PY]
+		formatString: #,##0 €
+		lineageTag: 1d878722-5ce4-4e07-bdbd-68190fa40ba3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'vs PY %' = DIVIDE([vs PY], [Net Revenue EUR PY])
+		formatString: 0.0%
+		lineageTag: 28a7904f-3250-4317-9053-80900891d49f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Budget YTD via calculation group using base measure context.
+	measure 'Budget YTD 2026' =
+			CALCULATE(
+			    [Net Revenue EUR Base],
+			    'Time Intelligence'[Time Intelligence] = "2026B YTD"
+			)
+		formatString: #,##0 €
+		lineageTag: ee0e51ae-8456-4346-8d18-40c82d4e8193
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Vs Budget % Selected Month' = DIVIDE([Actual EUR Selected Month] - [Budget EUR Selected Month], [Budget EUR Selected Month])
+		formatString: 0.0%
+		lineageTag: 1eb5ee1d-9823-4624-8b65-4fa14041f5bc
+
+	/// Latest visible date with actual revenue in current slicer context.
+	measure 'As Of Date' =
+			MAXX(
+			    FILTER(
+			        ALLSELECTED('Dim Date'[Date]),
+			        NOT ISBLANK(
+			            CALCULATE(
+			                [Net Revenue EUR Base],
+			                KEEPFILTERS('Dim Date'[Date] = MAX('Dim Date'[Date]))
+			            )
+			        )
+			    ),
+			    'Dim Date'[Date]
+			)
+		lineageTag: 53d46dd1-d0f9-4592-8102-f735b22c62e6
+
+	/// Actual net revenue for the latest month with actuals in selected date context.
+	measure 'Actual EUR Selected Month' =
+			VAR d = [As Of Date]
+			VAR y = YEAR(d)
+			VAR m = MONTH(d)
+			RETURN
+			CALCULATE(
+			    [Net Revenue EUR Base],
+			    REMOVEFILTERS('Time Intelligence'),
+			    FILTER(
+			        ALL('Dim Date'),
+			        'Dim Date'[Year] = y &&
+			        'Dim Date'[Month Num] = m
+			    )
+			)
+		formatString: #,##0 €
+		lineageTag: 9c2758f2-c57d-4399-b9c5-a898dc2c9c68
+
+	/// Budget for the same selected month used by actual selected month.
+	measure 'Budget EUR Selected Month' =
+			VAR d = [As Of Date]
+			VAR y = YEAR(d)
+			VAR m = MONTH(d)
+			RETURN
+			CALCULATE(
+			    SUM('Fact Budget'[Budget Amount EUR]),
+			    REMOVEFILTERS('Time Intelligence'),
+			    FILTER(
+			        ALL('Dim Date'),
+			        'Dim Date'[Year] = y &&
+			        'Dim Date'[Month Num] = m
+			    )
+			)
+		formatString: #,##0 €
+		lineageTag: a5b48049-8e23-4111-bdab-caf760e06fad
+
+	measure 'Budget EUR Cumulative' =
+			
+			VAR d = MAX('Dim Date'[Date])
+			RETURN
+			CALCULATE(
+			    [Budget 26 EUR],
+			    FILTER(
+			        ALLSELECTED('Dim Date'[Date]),
+			        'Dim Date'[Date] <= d
+			    )
+			)
+		lineageTag: 9783ce1c-92ca-4edf-9a7e-c6afe43c7ee6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Base (non-YTD) net revenue in EUR.
+	measure 'Net Revenue EUR Base' = CALCULATE(SUM('Fact Sales'[Revenue EUR]), REMOVEFILTERS('Time Intelligence'))
+		formatString: #,##0 €
+		lineageTag: 141dc3dd-f2a8-40db-8f6d-ff912ad90fae
+
+	column Placeholder
+		lineageTag: f618e2d7-b470-4962-82bb-08cecd81bf1b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Placeholder]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = DATATABLE("Placeholder", STRING, {{""}})
+
+	annotation PBI_Id = 50e9fefb822f40e6bc1e62c226c45aba
+

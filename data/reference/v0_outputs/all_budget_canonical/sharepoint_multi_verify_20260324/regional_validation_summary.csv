@@ -1,0 +1,6 @@
+regional_view,dataset_family,report_monthly_rows,report_month_min,report_month_max,report_distinct_month_count,sales_monthly_rows,sales_customer_rows,group_lines_rows,sales_monthly_null_customer_code_rows,sales_monthly_null_budget_month_rows,sales_monthly_null_budget_amount_rows,sales_monthly_null_sales_person_rows,sales_customer_null_customer_code_rows,sales_customer_null_customer_name_rows,sales_customer_null_sales_person_rows,duplicate_customer_key_rows,duplicate_customer_key_count,month_min,month_max,distinct_month_count
+us_budget,sales_budget,75,2022-01-01,2026-12-01,15.0,3783,74,0,0.0,0.0,0.0,634.0,0.0,0.0,42.0,0.0,0.0,2022-01-01,2026-12-01,60.0
+uk_budget,sales_budget,45,2022-01-01,2026-12-01,15.0,387,25,0,0.0,0.0,0.0,387.0,0.0,0.0,25.0,0.0,0.0,2022-01-01,2026-12-01,15.0
+core_markets_budget,sales_budget,105,2022-01-01,2026-12-01,15.0,14904,733,0,0.0,0.0,0.0,8448.0,0.0,1.0,703.0,0.0,0.0,2022-01-01,2026-12-01,27.0
+export_budget,sales_budget,123,2022-01-01,2026-12-01,15.0,215,49,0,0.0,0.0,0.0,215.0,0.0,0.0,49.0,0.0,0.0,2022-01-01,2026-12-01,15.0
+group_budget,group_budget,0,,,,0,0,2571,,,,,,,,,,,,

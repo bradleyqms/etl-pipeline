@@ -1,0 +1,18 @@
+category,category_plain_english,region,sub_region,sales_person,workbook_existing_k,reference_existing_k,delta_existing_k,workbook_new_k,reference_new_k,delta_new_k,workbook_total_k,reference_total_k,delta_total_k
+new_correct_existing_wrong,"New is correct, but existing is still off.",Benelux,NL Central,Marjelein,93.020078,98.032,-5.011921999999984,4.0,4.0,0.0,97.020078,102.0,-4.979921999999988
+new_correct_existing_wrong,"New is correct, but existing is still off.",Benelux,NL Other,-Kein Vertriebsmitarbeiter-,1.1,2.7,-1.6,0.0,0.0,0.0,1.1,3.0,-1.9
+new_correct_existing_wrong,"New is correct, but existing is still off.",France,France South,Yannick,5.0,4.0,1.0,4.0,4.0,0.0,9.0,8.0,1.0
+new_correct_existing_wrong,"New is correct, but existing is still off.",Germany,Bayern,I. Papoulias,61.49391957000001,60.932,0.5619195700000077,4.0,4.0,0.0,65.49391957,65.0,0.4939195700000027
+new_correct_existing_wrong,"New is correct, but existing is still off.",Germany,DE Other,-Kein Vertriebsmitarbeiter-,11.66,23.32,-11.66,0.0,0.0,0.0,11.66,24.0,-12.34
+new_correct_existing_wrong,"New is correct, but existing is still off.",Switzerland,German Switzerland,Christiane,67.08607936,70.094,-3.0079206399999947,4.0,4.2,-0.2000000000000001,71.08607936,74.0,-2.9139206400000006
+both_existing_and_new_wrong,Both existing and new are still off.,France,France North,Elena,2.5,5.0,-2.5,5.0,10.0,-5.0,7.5,16.0,-8.5
+fully_aligned,Existing and new both line up.,Benelux,NL Other + BL,Gabrielle,102.47238162000002,102.462,0.0103816200000181,4.0,4.0,0.0,106.47238162000002,106.0,0.4723816200000215
+fully_aligned,Existing and new both line up.,Germany,NRW - Marina,Marina,59.41372141000001,59.414,-0.0002785899999935,4.0,4.0,0.0,63.41372141000001,63.0,0.4137214100000079
+fully_aligned,Existing and new both line up.,Germany,NRW - Ulrike,Ulrike,15.792999440000004,15.793,-5.599999965966163e-07,3.0,3.0,0.0,18.792999440000003,19.0,-0.2070005599999973
+fully_aligned,Existing and new both line up.,Germany,North,Kerstin,65.38896391,65.389,-3.608999999471507e-05,5.0,5.0,0.0,70.38896391,70.0,0.3889639100000011
+fully_aligned,Existing and new both line up.,Germany,North East,Aracelli,40.54526388000001,40.545,0.0002638800000056,4.0,4.0,0.0,44.54526388000001,45.0,-0.4547361199999926
+fully_aligned,Existing and new both line up.,Germany,Retail,Aracelli,20.0,20.0,0.0,0.0,0.0,0.0,20.0,20.0,0.0
+fully_aligned,Existing and new both line up.,Germany,South West,Sibylle,185.38181692,185.382,-0.0001830799999993,4.0,4.0,0.0,189.38181692,189.0,0.3818169200000056
+fully_aligned,Existing and new both line up.,Italy,Italy,Elena,1.5,1.5,0.0,4.0,4.0,0.0,5.5,6.0,-0.5
+fully_aligned,Existing and new both line up.,Spain,Spain,Montse,17.5,17.5,0.0,4.0,4.0,0.0,21.5,22.0,-0.5
+fully_aligned,Existing and new both line up.,Switzerland,French Switzerland,Elena,3.5,3.675,-0.1749999999999998,5.0,5.25,-0.25,8.5,9.0,-0.5

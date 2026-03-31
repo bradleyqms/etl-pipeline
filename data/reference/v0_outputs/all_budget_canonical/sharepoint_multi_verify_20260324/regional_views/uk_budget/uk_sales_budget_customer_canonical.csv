@@ -1,0 +1,26 @@
+customer_code,customer_name,Sales person,sales_person,Customer Map,Active?,market_group,region,sub_region,company_group,door_type,sheet_name,workbook_name,workbook_type,Region,Country,2025 Cluster,channel,2026 Cluster,budget_version
+51184,The Connaught Hotel,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,BB,Spa,,2026.01.19
+51185,Four Seasons Hotel London,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+51186,hope street hotel; Liverpool,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,BB,Spa,,2026.01.19
+51187,Julia Knight; Sale,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,CC,Spa,,2026.01.19
+51189,RTL Limited; The Grove Hotel,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+53000,IzzyJ Aesthetics,,,Other,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,CC,Spa,,2026.01.19
+53014,Oblique house of aesthetics; London,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+53015,Hilton Bankside; Ken Tui Management Ltd.; London,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+53016,Royal London House; Ken Tui Managem. Ltd,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+53017,Piccadilly Town House; Ken Tui Managem. Ltd,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD24,Spa,,2026.01.19
+53019,M Alexander London,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+53018,"The Goodwood Hotel, Chichester",,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+53020,Guendalina The Skin Sculpter LTD,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+51192,Rachel Staggs Ltd.,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+51191,Louise Godsil; Tranquil Escape,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+53021,Ayadi Ltd.,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+51194,Artfarm Limited; The Fife Arms Braemar,,,Spas / Hotels,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+51196,CHAPEL BEAUTY,,,Institutes / Clinics,,UK,Spa,,Company 1,,UK Spa Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Spa,UK,NKD25,Spa,,2026.01.19
+51101,Liberty,,,Retail,,UK,Retail,,Company 1,,UK Retail Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Retail,UK,AA,Retail,,2026.01.19
+51172,Harrods (UK) Ltd.,,,Retail,,UK,Retail,,Company 1,,UK Retail Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Retail,UK,AA,Retail,,2026.01.19
+51183,"John Bell & Croyden, London",,,Retail,,UK,Retail,,Company 1,,UK Retail Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,Retail,UK,CC,Retail,,2026.01.19
+51175,The Hut.com Ltd; Poland,,,eTailers,,UK,Global eTailers,,Company 3,,Global eTailer Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,eTailers,UK,BC,Global eTailers,,2026.01.19
+51176,The Hut.com Ltd; GB,,,eTailers,,UK,Global eTailers,,Company 3,,Global eTailer Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,eTailers,UK,BC,Global eTailers,,2026.01.19
+-25,New doors 2025,,,,0.0,UK,Global eTailers,,Company 3,new_2025,Global eTailer Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,eTailers,UK,NKD25,Global eTailers,,2026.01.19
+-26,New doors 2026,,,,0.0,UK,Global eTailers,,Company 3,new_2026,Global eTailer Budget,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,uk_budget,eTailers,UK,NKD26,Global eTailers,,2026.01.19

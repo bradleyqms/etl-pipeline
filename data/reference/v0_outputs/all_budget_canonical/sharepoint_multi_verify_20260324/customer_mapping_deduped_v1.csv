@@ -1,0 +1,123 @@
+Entity,Market_Group,Region,Sub Region,Channel_Level,Company_Group,Sales_Employee,Customer_Code,Customer_Name,Sales_Employee_Cleaned,canonical_entity,canonical_customer_code,canonical_salesperson_name,customer_name_mapping,has_sp,has_name,dedup_rule
+Descomed,UK,UK,,Global etailers,Company 3,,10048.0,Luisa Via Roma Spa; Italy,,UK,10048,,Luisa Via Roma Spa; Italy,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Retail ,Company 1,,51101.0,Liberty Retail Ltd,,UK,51101,,Liberty Retail Ltd,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Interco,,Interco,51158.0,Liberty PR,Interco,UK,51158,INTERCO,Liberty PR,1,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Retail ,Company 1,,51172.0,Harrods (UK) Ltd.,,UK,51172,,Harrods (UK) Ltd.,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51175.0,The Hut.com Ltd; Poland,,UK,51175,,The Hut.com Ltd; Poland,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51176.0,The Hut.com Ltd; GB,,UK,51176,,The Hut.com Ltd; GB,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51177.0,Net-A-Porter; London GB,,UK,51177,,Net-A-Porter; London GB,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51178.0,Net-A-Porter; USA,,UK,51178,,Net-A-Porter; USA,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51179.0,Net-A-Porter; Hong Kong,,UK,51179,,Net-A-Porter; Hong Kong,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Global etailers,Company 3,,51180.0,Net-A-Porter; Italy,,UK,51180,,Net-A-Porter; Italy,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Retail ,Company 1,,51183.0,"John Bell & Croyden, London",,UK,51183,,"John Bell & Croyden, London",0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51184.0,The Connaught Hotel,,UK,51184,,The Connaught Hotel,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51185.0,Four Seasons Trinity,,UK,51185,,Four Seasons Trinity,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51186.0,hope street hotel; Liverpool,,UK,51186,,hope street hotel; Liverpool,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51187.0,Julia Knight; Sale,,UK,51187,,Julia Knight; Sale,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51189.0,RTL Limited; The Grove Hotel,,UK,51189,,RTL Limited; The Grove Hotel,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51191.0,Louise Godsil; Tranquil Escape,,UK,51191,,Louise Godsil; Tranquil Escape,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51192.0,Rachel Staggs Ltd.,,UK,51192,,Rachel Staggs Ltd.,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51193.0,Mweya PVT Ltd; Dubai,,UK,51193,,Mweya PVT Ltd; Dubai,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51194.0,Artfarm Limited; The Fife Arms Braemar,,UK,51194,,Artfarm Limited; The Fife Arms Braemar,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51196.0,CHAPEL BEAUTY,,UK,51196,,CHAPEL BEAUTY,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,51197.0,Sue Davis Ltd.,,UK,51197,,Sue Davis Ltd.,0,1,prefer_salesperson_then_name
+Descomed,UK,Interco,,Interco,,Interco,51202.0,"DESCOMED GB, London ( PR + Other )",Interco,UK,51202,INTERCO,"DESCOMED GB, London ( PR + Other )",1,1,prefer_salesperson_then_name
+Descomed,UK,Interco,,Interco,,Interco,51206.0,"DESCOMED GB, London (Personal BlueGem)",Interco,UK,51206,INTERCO,"DESCOMED GB, London (Personal BlueGem)",1,1,prefer_salesperson_then_name
+Descomed,UK,Interco,,Interco,,Interco,51207.0,,Interco,UK,51207,INTERCO,,1,1,prefer_salesperson_then_name
+Descomed,UK,Interco,,Interco,,Interco,51210.0,Katarzyna Walkowiak; MA Liberty,Interco,UK,51210,INTERCO,Katarzyna Walkowiak; MA Liberty,1,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53000.0,IzzyJ Aesthetics,,UK,53000,,IzzyJ Aesthetics,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53008.0,Saintly Skin;Frederika Van Hagan,,UK,53008,,Saintly Skin;Frederika Van Hagan,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53011.0,Liliana Fernandes,,UK,53011,,Liliana Fernandes,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Retail ,Company 1,,53012.0,Virginie Alvarez,,UK,53012,,Virginie Alvarez,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53014.0,Oblique house of aesthetics; London,,UK,53014,,Oblique house of aesthetics; London,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53015.0,Hilton Bankside; Ken Tui Management Ltd.; London,,UK,53015,,Hilton Bankside; Ken Tui Management Ltd.; London,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53016.0,Royal London House; Ken Tui Managem. Ltd,,UK,53016,,Royal London House; Ken Tui Managem. Ltd,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53017.0,Piccadilly Town House; Ken Tui Managem. Ltd,,UK,53017,,Piccadilly Town House; Ken Tui Managem. Ltd,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53018.0,"The Goodwood Hotel, Chichester",,UK,53018,,"The Goodwood Hotel, Chichester",0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53019.0,M Alexander London,,UK,53019,,M Alexander London,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53020.0,Guendalina The Skin Sculpter LTD,,UK,53020,,Guendalina The Skin Sculpter LTD,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,Spa ,Company 1,,53021.0,Ayadi Ltd.,,UK,53021,,Ayadi Ltd.,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,eCommerce (excl. USA),Company 3,,59100.0,Shopify UK,,UK,59100,,Shopify UK,0,1,prefer_salesperson_then_name
+Descomed,UK,UK,,eCommerce (excl. USA),Company 3,,59200.0,Shopify ROW,,UK,59200,,Shopify ROW,0,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25000.0,West Coast Lifestyles Inc.; CA,Erin,US,25000,ERIN,West Coast Lifestyles Inc.; CA,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25001.0,Four Seasons Hotel Philadelphia; ; El Paso,Marcus,US,25001,MARCUS,Four Seasons Hotel Philadelphia; ; El Paso,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25002.0,Porto Vita/Villa Grande Club; Fl,Bethany,US,25002,BETHANY,Porto Vita/Villa Grande Club; Fl,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25003.0,The resort at Longboat Key CLub; Florida,Bethany,US,25003,BETHANY,The resort at Longboat Key CLub; Florida,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25004.0,Teton Mountain Lodge,Erin,US,25004,ERIN,Teton Mountain Lodge,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25005.0,"Karen Reddy-Medeiros, Canada",Interco,US,25005,INTERCO,"Karen Reddy-Medeiros, Canada",1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25006.0,INNOVATIVE PR; Kamie O´Connor,Interco,US,25006,INTERCO,INNOVATIVE PR; Kamie O´Connor,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25007.0,"Melissa Blamey, White Plains",Interco,US,25007,INTERCO,"Melissa Blamey, White Plains",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25008.0,"Stars Skincare Med Spa, Florida",Bethany,US,25008,BETHANY,"Stars Skincare Med Spa, Florida",1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25009.0,Glo Rejuvenation; Oregon,Erin,US,25009,ERIN,Glo Rejuvenation; Oregon,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25010.0,"Four Seasons Hotel, Fort Lauderdale; FL",Bethany,US,25010,BETHANY,"Four Seasons Hotel, Fort Lauderdale; FL",1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25011.0,D&G Global Inc.; Claire Gobler; CA,Erin,US,25011,ERIN,D&G Global Inc.; Claire Gobler; CA,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25012.0,"Rosewood Sense Spa, CA",Erin,US,25012,ERIN,"Rosewood Sense Spa, CA",1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25013.0,Gurney ´s Inn Resort & Spa LLC; NY,Marcus,US,25013,MARCUS,Gurney ´s Inn Resort & Spa LLC; NY,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25015.0,Gateway Canyon Resort & Spa; CO,Erin,US,25015,ERIN,Gateway Canyon Resort & Spa; CO,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25016.0,"Williams Island POA, Inc.Florida",Bethany,US,25016,BETHANY,"Williams Island POA, Inc.Florida",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25018.0,Iridescent LLC; Big-Bang; Miiami; Paula,Bethany,US,25018,BETHANY,Iridescent LLC; Big-Bang; Miiami; Paula,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25019.0,Banyan Cay Res.; W Palm Beach; Melissa,Bethany,US,25019,BETHANY,Banyan Cay Res.; W Palm Beach; Melissa,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25020.0,Faena Hotel Miami Beach; FL,Bethany,US,25020,BETHANY,Faena Hotel Miami Beach; FL,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25021.0,TALISKER CLUB; Holly Arndt,Erin,US,25021,ERIN,TALISKER CLUB; Holly Arndt,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25022.0,Beating Hearts; Dallas; Lori Feste,Erin,US,25022,ERIN,Beating Hearts; Dallas; Lori Feste,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25023.0,HLP Hotels LLC DBA Lost Pines; Texas,Erin,US,25023,ERIN,HLP Hotels LLC DBA Lost Pines; Texas,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25024.0,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",Bethany,US,25024,BETHANY,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25025.0,"ARCH Amenity Group, Florida",Bethany,US,25025,BETHANY,"ARCH Amenity Group, Florida",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25026.0,JW Marriott Miami Turnberry,Bethany,US,25026,BETHANY,JW Marriott Miami Turnberry,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25027.0,San Manuel Entert.; Yaamava Resort; Highland,Erin,US,25027,ERIN,San Manuel Entert.; Yaamava Resort; Highland,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25028.0,Jenny Y Yu; MD FACS PLLC,Marcus,US,25028,MARCUS,Jenny Y Yu; MD FACS PLLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25029.0,Ana Molinari Inc.; FL,Bethany,US,25029,BETHANY,Ana Molinari Inc.; FL,1,1,prefer_salesperson_then_name
+Inc.,USA,Retail,,Retail,Company 1,,25030.0,Saks.com LLC; NY (Web orders),,US,25030,,Saks.com LLC; NY (Web orders),0,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25032.0,Four Seasons Hotel Las Vegas,Erin,US,25032,ERIN,Four Seasons Hotel Las Vegas,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25033.0,Body Works Day Spa; Stewart Manor,Marcus,US,25033,MARCUS,Body Works Day Spa; Stewart Manor,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25034.0,"Live Love Spa; Tustin, CA",Erin,US,25034,ERIN,"Live Love Spa; Tustin, CA",1,1,prefer_salesperson_then_name
+Inc.,USA,Other,,Spa,Company 1,,25035.0,Rosewood Little Dix Bay; Helen Lugo,Melissa,US,25035,MELISSA,Rosewood Little Dix Bay; Helen Lugo,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25036.0,MacArthur Place; LÁuberge de Sonoma LLC; CA,Erin,US,25036,ERIN,MacArthur Place; LÁuberge de Sonoma LLC; CA,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25037.0,Equinox Holdings Inc; Boston,Marcus,US,25037,MARCUS,Equinox Holdings Inc; Boston,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25038.0,"Lemon & Honey Day Spa; Orange, CA",Erin,US,25038,ERIN,"Lemon & Honey Day Spa; Orange, CA",1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25039.0,Four Seasons Hotel Austin; DTRS Austin LLC,Amy,US,25039,AMY,Four Seasons Hotel Austin; DTRS Austin LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25040.0,AMG Investments LLC; Fl,Bethany,US,25040,BETHANY,AMG Investments LLC; Fl,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25041.0,Agata Sokolowska; IL,Marcus,US,25041,MARCUS,Agata Sokolowska; IL,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25042.0,Eau Palm Beach Resort & Spa; Fl,Bethany,US,25042,BETHANY,Eau Palm Beach Resort & Spa; Fl,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25043.0,"Jupiter Island Holdings, Inc.; Fl",Bethany,US,25043,BETHANY,"Jupiter Island Holdings, Inc.; Fl",1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25044.0,The Elms Hotel & Spa; Missouri,Amy,US,25044,AMY,The Elms Hotel & Spa; Missouri,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25045.0,dba Haven Spa,Marcus,US,25045,MARCUS,dba Haven Spa,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25046.0,"Beverly Wilshire,Four Seasons Hotel, CA",Erin,US,25046,ERIN,"Beverly Wilshire,Four Seasons Hotel, CA",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25047.0,"Four Seasons Resort Orlando,FL",Bethany,US,25047,BETHANY,"Four Seasons Resort Orlando,FL",1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25049.0,Four Seasons Baltimore; MD,Marcus,US,25049,MARCUS,Four Seasons Baltimore; MD,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25050.0,"Mokara Hotel & Spa, Omni Hotels Management Corp.",Amy,US,25050,AMY,"Mokara Hotel & Spa, Omni Hotels Management Corp.",1,1,prefer_salesperson_then_name
+Inc.,USA,Retail,,Retail,Company 1,,25051.0,Rennai Royalmount; Canada,Other,US,25051,OTHER,Rennai Royalmount; Canada,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25052.0,Rosewood Miramar Beach; CA,Erin,US,25052,ERIN,Rosewood Miramar Beach; CA,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25053.0,"Bonnie Frances Skin;Phoenix, AZ",Erin,US,25053,ERIN,"Bonnie Frances Skin;Phoenix, AZ",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25054.0,Four Seasons Hotel Nashville; TN,Bethany,US,25054,BETHANY,Four Seasons Hotel Nashville; TN,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25055.0,USREC Banyan Cay Resort LLC,Bethany,US,25055,BETHANY,USREC Banyan Cay Resort LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25056.0,AMI LLC Bergamos Retreat,Amy,US,25056,AMY,AMI LLC Bergamos Retreat,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25057.0,Waldorf Astoria Spa Chicago,Melissa,US,25057,MELISSA,Waldorf Astoria Spa Chicago,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25058.0,"Five Point Five, Inc.",Erin,US,25058,ERIN,"Five Point Five, Inc.",1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25059.0,Red Rock Tivoli Aestetics,Erin,US,25059,ERIN,Red Rock Tivoli Aestetics,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25060.0,Nashville Hospitality/DBA Westin,Bethany,US,25060,BETHANY,Nashville Hospitality/DBA Westin,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25061.0,Equinox Holdings Inc; Washington DC,Marcus,US,25061,MARCUS,Equinox Holdings Inc; Washington DC,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25062.0,Equinox Holdings Inc; SPA Retail Washington DC,Marcus,US,25062,MARCUS,Equinox Holdings Inc; SPA Retail Washington DC,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25063.0,Equinox Holdings Inc; Miami,Bethany,US,25063,BETHANY,Equinox Holdings Inc; Miami,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25064.0,Embracing the Dance of Healing,Erin,US,25064,ERIN,Embracing the Dance of Healing,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25065.0,"Cupid Lift Inc., West Hollywood",Erin,US,25065,ERIN,"Cupid Lift Inc., West Hollywood",1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25066.0,ARIA Resort & Casino; Las Vegas,Erin,US,25066,ERIN,ARIA Resort & Casino; Las Vegas,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25067.0,"The Ritz-Carlton, Half Moon Bay LLC",Erin,US,25067,ERIN,"The Ritz-Carlton, Half Moon Bay LLC",1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25068.0,321 Skin Glow LLC,Amy,US,25068,AMY,321 Skin Glow LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25069.0,Simply Bliss SkinCare LLC,Bethany,US,25069,BETHANY,Simply Bliss SkinCare LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Northeast,,Spa,Company 1,,25070.0,Renaissance Hotel Partners LLC,Marcus,US,25070,MARCUS,Renaissance Hotel Partners LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25071.0,Nerdium LLC; Texas,Amy,US,25071,AMY,Nerdium LLC; Texas,1,1,prefer_salesperson_then_name
+Inc.,USA,West,,Spa,Company 1,,25072.0,Balboa Bay Club Ventures LLC,Erin,US,25072,ERIN,Balboa Bay Club Ventures LLC,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25073.0,Mario Tricoci Hair Salons & Day Spas,Amy,US,25073,AMY,Mario Tricoci Hair Salons & Day Spas,1,1,prefer_salesperson_then_name
+Inc.,USA,Central,,Spa,Company 1,,25074.0,"Houstonian Campus, LLC",Amy,US,25074,AMY,"Houstonian Campus, LLC",1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25075.0,Wyndham Grand Rio Mar Hotel,Bethany,US,25075,BETHANY,Wyndham Grand Rio Mar Hotel,1,1,prefer_salesperson_then_name
+Inc.,USA,Southeast,,Spa,Company 1,,25076.0,Costa d' Este Beach Resort & Spa,Bethany,US,25076,BETHANY,Costa d' Este Beach Resort & Spa,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25900.0,Amy Chasko,Interco,US,25900,INTERCO,Amy Chasko,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25902.0,Bridget Lonergan,Interco,US,25902,INTERCO,Bridget Lonergan,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25903.0,Lisa Perez,Interco,US,25903,INTERCO,Lisa Perez,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,25905.0,Emily Kasprowicz,Interco,US,25905,INTERCO,Emily Kasprowicz,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,30687.0,Asia Cilek; home address,Interco,US,30687,INTERCO,Asia Cilek; home address,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,30731.0,Lisamarie DeLucia; Account Executive,Interco,US,30731,INTERCO,Lisamarie DeLucia; Account Executive,1,1,prefer_salesperson_then_name
+Inc.,USA,Interco,,Interco,,Interco,30732.0,Monica Mosconi; Trainer,Interco,US,30732,INTERCO,Monica Mosconi; Trainer,1,1,prefer_salesperson_then_name
+Inc.,USA,USA,,Own eCommerce,Company 3,,40000.0,eCommerce USA,Own eCommerce,US,40000,OWN ECOMMERCE,eCommerce USA,1,1,prefer_salesperson_then_name
+Inc.,USA,USA,,Amazon,Company 3,,41000.0,Amazon,Amazon,US,41000,AMAZON,Amazon,1,1,prefer_salesperson_then_name

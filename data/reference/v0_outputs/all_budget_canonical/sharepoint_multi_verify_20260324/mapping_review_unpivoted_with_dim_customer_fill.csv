@@ -1,0 +1,236 @@
+canonical_entity,market_group,region,sub_region,channel_level,salesperson_alias,salesperson_raw,customer_code,customer_name,has_customer,needs_code_fill,dim_matches,matched_customer_code,matched_customer_name,matched_market_group,matched_region,matched_sub_region,fill_method,fill_status,customer_code_filled
+Export,Core Markets,Switzerland,German Switzerland,,Christiane,Ch. Rose,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,German Switzerland,,Christiane,G. Monopoli,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,German Switzerland,,Christiane,Ch. Rose Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,German Switzerland,,Christiane,G. Monopoli Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,French Switzerland,,French Switzerland,E. Grigoreva,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,French Switzerland,,French Switzerland,E. Grigoreva CH,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,Other Switzerland,,Other Switzerland,S. Chollet Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,Other Switzerland,,Other Switzerland,S. Chollet,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,Other Switzerland,,Other Switzerland,Innendienst CH,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Core Markets,Switzerland,Other Switzerland,,Other Switzerland,S. Loresco,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - APAC,,,,,,Muser Company; Seoul; S-Korea,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Austria,,,,,,qbeauty GmbH,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - China,,,,,,ETERNAL REVIVE (Jiessie); China;,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - New,,,,,,T.A. Cosmetics P.C.; Greece,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - New,,,,,,"Wellness Pot, Malaysia",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,All time beauty; Estland,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Spatrend Beauty Kft; Hungary,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Dr. Vranjes Firenze S.p.A.; Astrid Beltrami,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Spalanga; Litauen,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Arek Dawidowski; Polen,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Biokozmetika D.O.O.; Kroatien,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Luisa Via Roma Spa; Italy,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Ben´s Daughters LTD; Albanien,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,Thanassis Zachariadis; Greece,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,QMS Distributor Slovakia+Czechia s.r.o.; Slowakai,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,SpaTrend Wellness Kft; Hungary,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,PE Yegunova Anzhela; Ukraine,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,ForSpa Sp z o.o.; Arek Dawidowski; Polen,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other EU,,,,,,BUSHUIEVA VIKTORIIA; Ukraine,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Sapphire Limited_CRE03,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Olympia Industries Ltd; Indien,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Eurasia Cosmetics Co. Ltd.; Bangkok; Thailand,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Sapphire Limited_CRE03; inaktiv,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Mweya PVT Ltd; Dubai,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,LUXASIA PTE LTD.; Singapore; Interessent,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Other ROW,,,,,,Mweya Luxury FZCO; Dubai,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - Russia,,,,,,"Medicosmetic Group, LLC; Moskau",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Distributor - South Africa,,,,,,FUTURETHIS CONSULTANCY (PTY) LTD.,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,"Hotel Almenara, Sotogrande; Spanien",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,Mandarin Oriental; Hong Kong,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,"Katrin Bellin, Jesus/ Ibiza",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,Thanos Hotels Ltd.-Almyra; Zypern,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,Thanos Hotels Ltd.-Annabelle; Zypern,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,"Ekaterina Stoyalovskaya, Mallorca",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,"PRIVÉ AESTHETICS, Qatar",0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,Saintly Skin; Frederika Van Hagen,0,True,,,,,,,dim_customer_exact_name,no_match,
+Export,Export,Export - Direct business,,,,,,Munique; Thailand,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,A. Noran BE,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,A. Noran NL,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,A. Noran NL Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,G. van Eykern BE,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,G. van Eykern BE Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,G. van Eykern NL,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Other + BL,,Gabrielle,G. van Eykern NL Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Central,,Marjelein,M. Mijnheer NL,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Benelux,NL Central,,Marjelein,M. Mijnheer NL Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,France,France South,,France,G. Russo,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,France,France South,,France,Y. Januario FRA,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,France,France South,,France,Y. Januario Neukd FRA,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,France,France South,,France,Y. Januario,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,France,France North,,France,E. Grigoreva,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,North East,,Aracelli,A. Gutierrez,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,North East,,Aracelli,A. Gutierrez Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Claire,Claire Morgan,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,DE Other,,DE Other,Innendienst,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,DE Other,,DE Other,Ana Moll,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,DE Other,,DE Other,-Kein Vertriebsmitarbeiter-,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Export,Jerome Dubarry,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Bayern,,Iannis,Bayern,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Bayern,,Iannis,N. Bolz,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Bayern,,Iannis,I. Papoulias,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,Asia Cilek,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,Clare Morgan,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,descomed,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,G. Monopoli,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,Interco,Interco,Innendienst CH,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,Solveig Loresco,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Interco,Solveig Loresco Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,North,,Kerstin,K. Brunbauer,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,North,,Kerstin,K. Brunbauer Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,NRW - Marina,,Marina,M. Pfauch,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,NRW - Marina,,Marina,M. Pfauch Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Melanie,M. Meiritz Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Nora,J. Schottka,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,,,Nora,J. Schottka Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Retail,,Retail,KaDeWe Endverbr.,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Retail,,Retail,Rainer Anskinewitsch,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,Retail,,Retail,Steve Byrom-Chadd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,South West,,Sibylle,S. Wöhrle,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,South West,,Sibylle,S. Wöhrle Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,NRW - Ulrike,,Ulrike,U. Bensmann,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Germany,NRW - Ulrike,,Ulrike,U. Bensmann Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Export,Export,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Ch. Rose,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Ch. Rose Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,G. Monopoli Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Interco,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Rowan,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Solveig Chollet,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Solveig Chollet Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Interco,,Interco,Interco,Y. Januario,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Italy,Italy,,Italy,E. Grigoreva,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Italy,Italy,,Italy,E. Grigoreva Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Other NL,NL Other,,Benelux - Other,C. da Costa Campos,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Other NL,NL Other,,Benelux - Other,C. da Costa Campos Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Spain,Spain,,Montse,M. G. Fernández,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,Spain,Spain,,Montse,M. G. Fernández Neukd,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+GmbH,Core Markets,eCommerce (excl. USA),,eCommerce EU (incl. UK),eCommerce (excl. USA),e-commerce,,,0,True,,,,,,,dim_customer_exact_name,no_match,
+UK,UK,Interco,,Interco,Interco,Interco,51202,"DESCOMED GB, London ( PR + Other )",1,False,1.0,51202,"DESCOMED GB, London ( PR + Other )",UK,Interco,,,already_had_code,51202
+UK,UK,Interco,,Interco,Interco,Interco,51206,"DESCOMED GB, London (Personal BlueGem)",1,False,1.0,51206,"DESCOMED GB, London (Personal BlueGem)",UK,UK,,,already_had_code,51206
+UK,UK,Interco,,Interco,Interco,Interco,51207,,1,False,,,,,,,,already_had_code,51207
+UK,UK,Interco,,Interco,Interco,Interco,51210,Katarzyna Walkowiak; MA Liberty,1,False,1.0,51210,Katarzyna Walkowiak; MA Liberty,UK,UK,,,already_had_code,51210
+UK,UK,UK,,Interco,Interco,Interco,,BlueGem Capital Partners LLP,0,True,1.0,30300,BlueGem Capital Partners LLP,UK,UK,,dim_customer_exact_name,filled_unique_exact,30300
+UK,UK,UK,,Interco,Interco,Interco,,Suzanna Uden,0,True,1.0,30764,Suzanna Uden,UK,UK,,dim_customer_exact_name,filled_unique_exact,30764
+UK,UK,UK,,Interco,Interco,Interco,51158,Liberty PR,1,False,1.0,51158,Liberty PR,UK,UK,,,already_had_code,51158
+UK,UK,UK,,Spa,,,,Genesta Georgian LLP; Francis Hotel Bath,0,True,1.0,51195,Genesta Georgian LLP; Francis Hotel Bath,UK,UK,,dim_customer_exact_name,filled_unique_exact,51195
+UK,UK,UK,,Global etailers,,,10048,Luisa Via Roma Spa; Italy,1,False,,,,,,,,already_had_code,10048
+UK,UK,UK,,Retail ,,,51101,Liberty Retail Ltd,1,False,1.0,51101,Liberty Retail Ltd,UK,UK,,,already_had_code,51101
+UK,UK,UK,,Retail ,,,51172,Harrods (UK) Ltd.,1,False,1.0,51172,Harrods (UK) Ltd.,UK,UK,,,already_had_code,51172
+UK,UK,UK,,Global etailers,,,51175,The Hut.com Ltd; Poland,1,False,1.0,51175,The Hut.com Ltd; Poland,UK,UK,,,already_had_code,51175
+UK,UK,UK,,Retail ,,,51176,THG Beauty Limited,1,False,1.0,51176,THG Beauty Limited,UK,UK,,,already_had_code,51176
+UK,UK,UK,,Global etailers,,,51177,Net-A-Porter; London GB,1,False,1.0,51177,Net-A-Porter; London GB,UK,UK,,,already_had_code,51177
+UK,UK,UK,,Global etailers,,,51178,Net-A-Porter; USA,1,False,1.0,51178,Net-A-Porter; USA,UK,UK,,,already_had_code,51178
+UK,UK,UK,,Global etailers,,,51179,Net-A-Porter; Hong Kong,1,False,1.0,51179,Net-A-Porter; Hong Kong,UK,UK,,,already_had_code,51179
+UK,UK,UK,,Global etailers,,,51180,Net-A-Porter; Italy,1,False,1.0,51180,Net-A-Porter; Italy,UK,UK,,,already_had_code,51180
+UK,UK,UK,,Retail ,,,51183,"John Bell & Croyden, London",1,False,1.0,51183,"John Bell & Croyden, London",UK,UK,,,already_had_code,51183
+UK,UK,UK,,Spa ,,,51184,The Connaught Hotel,1,False,1.0,51184,The Connaught Hotel,UK,UK,,,already_had_code,51184
+UK,UK,UK,,Spa ,,,51185,Four Seasons Hotel London,1,False,1.0,51185,Four Seasons Hotel London,UK,UK,,,already_had_code,51185
+UK,UK,UK,,Spa ,,,51186,hope street hotel; Liverpool,1,False,1.0,51186,hope street hotel; Liverpool,UK,UK,,,already_had_code,51186
+UK,UK,UK,,Spa ,,,51187,Julia Knight; Sale,1,False,1.0,51187,Julia Knight; Sale,UK,UK,,,already_had_code,51187
+UK,UK,UK,,Spa ,,,51189,RTL Limited; The Grove Hotel,1,False,1.0,51189,RTL Limited; The Grove Hotel,UK,UK,,,already_had_code,51189
+UK,UK,UK,,Spa ,,,51191,Louise Godsil; Tranquil Escape,1,False,1.0,51191,Louise Godsil; Tranquil Escape,UK,UK,,,already_had_code,51191
+UK,UK,UK,,Spa ,,,51192,Rachel Staggs Ltd.,1,False,1.0,51192,Rachel Staggs Ltd.,UK,UK,,,already_had_code,51192
+UK,UK,UK,,Spa ,,,51193,Mweya PVT Ltd; Dubai,1,False,1.0,51193,Mweya PVT Ltd; Dubai,UK,UK,,,already_had_code,51193
+UK,UK,UK,,Spa ,,,51194,Artfarm Limited; The Fife Arms Braemar,1,False,1.0,51194,Artfarm Limited; The Fife Arms Braemar,UK,UK,,,already_had_code,51194
+UK,UK,UK,,Spa ,,,51196,CHAPEL BEAUTY,1,False,1.0,51196,CHAPEL BEAUTY,UK,UK,,,already_had_code,51196
+UK,UK,UK,,Spa ,,,51197,Sue Davis Ltd.,1,False,1.0,51197,Sue Davis Ltd.,UK,UK,,,already_had_code,51197
+UK,UK,UK,,Spa ,,,53000,IzzyJ Aesthetics,1,False,1.0,53000,IzzyJ Aesthetics,UK,UK,,,already_had_code,53000
+UK,UK,UK,,Spa ,,,53008,Saintly Skin;Frederika Van Hagan,1,False,,,,,,,,already_had_code,53008
+UK,UK,UK,,Spa ,,,53011,Liliana Fernandes,1,False,1.0,53011,Liliana Fernandes,UK,UK,,,already_had_code,53011
+UK,UK,UK,,Retail ,,,53012,Virginie Alvarez,1,False,1.0,53012,Virginie Alvarez,UK,UK,,,already_had_code,53012
+UK,UK,UK,,Spa ,,,53014,Oblique house of aesthetics; London,1,False,1.0,53014,Oblique house of aesthetics; London,UK,UK,,,already_had_code,53014
+UK,UK,UK,,Spa ,,,53015,Hilton Bankside; Ken Tui Management Ltd.; London,1,False,,,,,,,,already_had_code,53015
+UK,UK,UK,,Spa ,,,53016,Royal London House; Ken Tui Managem. Ltd,1,False,1.0,53016,Royal London House; Ken Tui Managem. Ltd,UK,UK,,,already_had_code,53016
+UK,UK,UK,,Spa ,,,53017,Piccadilly Town House; Ken Tui Managem. Ltd,1,False,1.0,53017,Piccadilly Town House; Ken Tui Managem. Ltd,UK,UK,,,already_had_code,53017
+UK,UK,UK,,Spa ,,,53018,"The Goodwood Hotel, Chichester",1,False,1.0,53018,"The Goodwood Hotel, Chichester",UK,UK,,,already_had_code,53018
+UK,UK,UK,,Spa ,,,53019,M Alexander London,1,False,1.0,53019,M Alexander London,UK,UK,,,already_had_code,53019
+UK,UK,UK,,Spa ,,,53020,Guendalina The Skin Sculpter LTD,1,False,1.0,53020,Guendalina The Skin Sculpter LTD,UK,UK,,,already_had_code,53020
+UK,UK,UK,,Spa ,,,53021,Ayadi Ltd.,1,False,1.0,53021,Ayadi Ltd.,UK,UK,,,already_had_code,53021
+UK,UK,UK,,eCommerce (excl. USA),,,59100,Shopify UK,1,False,1.0,59100,Shopify UK,UK,UK,,,already_had_code,59100
+UK,UK,UK,,eCommerce (excl. USA),,,59200,Shopify ROW,1,False,1.0,59200,Shopify ROW,UK,UK,,,already_had_code,59200
+US,USA,Central,,Spa,Amy,,25039,Four Seasons Hotel Austin; DTRS Austin LLC,1,False,1.0,25039,Four Seasons Hotel Austin; DTRS Austin LLC,USA,Central,,,already_had_code,25039
+US,USA,Central,,Spa,Amy,,25044,The Elms Hotel & Spa; Missouri,1,False,1.0,25044,The Elms Hotel & Spa; Missouri,USA,Central,,,already_had_code,25044
+US,USA,Central,,Spa,Amy,,25050,"Mokara Hotel & Spa, Omni Hotels Management Corp.",1,False,1.0,25050,"Mokara Hotel & Spa, Omni Hotels Management Corp.",USA,Central,,,already_had_code,25050
+US,USA,Central,,Spa,Amy,,25056,AMI LLC Bergamos Retreat,1,False,1.0,25056,AMI LLC Bergamos Retreat,USA,Central,,,already_had_code,25056
+US,USA,Central,,Spa,Amy,,25068,321 Skin Glow LLC,1,False,1.0,25068,321 Skin Glow LLC,USA,Central,,,already_had_code,25068
+US,USA,Central,,Spa,Amy,,25071,Nerdium LLC; Texas,1,False,1.0,25071,Nerdium LLC; Texas,USA,Central,,,already_had_code,25071
+US,USA,Central,,Spa,Amy,,25073,Mario Tricoci Hair Salons & Day Spas,1,False,1.0,25073,Mario Tricoci Hair Salons & Day Spas,USA,Central,,,already_had_code,25073
+US,USA,Central,,Spa,Amy,,25074,"Houstonian Campus, LLC",1,False,1.0,25074,"Houstonian Campus, LLC",USA,Central,,,already_had_code,25074
+US,USA,Central,,Spa,Melissa,,25057,Waldorf Astoria Spa Chicago,1,False,1.0,25057,Waldorf Astoria Spa Chicago,USA,Central,,,already_had_code,25057
+US,USA,Interco,,Spa,Interco,,,Bethany Phillips,0,True,1.0,25908,Bethany Phillips,USA,USA,,dim_customer_exact_name,filled_unique_exact,25908
+US,USA,Interco,,Spa,Interco,,,Erin Shapiro,0,True,1.0,25907,Erin Shapiro,USA,USA,,dim_customer_exact_name,filled_unique_exact,25907
+US,USA,Interco,,Interco,Interco,Interco,25005,"Karen Reddy-Medeiros, Canada",1,False,1.0,25005,"Karen Reddy-Medeiros, Canada",USA,Interco,,,already_had_code,25005
+US,USA,Interco,,Interco,Interco,Interco,25006,INNOVATIVE PR; Kamie O´Connor,1,False,1.0,25006,INNOVATIVE PR; Kamie O´Connor,USA,Interco,,,already_had_code,25006
+US,USA,Interco,,Interco,Interco,Interco,25007,"Melissa Blamey, White Plains",1,False,1.0,25007,"Melissa Blamey, White Plains",USA,Interco,,,already_had_code,25007
+US,USA,Interco,,Interco,Interco,Interco,25900,Amy Chasko,1,False,1.0,25900,Amy Chasko,USA,Interco,,,already_had_code,25900
+US,USA,Interco,,Interco,Interco,Interco,25902,Bridget Lonergan,1,False,1.0,25902,Bridget Lonergan,USA,Interco,,,already_had_code,25902
+US,USA,Interco,,Interco,Interco,Interco,25903,Lisa Perez,1,False,1.0,25903,Lisa Perez,USA,Interco,,,already_had_code,25903
+US,USA,Interco,,Interco,Interco,Interco,25905,Emily Kasprowicz,1,False,1.0,25905,Emily Kasprowicz,USA,Interco,,,already_had_code,25905
+US,USA,Interco,,Interco,Interco,Interco,30687,Asia Cilek; home address,1,False,,,,,,,,already_had_code,30687
+US,USA,Interco,,Interco,Interco,Interco,30731,Lisamarie DeLucia; Account Executive,1,False,,,,,,,,already_had_code,30731
+US,USA,Interco,,Interco,Interco,Interco,30732,Monica Mosconi; Trainer,1,False,,,,,,,,already_had_code,30732
+US,USA,Northeast,,Spa,Marcus,,25001,Four Seasons Hotel Philadelphia; ; El Paso,1,False,1.0,25001,Four Seasons Hotel Philadelphia; ; El Paso,USA,Northeast,,,already_had_code,25001
+US,USA,Northeast,,Spa,Marcus,,25013,Gurney ´s Inn Resort & Spa LLC; NY,1,False,1.0,25013,Gurney ´s Inn Resort & Spa LLC; NY,USA,Northeast,,,already_had_code,25013
+US,USA,Northeast,,Spa,Marcus,,25028,Jenny Y Yu; MD FACS PLLC,1,False,1.0,25028,Jenny Y Yu; MD FACS PLLC,USA,Northeast,,,already_had_code,25028
+US,USA,Northeast,,Spa,Marcus,,25033,Body Works Day Spa; Stewart Manor,1,False,1.0,25033,Body Works Day Spa; Stewart Manor,USA,Northeast,,,already_had_code,25033
+US,USA,Northeast,,Spa,Marcus,,25037,Equinox Holdings Inc; Boston,1,False,1.0,25037,Equinox Holdings Inc; Boston,USA,Northeast,,,already_had_code,25037
+US,USA,Northeast,,Spa,Marcus,,25041,Agata Sokolowska; IL,1,False,1.0,25041,Agata Sokolowska; IL,USA,Northeast,,,already_had_code,25041
+US,USA,Northeast,,Spa,Marcus,,25045,"dba Haven Spa, New York",1,False,1.0,25045,"dba Haven Spa, New York",USA,Northeast,,,already_had_code,25045
+US,USA,Northeast,,Spa,Marcus,,25049,Four Seasons Baltimore; MD,1,False,1.0,25049,Four Seasons Baltimore; MD,USA,Northeast,,,already_had_code,25049
+US,USA,Northeast,,Spa,Marcus,,25061,Equinox Holdings Inc; Washington DC,1,False,1.0,25061,Equinox Holdings Inc; Washington DC,USA,Northeast,,,already_had_code,25061
+US,USA,Northeast,,Spa,Marcus,,25062,Equinox Holdings Inc; SPA Retail Washington DC,1,False,1.0,25062,Equinox Holdings Inc; SPA Retail Washington DC,USA,Northeast,,,already_had_code,25062
+US,USA,Northeast,,Spa,Marcus,,25070,Renaissance Hotel Partners LLC,1,False,1.0,25070,Renaissance Hotel Partners LLC,USA,Northeast,,,already_had_code,25070
+US,USA,Other,,Spa,Melissa,,25035,Rosewood Little Dix Bay; Helen Lugo,1,False,1.0,25035,Rosewood Little Dix Bay; Helen Lugo,USA,Other,,,already_had_code,25035
+US,USA,Retail,,Retail,Other,,25051,Rennai Royalmount; Canada,1,False,1.0,25051,Rennai Royalmount; Canada,USA,Retail,,,already_had_code,25051
+US,USA,Retail,,Retail,,,25030,Saks.com LLC; NY (Web orders),1,False,1.0,25030,Saks.com LLC; NY (Web orders),USA,Retail,,,already_had_code,25030
+US,USA,Southeast,,Spa,Bethany,,25002,Porto Vita/Villa Grande Club; Fl,1,False,1.0,25002,Porto Vita/Villa Grande Club; Fl,USA,Southeast,,,already_had_code,25002
+US,USA,Southeast,,Spa,Bethany,,25003,The resort at Longboat Key CLub; Florida,1,False,1.0,25003,The resort at Longboat Key CLub; Florida,USA,Southeast,,,already_had_code,25003
+US,USA,Southeast,,Spa,Bethany,,25008,"Stars Skincare Med Spa, Florida",1,False,1.0,25008,"Stars Skincare Med Spa, Florida",USA,Southeast,,,already_had_code,25008
+US,USA,Southeast,,Spa,Bethany,,25010,"Four Seasons Hotel, Fort Lauderdale; FL",1,False,1.0,25010,"Four Seasons Hotel, Fort Lauderdale; FL",USA,Southeast,,,already_had_code,25010
+US,USA,Southeast,,Spa,Bethany,,25016,"Williams Island POA, Inc. Florida",1,False,1.0,25016,"Williams Island POA, Inc. Florida",USA,Southeast,,,already_had_code,25016
+US,USA,Southeast,,Spa,Bethany,,25018,Iridescent LLC; Big-Bang; Miiami; Paula,1,False,1.0,25018,Iridescent LLC; Big-Bang; Miiami; Paula,USA,Southeast,,,already_had_code,25018
+US,USA,Southeast,,Spa,Bethany,,25019,Banyan Cay Res.; W Palm Beach; Melissa,1,False,1.0,25019,Banyan Cay Res.; W Palm Beach; Melissa,USA,Southeast,,,already_had_code,25019
+US,USA,Southeast,,Spa,Bethany,,25020,Faena Hotel Miami Beach; FL,1,False,1.0,25020,Faena Hotel Miami Beach; FL,USA,Southeast,,,already_had_code,25020
+US,USA,Southeast,,Spa,Bethany,,25024,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",1,False,1.0,25024,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",USA,Southeast,,,already_had_code,25024
+US,USA,Southeast,,Spa,Bethany,,25025,"ARCH Amenity Group, Florida",1,False,1.0,25025,"ARCH Amenity Group, Florida",USA,Southeast,,,already_had_code,25025
+US,USA,Southeast,,Spa,Bethany,,25026,JW Marriott Miami Turnberry,1,False,1.0,25026,JW Marriott Miami Turnberry,USA,Southeast,,,already_had_code,25026
+US,USA,Southeast,,Spa,Bethany,,25029,Ana Molinari Inc.; FL,1,False,1.0,25029,Ana Molinari Inc.; FL,USA,Southeast,,,already_had_code,25029
+US,USA,Southeast,,Spa,Bethany,,25040,AMG Investments LLC; Fl,1,False,,,,,,,,already_had_code,25040
+US,USA,Southeast,,Spa,Bethany,,25042,Eau Palm Beach Resort & Spa; Fl,1,False,1.0,25042,Eau Palm Beach Resort & Spa; Fl,USA,Southeast,,,already_had_code,25042
+US,USA,Southeast,,Spa,Bethany,,25043,"Jupiter Island Holdings, Inc.; Fl",1,False,1.0,25043,"Jupiter Island Holdings, Inc.; Fl",USA,Southeast,,,already_had_code,25043
+US,USA,Southeast,,Spa,Bethany,,25047,"Four Seasons Resort Orlando,FL",1,False,1.0,25047,"Four Seasons Resort Orlando,FL",USA,Southeast,,,already_had_code,25047
+US,USA,Southeast,,Spa,Bethany,,25054,Four Seasons Hotel Nashville; TN,1,False,1.0,25054,Four Seasons Hotel Nashville; TN,USA,Southeast,,,already_had_code,25054
+US,USA,Southeast,,Spa,Bethany,,25055,USREC Banyan Cay Resort LLC,1,False,1.0,25055,USREC Banyan Cay Resort LLC,USA,Southeast,,,already_had_code,25055
+US,USA,Southeast,,Spa,Bethany,,25060,Nashville Hospitality/DBA Westin,1,False,1.0,25060,Nashville Hospitality/DBA Westin,USA,Southeast,,,already_had_code,25060
+US,USA,Southeast,,Spa,Bethany,,25063,Equinox Holdings Inc; Miami,1,False,1.0,25063,Equinox Holdings Inc; Miami,USA,Southeast,,,already_had_code,25063
+US,USA,Southeast,,Spa,Bethany,,25069,Simply Bliss SkinCare LLC,1,False,1.0,25069,Simply Bliss SkinCare LLC,USA,Southeast,,,already_had_code,25069
+US,USA,Southeast,,Spa,Bethany,,25075,Wyndham Grand Rio Mar Hotel,1,False,1.0,25075,Wyndham Grand Rio Mar Hotel,USA,Southeast,,,already_had_code,25075
+US,USA,Southeast,,Spa,Bethany,,25076,Costa d' Este Beach Resort & Spa,1,False,1.0,25076,Costa d' Este Beach Resort & Spa,USA,Southeast,,,already_had_code,25076
+US,USA,USA,,Amazon,Amazon,,41000,Amazon,1,False,1.0,41000,Amazon,USA,USA,,,already_had_code,41000
+US,USA,USA,,Own eCommerce,Own eCommerce,,40000,eCommerce USA,1,False,,,,,,,,already_had_code,40000
+US,USA,West,,Spa,Erin,,25000,West Coast Lifestyles Inc.; CA,1,False,1.0,25000,West Coast Lifestyles Inc.; CA,USA,West,,,already_had_code,25000
+US,USA,West,,Spa,Erin,,25004,Teton Mountain Lodge,1,False,1.0,25004,Teton Mountain Lodge,USA,West,,,already_had_code,25004
+US,USA,West,,Spa,Erin,,25009,Glo Rejuvenation; Oregon,1,False,1.0,25009,Glo Rejuvenation; Oregon,USA,West,,,already_had_code,25009
+US,USA,West,,Spa,Erin,,25011,D&G Global Inc.; Claire Gobler; CA,1,False,1.0,25011,D&G Global Inc.; Claire Gobler; CA,USA,West,,,already_had_code,25011
+US,USA,West,,Spa,Erin,,25012,"Rosewood Sense Spa, CA",1,False,1.0,25012,"Rosewood Sense Spa, CA",USA,West,,,already_had_code,25012
+US,USA,West,,Spa,Erin,,25015,Gateway Canyon Resort & Spa; CO,1,False,1.0,25015,Gateway Canyon Resort & Spa; CO,USA,West,,,already_had_code,25015
+US,USA,West,,Spa,Erin,,25021,TALISKER CLUB; Holly Arndt,1,False,1.0,25021,TALISKER CLUB; Holly Arndt,USA,West,,,already_had_code,25021
+US,USA,West,,Spa,Erin,,25022,Beating Hearts; Dallas; Lori Feste,1,False,1.0,25022,Beating Hearts; Dallas; Lori Feste,USA,West,,,already_had_code,25022
+US,USA,West,,Spa,Erin,,25023,HLP Hotels LLC DBA Lost Pines; Texas,1,False,1.0,25023,HLP Hotels LLC DBA Lost Pines; Texas,USA,West,,,already_had_code,25023
+US,USA,West,,Spa,Erin,,25027,San Manuel Entert.; Yaamava Resort; Highland,1,False,1.0,25027,San Manuel Entert.; Yaamava Resort; Highland,USA,West,,,already_had_code,25027
+US,USA,West,,Spa,Erin,,25032,Four Seasons Hotel Las Vegas,1,False,1.0,25032,Four Seasons Hotel Las Vegas,USA,West,,,already_had_code,25032
+US,USA,West,,Spa,Erin,,25034,"Live Love Spa; Tustin, CA",1,False,1.0,25034,"Live Love Spa; Tustin, CA",USA,West,,,already_had_code,25034
+US,USA,West,,Spa,Erin,,25036,MacArthur Place; LÁuberge de Sonoma LLC; CA,1,False,1.0,25036,MacArthur Place; LÁuberge de Sonoma LLC; CA,USA,West,,,already_had_code,25036
+US,USA,West,,Spa,Erin,,25038,"Lemon & Honey Day Spa; Orange, CA",1,False,1.0,25038,"Lemon & Honey Day Spa; Orange, CA",USA,West,,,already_had_code,25038
+US,USA,West,,Spa,Erin,,25046,"Beverly Wilshire,Four Seasons Hotel, CA",1,False,1.0,25046,"Beverly Wilshire,Four Seasons Hotel, CA",USA,West,,,already_had_code,25046
+US,USA,West,,Spa,Erin,,25052,Rosewood Miramar Beach; CA,1,False,1.0,25052,Rosewood Miramar Beach; CA,USA,West,,,already_had_code,25052
+US,USA,West,,Spa,Erin,,25053,"Bonnie Frances Skin;Phoenix, AZ",1,False,1.0,25053,"Bonnie Frances Skin;Phoenix, AZ",USA,West,,,already_had_code,25053
+US,USA,West,,Spa,Erin,,25058,"Five Point Five, Inc.",1,False,1.0,25058,"Five Point Five, Inc.",USA,West,,,already_had_code,25058
+US,USA,West,,Spa,Erin,,25059,Red Rock Tivoli Aestetics,1,False,1.0,25059,Red Rock Tivoli Aestetics,USA,West,,,already_had_code,25059
+US,USA,West,,Spa,Erin,,25064,Embracing the Dance of Healing,1,False,1.0,25064,Embracing the Dance of Healing,USA,West,,,already_had_code,25064
+US,USA,West,,Spa,Erin,,25065,"Cupid Lift Inc., West Hollywood",1,False,1.0,25065,"Cupid Lift Inc., West Hollywood",USA,West,,,already_had_code,25065
+US,USA,West,,Spa,Erin,,25066,ARIA Resort & Casino; Las Vegas,1,False,1.0,25066,ARIA Resort & Casino; Las Vegas,USA,West,,,already_had_code,25066
+US,USA,West,,Spa,Erin,,25067,"The Ritz-Carlton, Half Moon Bay LLC",1,False,1.0,25067,"The Ritz-Carlton, Half Moon Bay LLC",USA,West,,,already_had_code,25067
+US,USA,West,,Spa,Erin,,25072,Balboa Bay Club Ventures LLC,1,False,1.0,25072,Balboa Bay Club Ventures LLC,USA,West,,,already_had_code,25072

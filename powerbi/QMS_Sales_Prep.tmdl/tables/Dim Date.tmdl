@@ -1,0 +1,92 @@
+table 'Dim Date'
+	lineageTag: 67d4c6b9-0961-403d-9a34-a53e6eb8eb5f
+
+	column 'Date Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f336820-8192-4fce-bec7-38b45721f1f3
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Date
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 80b4a221-12af-4c45-bb9a-a5d5c43457a8
+		summarizeBy: none
+		sourceColumn: date
+
+		variation Variation
+			isDefault
+			relationship: 16e65dfb-4970-48e9-905d-670fdc6027d7
+			defaultHierarchy: LocalDateTable_1e8f56e3-4db6-4cf4-bde7-801dcc9520c7.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: b1dbbddf-dbc4-4f95-b27c-b6aad742b559
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		dataType: string
+		lineageTag: fa4427ac-5eaf-425c-9676-34774dd95b35
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Num'
+		dataType: int64
+		formatString: 0
+		lineageTag: 9efe3358-629c-48ed-bb16-b979dabebfd8
+		summarizeBy: sum
+		sourceColumn: month_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: d083c12d-232e-4cf9-ab39-b06b71467066
+		summarizeBy: none
+		sourceColumn: month_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Week Num'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5f7bf273-7a99-4949-9e33-0b4f923ff48b
+		summarizeBy: sum
+		sourceColumn: week_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Of Week'
+		dataType: string
+		lineageTag: d8ef1d64-23d7-4907-9b40-49a781073bc8
+		summarizeBy: none
+		sourceColumn: day_of_week
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://stqmssaledatalakeprod.dfs.core.windows.net/"),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Folder Path] = "https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/")),
+				    #"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_date parquet" = #"Filtered Rows"{[#"Folder Path"="https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/",Name="dim_date.parquet"]}[Content],
+				    #"Imported Parquet" = Parquet.Document(#"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_date parquet")
+				in
+				    #"Imported Parquet"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

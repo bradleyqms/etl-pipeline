@@ -1,0 +1,388 @@
+entity_std,customer_code_std,customer_name_unified,in_unified,customer_name_dim,in_fact_sales_daily,customer_name_mapping,in_mapping,match_status
+Export,10016,FUTURETHIS CONSULTANCY (PTY) LTD.,1,,0,,0,unified_only
+Export,10018,qbeauty GmbH,1,,0,,0,unified_only
+Export,10031,SpaTrend Wellness Kft; Hungary,1,,0,,0,unified_only
+Export,10043,ETERNAL REVIVE (Jiessie); China;,1,,0,,0,unified_only
+Export,10047,Thanassis Zachariadis; Greece,1,,0,,0,unified_only
+Export,10049,Biokozmetika D.O.O.; Kroatien,1,,0,,0,unified_only
+GmbH,10016,,0,FUTURETHIS CONSULTANCY (PTY) LTD.,1,,0,fact_only
+GmbH,10018,,0,qbeauty GmbH,1,,0,fact_only
+GmbH,10031,,0,SpaTrend Wellness Kft; Hungary,1,,0,fact_only
+GmbH,10036,,0,QMS Inc.; USA,1,,0,fact_only
+GmbH,10043,,0,ETERNAL REVIVE (Jiessie); China;,1,,0,fact_only
+GmbH,10047,,0,Thanassis Zachariadis; Greece,1,,0,fact_only
+GmbH,10049,,0,Biokozmetika D.O.O.; Kroatien,1,,0,fact_only
+GmbH,10067,,0,QMS Medicosmetics - Nordic; Norwegen,1,,0,fact_only
+GmbH,10070,,0,,1,,0,fact_only
+GmbH,20004,,0,Susanne Dreier,1,,0,fact_only
+GmbH,20005,,0,Heike Kreutzburg,1,,0,fact_only
+GmbH,20007,,0,Birgit Kraft,1,,0,fact_only
+GmbH,20009,,0,Parfümerie Flair Petra Wiesenmüller,1,,0,fact_only
+GmbH,20018,,0,Susanne Gollmer,1,,0,fact_only
+GmbH,20070,,0,Liane Bott Institut für Ganzheitskosmetik,1,,0,fact_only
+GmbH,20093,,0,Beauty & Wellness am Mühlenbach Susanne Thomsen,1,,0,fact_only
+GmbH,20097,,0,Kosmetik & Wäsche Heidi Sönksen,1,,0,fact_only
+GmbH,20108,,0,Petra Pott,1,,0,fact_only
+GmbH,20130,,0,Schönheitscenter Eichhorn,1,,0,fact_only
+GmbH,20132,,0,Beauty Concept Spa Katja Wilk,1,,0,fact_only
+GmbH,20142,,0,Kosmetik Vogelgesang am Heidenkopfpark GmbH,1,,0,fact_only
+GmbH,20145,,0,Gerti Volkmer,1,,0,fact_only
+GmbH,20148,,0,Karin Tippelt,1,,0,fact_only
+GmbH,20161,,0,Kosmetikstudio Hautnah Liane Kurth,1,,0,fact_only
+GmbH,20163,,0,Manuela Nestmeier,1,,0,fact_only
+GmbH,20171,,0,Katrin Wille; Bartholomé,1,,0,fact_only
+GmbH,20172,,0,Tages Beauty Farm Körner Charlotte Eggers,1,,0,fact_only
+GmbH,20173,,0,Marianne Peter,1,,0,fact_only
+GmbH,20188,,0,"Institut für Anti-Aging & Ästhetik, Andrea Nussbaum",1,,0,fact_only
+GmbH,20201,,0,Cosmetic Pur by Tanja Beisel,1,,0,fact_only
+GmbH,20206,,0,Apricot Cosmetic; Tabea Buchhart,1,,0,fact_only
+GmbH,20227,,0,Danuta Bruckhaus,1,,0,fact_only
+GmbH,20245,,0,Beautyline Rosbach,1,,0,fact_only
+GmbH,20251,,0,Esther Wohlfahrt-Maley,1,,0,fact_only
+GmbH,20263,,0,Brigitte Böttcher Kosmetikinstitut,1,,0,fact_only
+GmbH,20266,,0,Frauke Hinz Kosmetik,1,,0,fact_only
+GmbH,20276,,0,"Claudia Cosmetic, Claudia Golinski",1,,0,fact_only
+GmbH,20295,,0,"Kosmetik Braun, Birgit Schlagenhof",1,,0,fact_only
+GmbH,20300,,0,Hilde Jansen,1,,0,fact_only
+GmbH,20301,,0,Margrit Feddersen,1,,0,fact_only
+GmbH,20309,,0,I & C Nebel GmbH,1,,0,fact_only
+GmbH,20313,,0,Luna De Seth,1,,0,fact_only
+GmbH,20317,,0,"Kosmetikstudio Schön & Gepflegt, Markus Andreas Hillinger",1,,0,fact_only
+GmbH,20331,,0,"Aesthetic & More Beauty for you, Sylvia Klara Scherrer",1,,0,fact_only
+GmbH,20333,,0,Christina Papoulia,1,,0,fact_only
+GmbH,20334,,0,Marion Schlereth,1,,0,fact_only
+GmbH,20345,,0,Lady Anne Kosmetik,1,,0,fact_only
+GmbH,20346,,0,Medikosmetik Susanne Krämer,1,,0,fact_only
+GmbH,20349,,0,Simone Maschmeyer,1,,0,fact_only
+GmbH,20370,,0,Kosmetikpraxis Henning,1,,0,fact_only
+GmbH,20371,,0,Parfümerie & Kosmetik Kirchner,1,,0,fact_only
+GmbH,20376,,0,Barbara Gugel,1,,0,fact_only
+GmbH,20395,,0,Top Parfümerie Manegold,1,,0,fact_only
+GmbH,20433,,0,Kosmetikinstitut Lenz,1,,0,fact_only
+GmbH,20434,,0,Beauty-Lounge Kosmetik Gottwald,1,,0,fact_only
+GmbH,20441,,0,Lother Hohagen - Schönheitspflege,1,,0,fact_only
+GmbH,20445,,0,Agnes Peltzer,1,,0,fact_only
+GmbH,20454,,0,Michaela Stefan-Lehnert,1,,0,fact_only
+GmbH,20509,,0,"White Lounge, Elke Blidon",1,,0,fact_only
+GmbH,20511,,0,Kosmetik Day Spa Jana Jungblut,1,,0,fact_only
+GmbH,20519,,0,Besime Celik,1,,0,fact_only
+GmbH,20536,,0,Horst Kirchberger,1,,0,fact_only
+GmbH,20539,,0,Susanne Winter,1,,0,fact_only
+GmbH,20568,,0,Kathleen Drescher,1,,0,fact_only
+GmbH,20570,,0,Kosmetik-Studio Pfeiffer,1,,0,fact_only
+GmbH,20573,,0,"Hautklar Reutlingen, Martina Broß",1,,0,fact_only
+GmbH,20576,,0,Institut für Ganzheitskosmetik Susanne Große,1,,0,fact_only
+GmbH,20598,,0,Schuback GmbH,1,,0,fact_only
+GmbH,20601,,0,"Fachinstitut für Ganzheitskosmetik und Permanent Make-up, Gabi Leunig",1,,0,fact_only
+GmbH,20613,,0,Sofia Gärtner Kosmetik,1,,0,fact_only
+GmbH,20615,,0,"Med Cosmetic, Rosi Breisch",1,,0,fact_only
+GmbH,20619,,0,"Kosmetik & Mode, Gisela Gall",1,,0,fact_only
+GmbH,20646,,0,"Kosmetikinstitut am Waldpark, Malgorzata Pinter",1,,0,fact_only
+GmbH,20668,,0,Gregor von Wirth,1,,0,fact_only
+GmbH,20674,,0,Sonjas Kosmetikstudio Sonja Schreyer,1,,0,fact_only
+GmbH,20679,,0,"Aesthetic & Mind, Corinna Schröder",1,,0,fact_only
+GmbH,20693,,0,Susanne Barke,1,,0,fact_only
+GmbH,20696,,0,Stephan Ronsberger,1,,0,fact_only
+GmbH,20697,,0,Sonja Zgrabic,1,,0,fact_only
+GmbH,20699,,0,Larisa Shabaeva,1,,0,fact_only
+GmbH,20710,,0,"Braun's Kosmetik, Kai Köster",1,,0,fact_only
+GmbH,20731,,0,"Beautyshopping24.de, Margit Jox",1,,0,fact_only
+GmbH,20743,,0,Ursula Hederer,1,,0,fact_only
+GmbH,20745,,0,Diana Awanesow,1,,0,fact_only
+GmbH,20750,,0,Oriana Adkonis,1,,0,fact_only
+GmbH,20765,,0,Svetlana Grießner,1,,0,fact_only
+GmbH,20767,,0,Dagmar Haslbeck,1,,0,fact_only
+GmbH,20772,,0,SK Kosmetik; Sebastian Klitsch,1,,0,fact_only
+GmbH,20778,,0,Ursula Feinbier,1,,0,fact_only
+GmbH,20794,,0,Carmen Kühnert,1,,0,fact_only
+GmbH,20808,,0,ONDUA Deutschland GmbH,1,,0,fact_only
+GmbH,20811,,0,"Cosmetique Culture, Gabi Agnes Hirschburger",1,,0,fact_only
+GmbH,20825,,0,Marisca Kugler,1,,0,fact_only
+GmbH,20828,,0,Heike Hermann,1,,0,fact_only
+GmbH,20830,,0,Tatjana Facher,1,,0,fact_only
+GmbH,20847,,0,Waldheimat;Reiteralm; VORKASSE; Angela  Incorvaia,1,,0,fact_only
+GmbH,20848,,0,feel beauty GmbH,1,,0,fact_only
+GmbH,20866,,0,"Beauty Inn, Valentina Terre",1,,0,fact_only
+GmbH,20874,,0,Karin Arndt,1,,0,fact_only
+GmbH,20875,,0,Viktoria Pökelmann,1,,0,fact_only
+GmbH,20877,,0,Private Beauty Sandra Koschny,1,,0,fact_only
+GmbH,20879,,0,Kosmetikinstitut Madeleine Paetzold,1,,0,fact_only
+GmbH,20881,,0,"kosmetikfuchs, Schnitzler",1,,0,fact_only
+GmbH,20906,,0,Juvenis - Medical Spa Dr. Ermuth & Dr. Löckermann GmbH,1,,0,fact_only
+GmbH,20908,,0,Lebensart; Sonja Dreisow,1,,0,fact_only
+GmbH,20910,,0,Isabella Faßbender,1,,0,fact_only
+GmbH,20912,,0,"Beauty Rausch, Rudolf Rauschenberger",1,,0,fact_only
+GmbH,20916,,0,Saintly Skin; Frederika Van Hagen,1,,0,fact_only
+GmbH,20917,,0,baslerbeauty GmbH & Co. KG,1,,0,fact_only
+GmbH,20920,,0,"Kosmetikstudio von Carben Cosmetics, Bettina von Carben",1,,0,fact_only
+GmbH,20923,,0,No. 1 Cosmetics GmbH,1,,0,fact_only
+GmbH,20925,,0,Anadore; Anna Rajski,1,,0,fact_only
+GmbH,20929,,0,Hotel Traube Tonbach - Familie Finkbeiner GmbH & Co KG,1,,0,fact_only
+GmbH,20933,,0,Beautywelt GmbH,1,,0,fact_only
+GmbH,20940,,0,Beautymanufactur GmbH,1,,0,fact_only
+GmbH,20948,,0,"MP Cosmetic, Milita Pernawas",1,,0,fact_only
+GmbH,20952,,0,"Stadtschönheit, Rebecca Schanz",1,,0,fact_only
+GmbH,20956,,0,Kosmetiksalon Yelena Brückner,1,,0,fact_only
+GmbH,20964,,0,"Cozy by Zey, Zeynep Tekin",1,,0,fact_only
+GmbH,20966,,0,"Sagatti Beauty Salon, Mariya Alifyan",1,,0,fact_only
+GmbH,20969,,0,Skinfactory Laura Pfluegler,1,,0,fact_only
+GmbH,20982,,0,Suyas Beauty; Melissa Arisoy,1,,0,fact_only
+GmbH,20983,,0,Anna Heistermann,1,,0,fact_only
+GmbH,20985,,0,Kalyana-by-K; Kerstin Leonhard,1,,0,fact_only
+GmbH,20986,,0,Beletage; Nora Medyan,1,,0,fact_only
+GmbH,20990,,0,Hotel Das Achental,1,,0,fact_only
+GmbH,20992,,0,Patrizia Miceli,1,,0,fact_only
+GmbH,20997,,0,"Bodyconcept Skin-Beauty-Body, Martina Borowski",1,,0,fact_only
+GmbH,21002,,0,Carol Seewer,1,,0,fact_only
+GmbH,21024,,0,"Kosmetik Pedicure,Thüler, Klosters",1,,0,fact_only
+GmbH,21041,,0,"Megi Portmann, Grenchen",1,,0,fact_only
+GmbH,21042,,0,"Giovanna,Casellini,Chur; Golden Girl",1,,0,fact_only
+GmbH,21047,,0,"Bellezza (Dietiker-Gonzalez), Dulliken",1,,0,fact_only
+GmbH,21049,,0,"Edina Szeleczki, Zürich",1,,0,fact_only
+GmbH,21050,,0,"Center of Beauty, Märki",1,,0,fact_only
+GmbH,21059,,0,Lucie Widmer,1,,0,fact_only
+GmbH,21061,,0,"Sabrina Reich, Ascona",1,,0,fact_only
+GmbH,21063,,0,Parfümerie Spitzenhaus AG,1,,0,fact_only
+GmbH,21066,,0,"Katja Gyorgyevits,be-exclusive GmbH; Zürich",1,,0,fact_only
+GmbH,21069,,0,"Christa Meyer, Luzern",1,,0,fact_only
+GmbH,21092,,0,The fine Art of Beauty; Simone Casanova,1,,0,fact_only
+GmbH,21098,,0,Art of Beauty; Fatima Arm,1,,0,fact_only
+GmbH,21102,,0,Maison Fleurs de Coton; Catherine Cerezo; Genève,1,,0,fact_only
+GmbH,21104,,0,eve COSMETICS Evelyne Ammann-Siegrist,1,,0,fact_only
+GmbH,21105,,0,Maison du Laser; Servan Haidar,1,,0,fact_only
+GmbH,21106,,0,World of Bonnie; Monica Burkard,1,,0,fact_only
+GmbH,21109,,0,Gabriella Wittwer; Meggen,1,,0,fact_only
+GmbH,21800,,0,Zuzana Michalikova,1,,0,fact_only
+GmbH,23000,,0,Permanent Beauty Ilona Inceman,1,,0,fact_only
+GmbH,23001,,0,"Cryon Christine Geldtmeijer, Evyo Gijs Wiegeraad",1,,0,fact_only
+GmbH,23003,,0,Cyelle; Coby Bette,1,,0,fact_only
+GmbH,23005,,0,Beauty Reflection;Connie Kraak,1,,0,fact_only
+GmbH,23006,,0,Taiger Enters,1,,0,fact_only
+GmbH,23009,,0,Dehcos,1,,0,fact_only
+GmbH,23010,,0,Dermacosmetic Skin Beauty Instituut,1,,0,fact_only
+GmbH,23011,,0,Orange Beauty; Peggy Peters,1,,0,fact_only
+GmbH,23014,,0,Huidverzorging Vera van Velzen,1,,0,fact_only
+GmbH,23020,,0,Beauty Center Anke; Rotterdam; Anke Slegtenhorst,1,,0,fact_only
+GmbH,23029,,0,Beautien schoonheidssalon; Bartine Siekman,1,,0,fact_only
+GmbH,23031,,0,Delia Skin Clinic B.V.; Sylvia van der Graaf,1,,0,fact_only
+GmbH,23035,,0,Jackelin Frank,1,,0,fact_only
+GmbH,23038,,0,Skin Terneuzen,1,,0,fact_only
+GmbH,23043,,0,Lalana Huidkliniek,1,,0,fact_only
+GmbH,23047,,0,Marieke Skin,1,,0,fact_only
+GmbH,23049,,0,vanBeurden health & beauty,1,,0,fact_only
+GmbH,23056,,0,Marion Beautysalon; Marion Bongers,1,,0,fact_only
+GmbH,23058,,0,Skin Studio Suuz; Suzanne van den Berg,1,,0,fact_only
+GmbH,23061,,0,Bloy Institute; Daisy v.d.Looij; Einhoven,1,,0,fact_only
+GmbH,23063,,0,Quindy's; Jessica Dirks,1,,0,fact_only
+GmbH,23064,,0,Grand Hotel Huis ter Duin,1,,0,fact_only
+GmbH,23069,,0,Skinz,1,,0,fact_only
+GmbH,23080,,0,Het Cosmetisch Ambacht,1,,0,fact_only
+GmbH,23084,,0,Beleza Pura; Maartje Boonen,1,,0,fact_only
+GmbH,23086,,0,LJ Beauty Instituut; Belgien,1,,0,fact_only
+GmbH,23087,,0,EE Praktijk voor Huidverbetering; Edith Esselink,1,,0,fact_only
+GmbH,23088,,0,ik skin and more,1,,0,fact_only
+GmbH,23090,,0,Mooi Instituut; Kitty Scherff,1,,0,fact_only
+GmbH,23107,,0,The Exclusiv complete skin; Wendy Wynhoven,1,,0,fact_only
+GmbH,23111,,0,Avance; Lara Hiddema,1,,0,fact_only
+GmbH,23112,,0,Si Beauty by Cynthia; de Smet,1,,0,fact_only
+GmbH,23115,,0,Clien Skin; Eline Hartogs; Eindhoven,1,,0,fact_only
+GmbH,23121,,0,PUUR Huidinstituut Breda,1,,0,fact_only
+GmbH,23123,,0,,1,,0,fact_only
+GmbH,24000,,0,Esthetiek Vicky Michiels,1,,0,fact_only
+GmbH,24002,,0,Schoonheidssalon Christel,1,,0,fact_only
+GmbH,24007,,0,Apprenza Cosmedisch Instituut,1,,0,fact_only
+GmbH,24009,,0,Argenteuil Spa & Wellness,1,,0,fact_only
+GmbH,24014,,0,Beauty and Care Beatrix Joosten,1,,0,fact_only
+GmbH,24027,,0,MOOI BIJ LOTTE,1,,0,fact_only
+GmbH,24028,,0,Love for body and feet,1,,0,fact_only
+GmbH,24031,,0,"Vitality Beauty Instituut, Vivianne Latten",1,,0,fact_only
+GmbH,24034,,0,Bar a Beauté; Lies Vervaele,1,,0,fact_only
+GmbH,26004,,0,Skinpharmacy; Lucia Altozano; Madrid,1,,0,fact_only
+GmbH,26016,,0,Beauty by Willeke; Spain,1,,0,fact_only
+GmbH,27045,,0,"Mont D´Arbois, Four Seasons H.; Megéve",1,,0,fact_only
+GmbH,27049,,0,SELAS H8 PHARMA; Bois d´Arcy,1,,0,fact_only
+GmbH,29000,,0,"Kosmetik-Atelier, Luciana Müller",1,,0,fact_only
+GmbH,29012,,0,Sebastian Kirsch; Riezlern,1,,0,fact_only
+GmbH,29017,,0,SeCos-Kosmetik; Sevgi Cosguner,1,,0,fact_only
+GmbH,29021,,0,Vitaleen GmbH; Dr. Roger Eisen,1,,0,fact_only
+GmbH,29022,,0,Anja-Maria Fischedick; Gladbeck,1,,0,fact_only
+GmbH,29026,,0,By Natalia; Natalia Ivica,1,,0,fact_only
+GmbH,29028,,0,Hautnah by Tiziana; Tiziana Schwarz,1,,0,fact_only
+GmbH,29033,,0,Angelo stile italiano; Paderborn,1,,0,fact_only
+GmbH,29034,,0,SKINTHETICS; Dr. Lucija Grittern,1,,0,fact_only
+GmbH,30000,,0,Elisabeth Potrykus,1,,0,fact_only
+GmbH,30007,,0,Sibylle Wöhrle,1,,0,fact_only
+GmbH,30019,,0,QMS Medicosmetics GmbH,1,,0,fact_only
+GmbH,30035,,0,printprofess,1,,0,fact_only
+GmbH,30055,,0,Aracelli Gutierrez,1,,0,fact_only
+GmbH,30066,,0,KaDeWe QMS Konsignment Abr.,1,,0,fact_only
+GmbH,30078,,0,Schulungen QMS GmbH,1,,0,fact_only
+GmbH,30276,,0,Ulrike Bensmann,1,,0,fact_only
+GmbH,30303,,0,QMS Medicosmetics GmbH (Marketing),1,,0,fact_only
+GmbH,30608,,0,Wladimir Bokk,1,,0,fact_only
+GmbH,30618,,0,Karin Schneider,1,,0,fact_only
+GmbH,30634,,0,Olga Rekowski,1,,0,fact_only
+GmbH,30669,,0,Caroline da Costa Campos,1,,0,fact_only
+GmbH,30670,,0,Marjelein Mijnheer,1,,0,fact_only
+GmbH,30676,,0,Oberpollinger QMS Konsignationsrechnung,1,,0,fact_only
+GmbH,30678,,0,Alsterhaus QMS Konsignationsrechnung,1,,0,fact_only
+GmbH,30711,,0,Kerstin Brunbauer,1,,0,fact_only
+GmbH,30712,,0,Melissa Blamey,1,,0,fact_only
+GmbH,30714,,0,Britta Beiser,1,,0,fact_only
+GmbH,30720,,0,Viola Kleist,1,,0,fact_only
+GmbH,30722,,0,Heike Zils,1,,0,fact_only
+GmbH,30725,,0,Marina Pfauch,1,,0,fact_only
+GmbH,30735,,0,Gabrielle van Eykern,1,,0,fact_only
+GmbH,30766,,0,Barbara Rigal,1,,0,fact_only
+GmbH,30771,,0,Ioannis Papoulias,1,,0,fact_only
+GmbH,30772,,0,Tanja Essig,1,,0,fact_only
+GmbH,31026,,0,Elena Grigoreva; f.Lief.Schweiz,1,,0,fact_only
+GmbH,31027,,0,Christiane Rose; für schw.Lieferg,1,,0,fact_only
+GmbH,31038,,0,Peter Sechehaye Public Relations,1,,0,fact_only
+GmbH,31041,,0,SanderStrothmann GmbH,1,,0,fact_only
+GmbH,31189,,0,Dr. Stefanie Wriedt,1,,0,fact_only
+GmbH,31226,,0,Estefanía García Tortajada,1,,0,fact_only
+GmbH,36039,,0,PR Related; Amsterdam,1,,0,fact_only
+GmbH,48001,,0,Shopify DE,1,,0,fact_only
+GmbH,48002,,0,Shopify AT,1,,0,fact_only
+GmbH,48003,,0,Shopify CH,1,,0,fact_only
+GmbH,48004,,0,Shopify NL,1,,0,fact_only
+GmbH,48005,,0,Shopify BE,1,,0,fact_only
+GmbH,48007,,0,Shopify FR,1,,0,fact_only
+GmbH,48009,,0,Shopify ES,1,,0,fact_only
+GmbH,48011,,0,Shopify IT,1,,0,fact_only
+GmbH,48013,,0,Shopify DK,1,,0,fact_only
+GmbH,48015,,0,Shopify LU,1,,0,fact_only
+GmbH,48018,,0,Shopify CY,1,,0,fact_only
+GmbH,48022,,0,Shopify PT,1,,0,fact_only
+UK,10048,,0,,0,Luisa Via Roma Spa; Italy,1,mapping_only
+UK,51101,,0,,0,Liberty Retail Ltd,1,mapping_only
+UK,51157,Liberty Professional,1,Liberty Professional,1,,0,unified_fact_only
+UK,51158,,0,,0,Liberty PR,1,mapping_only
+UK,51172,Harrods (UK) Ltd.,1,Harrods (UK) Ltd.,1,Harrods (UK) Ltd.,1,match_all_three
+UK,51175,,0,,0,The Hut.com Ltd; Poland,1,mapping_only
+UK,51176,,0,,0,The Hut.com Ltd; GB,1,mapping_only
+UK,51176,,0,,0,THG Beauty Limited,1,mapping_only
+UK,51177,,0,,0,Net-A-Porter; London GB,1,mapping_only
+UK,51178,,0,,0,Net-A-Porter; USA,1,mapping_only
+UK,51179,,0,,0,Net-A-Porter; Hong Kong,1,mapping_only
+UK,51180,,0,,0,Net-A-Porter; Italy,1,mapping_only
+UK,51183,,0,,0,"John Bell & Croyden, London",1,mapping_only
+UK,51184,The Connaught Hotel,1,The Connaught Hotel,1,The Connaught Hotel,1,match_all_three
+UK,51185,Four Seasons Hotel London,1,Four Seasons Hotel London,1,Four Seasons Trinity,1,match_all_three
+UK,51185,Four Seasons Hotel London,1,Four Seasons Hotel London,1,Four Seasons Hotel London,1,match_all_three
+UK,51186,,0,,0,hope street hotel; Liverpool,1,mapping_only
+UK,51187,,0,,0,Julia Knight; Sale,1,mapping_only
+UK,51189,RTL Limited; The Grove Hotel,1,RTL Limited; The Grove Hotel,1,RTL Limited; The Grove Hotel,1,match_all_three
+UK,51191,Louise Godsil; Tranquil Escape,1,Louise Godsil; Tranquil Escape,1,Louise Godsil; Tranquil Escape,1,match_all_three
+UK,51192,,0,,0,Rachel Staggs Ltd.,1,mapping_only
+UK,51193,,0,,0,Mweya PVT Ltd; Dubai,1,mapping_only
+UK,51194,Artfarm Limited; The Fife Arms Braemar,1,Artfarm Limited; The Fife Arms Braemar,1,Artfarm Limited; The Fife Arms Braemar,1,match_all_three
+UK,51195,Genesta Georgian LLP; Francis Hotel Bath,1,Genesta Georgian LLP; Francis Hotel Bath,1,,0,unified_fact_only
+UK,51196,,0,,0,CHAPEL BEAUTY,1,mapping_only
+UK,51197,Sue Davis Ltd.,1,Sue Davis Ltd.,1,Sue Davis Ltd.,1,match_all_three
+UK,51202,"DESCOMED GB, London ( PR + Other )",1,"DESCOMED GB, London ( PR + Other )",1,"DESCOMED GB, London ( PR + Other )",1,match_all_three
+UK,51206,,0,,0,"DESCOMED GB, London (Personal BlueGem)",1,mapping_only
+UK,51207,,0,,0,,1,mapping_only
+UK,51210,,0,,0,Katarzyna Walkowiak; MA Liberty,1,mapping_only
+UK,53000,,0,,0,IzzyJ Aesthetics,1,mapping_only
+UK,53008,,0,,0,Saintly Skin;Frederika Van Hagan,1,mapping_only
+UK,53011,,0,,0,Liliana Fernandes,1,mapping_only
+UK,53012,,0,,0,Virginie Alvarez,1,mapping_only
+UK,53014,,0,,0,Oblique house of aesthetics; London,1,mapping_only
+UK,53015,,0,,0,Hilton Bankside; Ken Tui Management Ltd.; London,1,mapping_only
+UK,53015,,0,,0,Ken Tui Management Ltd.; London,1,mapping_only
+UK,53016,,0,,0,Royal London House; Ken Tui Managem. Ltd,1,mapping_only
+UK,53017,,0,,0,Piccadilly Town House; Ken Tui Managem. Ltd,1,mapping_only
+UK,53018,"The Goodwood Hotel, Chichester",1,"The Goodwood Hotel, Chichester",1,"The Goodwood Hotel, Chichester",1,match_all_three
+UK,53019,,0,,0,M Alexander London,1,mapping_only
+UK,53020,Guendalina The Skin Sculpter LTD,1,Guendalina The Skin Sculpter LTD,1,Guendalina The Skin Sculpter LTD,1,match_all_three
+UK,53021,,0,,0,Ayadi Ltd.,1,mapping_only
+UK,59100,Shopify UK,1,Shopify UK,1,Shopify UK,1,match_all_three
+UK,59200,Shopify ROW,1,Shopify ROW,1,Shopify ROW,1,match_all_three
+US,10036,QMS ; Melissa Blamey,1,QMS ; Melissa Blamey,1,,0,unified_fact_only
+US,25000,,0,,0,West Coast Lifestyles Inc.; CA,1,mapping_only
+US,25001,Four Seasons Hotel Philadelphia; ; El Paso,1,Four Seasons Hotel Philadelphia; ; El Paso,1,Four Seasons Hotel Philadelphia; ; El Paso,1,match_all_three
+US,25002,Porto Vita/Villa Grande Club; Fl,1,Porto Vita/Villa Grande Club; Fl,1,Porto Vita/Villa Grande Club; Fl,1,match_all_three
+US,25003,,0,,0,The resort at Longboat Key CLub; Florida,1,mapping_only
+US,25004,,0,,0,Teton Mountain Lodge,1,mapping_only
+US,25005,,0,,0,"Karen Reddy-Medeiros, Canada",1,mapping_only
+US,25006,,0,,0,INNOVATIVE PR; Kamie O´Connor,1,mapping_only
+US,25007,"Melissa Blamey, White Plains",1,"Melissa Blamey, White Plains",1,"Melissa Blamey, White Plains",1,match_all_three
+US,25008,,0,,0,"Stars Skincare Med Spa, Florida",1,mapping_only
+US,25009,,0,,0,Glo Rejuvenation; Oregon,1,mapping_only
+US,25010,,0,,0,"Four Seasons Hotel, Fort Lauderdale; FL",1,mapping_only
+US,25011,,0,,0,D&G Global Inc.; Claire Gobler; CA,1,mapping_only
+US,25012,,0,,0,"Rosewood Sense Spa, CA",1,mapping_only
+US,25013,,0,,0,Gurney ´s Inn Resort & Spa LLC; NY,1,mapping_only
+US,25015,,0,,0,Gateway Canyon Resort & Spa; CO,1,mapping_only
+US,25016,"Williams Island POA, Inc. Florida",1,"Williams Island POA, Inc. Florida",1,"Williams Island POA, Inc.Florida",1,match_all_three
+US,25016,"Williams Island POA, Inc. Florida",1,"Williams Island POA, Inc. Florida",1,"Williams Island POA, Inc. Florida",1,match_all_three
+US,25018,,0,,0,Iridescent LLC; Big-Bang; Miiami; Paula,1,mapping_only
+US,25019,,0,,0,Banyan Cay Res.; W Palm Beach; Melissa,1,mapping_only
+US,25020,,0,,0,Faena Hotel Miami Beach; FL,1,mapping_only
+US,25021,,0,,0,TALISKER CLUB; Holly Arndt,1,mapping_only
+US,25022,,0,,0,Beating Hearts; Dallas; Lori Feste,1,mapping_only
+US,25023,,0,,0,HLP Hotels LLC DBA Lost Pines; Texas,1,mapping_only
+US,25024,,0,,0,"Mt. Bailey Holdings, LLC; Four Seasons Hotel Atlanta",1,mapping_only
+US,25025,,0,,0,"ARCH Amenity Group, Florida",1,mapping_only
+US,25026,,0,,0,JW Marriott Miami Turnberry,1,mapping_only
+US,25027,San Manuel Entert.; Yaamava Resort; Highland,1,San Manuel Entert.; Yaamava Resort; Highland,1,San Manuel Entert.; Yaamava Resort; Highland,1,match_all_three
+US,25028,,0,,0,Jenny Y Yu; MD FACS PLLC,1,mapping_only
+US,25029,Ana Molinari Inc.; FL,1,Ana Molinari Inc.; FL,1,Ana Molinari Inc.; FL,1,match_all_three
+US,25030,,0,,0,Saks.com LLC; NY (Web orders),1,mapping_only
+US,25032,Four Seasons Hotel Las Vegas,1,Four Seasons Hotel Las Vegas,1,Four Seasons Hotel Las Vegas,1,match_all_three
+US,25033,,0,,0,Body Works Day Spa; Stewart Manor,1,mapping_only
+US,25034,,0,,0,"Live Love Spa; Tustin, CA",1,mapping_only
+US,25035,,0,,0,Rosewood Little Dix Bay; Helen Lugo,1,mapping_only
+US,25036,,0,,0,MacArthur Place; LÁuberge de Sonoma LLC; CA,1,mapping_only
+US,25037,Equinox Holdings Inc; Boston,1,Equinox Holdings Inc; Boston,1,Equinox Holdings Inc; Boston,1,match_all_three
+US,25038,"Lemon & Honey Day Spa; Orange, CA",1,"Lemon & Honey Day Spa; Orange, CA",1,"Lemon & Honey Day Spa; Orange, CA",1,match_all_three
+US,25039,,0,,0,Four Seasons Hotel Austin; DTRS Austin LLC,1,mapping_only
+US,25040,,0,,0,AMG Investments LLC; Fl,1,mapping_only
+US,25041,,0,,0,Agata Sokolowska; IL,1,mapping_only
+US,25042,Eau Palm Beach Resort & Spa; Fl,1,Eau Palm Beach Resort & Spa; Fl,1,Eau Palm Beach Resort & Spa; Fl,1,match_all_three
+US,25043,,0,,0,"Jupiter Island Holdings, Inc.; Fl",1,mapping_only
+US,25044,The Elms Hotel & Spa; Missouri,1,The Elms Hotel & Spa; Missouri,1,The Elms Hotel & Spa; Missouri,1,match_all_three
+US,25045,,0,,0,dba Haven Spa,1,mapping_only
+US,25045,,0,,0,"dba Haven Spa, New York",1,mapping_only
+US,25046,,0,,0,"Beverly Wilshire,Four Seasons Hotel, CA",1,mapping_only
+US,25047,,0,,0,"Four Seasons Resort Orlando,FL",1,mapping_only
+US,25049,,0,,0,Four Seasons Baltimore; MD,1,mapping_only
+US,25050,"Mokara Hotel & Spa, Omni Hotels Management Corp.",1,"Mokara Hotel & Spa, Omni Hotels Management Corp.",1,"Mokara Hotel & Spa, Omni Hotels Management Corp.",1,match_all_three
+US,25051,,0,,0,Rennai Royalmount; Canada,1,mapping_only
+US,25052,,0,,0,Rosewood Miramar Beach; CA,1,mapping_only
+US,25053,,0,,0,"Bonnie Frances Skin;Phoenix, AZ",1,mapping_only
+US,25054,,0,,0,Four Seasons Hotel Nashville; TN,1,mapping_only
+US,25055,,0,,0,USREC Banyan Cay Resort LLC,1,mapping_only
+US,25056,AMI LLC Bergamos Retreat,1,AMI LLC Bergamos Retreat,1,AMI LLC Bergamos Retreat,1,match_all_three
+US,25057,,0,,0,Waldorf Astoria Spa Chicago,1,mapping_only
+US,25058,"Five Point Five, Inc.",1,"Five Point Five, Inc.",1,"Five Point Five, Inc.",1,match_all_three
+US,25059,,0,,0,Red Rock Tivoli Aestetics,1,mapping_only
+US,25060,,0,,0,Nashville Hospitality/DBA Westin,1,mapping_only
+US,25061,,0,,0,Equinox Holdings Inc; Washington DC,1,mapping_only
+US,25062,,0,,0,Equinox Holdings Inc; SPA Retail Washington DC,1,mapping_only
+US,25063,,0,,0,Equinox Holdings Inc; Miami,1,mapping_only
+US,25064,Embracing the Dance of Healing,1,Embracing the Dance of Healing,1,Embracing the Dance of Healing,1,match_all_three
+US,25065,,0,,0,"Cupid Lift Inc., West Hollywood",1,mapping_only
+US,25066,,0,,0,ARIA Resort & Casino; Las Vegas,1,mapping_only
+US,25067,"The Ritz-Carlton, Half Moon Bay LLC",1,"The Ritz-Carlton, Half Moon Bay LLC",1,"The Ritz-Carlton, Half Moon Bay LLC",1,match_all_three
+US,25068,,0,,0,321 Skin Glow LLC,1,mapping_only
+US,25069,,0,,0,Simply Bliss SkinCare LLC,1,mapping_only
+US,25070,,0,,0,Renaissance Hotel Partners LLC,1,mapping_only
+US,25071,,0,,0,Nerdium LLC; Texas,1,mapping_only
+US,25072,,0,,0,Balboa Bay Club Ventures LLC,1,mapping_only
+US,25073,,0,,0,Mario Tricoci Hair Salons & Day Spas,1,mapping_only
+US,25074,,0,,0,"Houstonian Campus, LLC",1,mapping_only
+US,25075,,0,,0,Wyndham Grand Rio Mar Hotel,1,mapping_only
+US,25076,Costa d' Este Beach Resort & Spa,1,Costa d' Este Beach Resort & Spa,1,Costa d' Este Beach Resort & Spa,1,match_all_three
+US,25900,,0,,0,Amy Chasko,1,mapping_only
+US,25902,,0,,0,Bridget Lonergan,1,mapping_only
+US,25903,,0,,0,Lisa Perez,1,mapping_only
+US,25905,,0,,0,Emily Kasprowicz,1,mapping_only
+US,30687,,0,,0,Asia Cilek; home address,1,mapping_only
+US,30731,,0,,0,Lisamarie DeLucia; Account Executive,1,mapping_only
+US,30732,,0,,0,Monica Mosconi; Trainer,1,mapping_only
+US,40000,Shopify,1,Shopify,1,Shopify,1,match_all_three
+US,40000,Shopify,1,Shopify,1,eCommerce USA,1,match_all_three
+US,41000,Amazon,1,Amazon,1,Amazon,1,match_all_three

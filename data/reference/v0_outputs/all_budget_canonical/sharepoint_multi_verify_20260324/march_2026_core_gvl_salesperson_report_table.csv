@@ -1,0 +1,18 @@
+Region,Sub Region,Salesperson,Status,Workbook Total k,GVL Total k,Delta k,GVL Existing k,GVL New k
+Benelux,NL Central,Marjelein,matched,93.020078,102.0,-8.979921999999988,98.032,4.0
+Benelux,NL Other,-Kein Vertriebsmitarbeiter-,matched,1.1,3.0,-1.9,2.7,0.0
+Benelux,NL Other + BL,Gabrielle,matched,102.47238162000002,106.0,-3.5276183799999785,102.462,4.0
+France,France North,Elena,matched,2.5,16.0,-13.5,5.0,10.0
+France,France South,Yannick,matched,5.0,8.0,-3.0,4.0,4.0
+Germany,Bayern,I. Papoulias,matched,61.49391957,65.0,-3.506080429999997,60.932,4.0
+Germany,DE Other,-Kein Vertriebsmitarbeiter-,matched,11.66,24.0,-12.34,23.32,0.0
+Germany,NRW - Marina,Marina,matched,59.41372141000001,63.0,-3.586278589999992,59.414,4.0
+Germany,NRW - Ulrike,Ulrike,matched,15.79299944,19.0,-3.207000559999999,15.793,3.0
+Germany,North,Kerstin,matched,65.38896391,70.0,-4.611036089999999,65.389,5.0
+Germany,North East,Aracelli,matched,40.54526388000001,45.0,-4.454736119999993,40.545,4.0
+Germany,Retail,Aracelli,matched,20.0,20.0,0.0,20.0,0.0
+Germany,South West,Sibylle,matched,185.38181692,189.0,-3.6181830799999934,185.382,4.0
+Italy,Italy,Elena,matched,1.5,6.0,-4.5,1.5,4.0
+Spain,Spain,Montse,matched,17.5,22.0,-4.5,17.5,4.0
+Switzerland,French Switzerland,Elena,matched,3.5,9.0,-5.5,3.675,5.25
+Switzerland,German Switzerland,Christiane,matched,67.08607936,74.0,-6.913920640000001,70.094,4.2

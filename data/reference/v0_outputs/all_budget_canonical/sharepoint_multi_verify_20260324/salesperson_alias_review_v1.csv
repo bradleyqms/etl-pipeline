@@ -1,0 +1,29 @@
+canonical_entity,canonical_salesperson_name,salesperson_unified_raw,salesperson_unified_clean_src,slp_code,salesperson_dim_name,salesperson_dim_clean,suggested_dim_name,suggested_slp_code,suggested_score,alias_status,priority_group
+UK,INTERCO,,Interco,,,,e-commerce,2,35.3,needs_review,1
+US,AMAZON,,Amazon,,,,Amy Chasko,4,50.0,needs_review,2
+US,AMY,,Amy,,,,Amy Chasko,4,46.2,needs_review,2
+US,BETHANY,,Bethany,,,,Bethany Phillips,11,60.9,needs_review,2
+US,ERIN,,Erin,,,,Erin Shapiro,10,50.0,needs_review,2
+US,INTERCO,,Interco,,,,Erin Shapiro,10,42.1,needs_review,2
+US,MARCUS,,Marcus,,,,Marcus Howard,12,63.2,needs_review,2
+GmbH,ARACELLI,A. Gutierrez,Aracelli,,,,Ana Moll,71,50.0,needs_review,3
+GmbH,BENELUX - OTHER,C. da Costa Campos,Benelux - Other,,,,e-commerce,7,40.0,needs_review,3
+GmbH,DE OTHER,-Kein Vertriebsmitarbeiter-,DE Other,,,,C. Obser,3,50.0,needs_review,3
+GmbH,DE OTHER,Innendienst,DE Other,,,,C. Obser,3,50.0,needs_review,3
+GmbH,ECOMMERCE EU (INCL. UK),e-commerce,eCommerce EU (incl. UK),,,,e-commerce,7,54.5,needs_review,3
+GmbH,FRANCE,Y. Januario Neukd FRA,France,,,,Rowan,32,54.5,needs_review,3
+GmbH,GABRIELLE,G. van Eykern NL,Gabrielle,,,,Asia Cilek,50,42.1,needs_review,3
+GmbH,GABRIELLE,G. van Eykern BE,Gabrielle,,,,Asia Cilek,50,42.1,needs_review,3
+GmbH,IANNIS,I. Papoulias,Iannis,,,,Innendienst,5,58.8,needs_review,3
+GmbH,INTERCO,Interco,Interco,64,Interco,INTERCO,Interco,64,100.0,exact_match,3
+GmbH,INTERCO,Solveig Loresco,Interco,64,Interco,INTERCO,Interco,64,100.0,exact_match,3
+GmbH,INTERCO,Innendienst CH,Interco,64,Interco,INTERCO,Interco,64,100.0,exact_match,3
+GmbH,KERSTIN,K. Brunbauer,Kerstin,,,,Vertrieb,21,53.3,needs_review,3
+GmbH,MARINA,M. Pfauch Neukd,Marina,,,,Mark Stanlein,34,52.6,needs_review,3
+GmbH,MARINA,M. Pfauch,Marina,,,,Mark Stanlein,34,52.6,needs_review,3
+GmbH,MARJELEIN,M. Mijnheer NL,Marjelein,,,,Mark Stanlein,34,63.6,needs_review,3
+GmbH,MARJELEIN,M. Mijnheer NL Neukd,Marjelein,,,,Mark Stanlein,34,63.6,needs_review,3
+GmbH,MONTSE,M. G. Fernández,Montse,,,,S. Monteiro,26,58.8,needs_review,3
+GmbH,RETAIL,Steve Byrom-Chadd,Retail,,,,M. Radi,5,46.2,needs_review,3
+GmbH,SIBYLLE,S. Wöhrle,Sibylle,,,,Asia Cilek,50,47.1,needs_review,3
+GmbH,ULRIKE,U. Bensmann,Ulrike,,,,Vertrieb,21,42.9,needs_review,3

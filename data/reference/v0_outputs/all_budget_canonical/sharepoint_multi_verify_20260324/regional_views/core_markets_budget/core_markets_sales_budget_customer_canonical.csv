@@ -1,0 +1,734 @@
+customer_code,customer_name,Sales person,sales_person,Customer Map,Active?,market_group,region,sub_region,company_group,door_type,sheet_name,workbook_name,workbook_type,Region,Country,2025 Cluster,channel,2026 Cluster,budget_version
+29022,Anja-Maria Fischedick; Gladbeck,Marina,Marina,Institutes / Clinic,Yes,Core Markets,Germany,NRW - Marina,Company 1,,NRW Marina,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29026,By Natalia; Natalia Ivica,Marina,Marina,Institutes / Clinic,Yes,Core Markets,Germany,NRW - Marina,Company 1,,NRW Marina,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29031,de Medici Moment & Spa Club; Regina Lörke,Marina,Marina,Institutes / Clinic,,Core Markets,Germany,NRW - Marina,Company 1,,NRW Marina,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29033,Angelo stile italiano; Paderborn,Marina,Marina,Institutes / Clinic,,Core Markets,Germany,NRW - Marina,Company 1,,NRW Marina,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29019,PM Kinga; Kinga Mathey,Ulrike,Ulrike,Institutes / Clinic,Yes,Core Markets,Germany,NRW - Ulrike,Company 1,,NRW Ulrike,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,NKD25,,,2026.03.18
+29020,Sandra Duratovic; Osnabrück,Ulrike,Ulrike,Institutes / Clinic,Yes,Core Markets,Germany,NRW - Ulrike,Company 1,,NRW Ulrike,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,NKD25,,,2026.03.18
+29029,Beauty Space; Shareen Idu,Ulrike,Ulrike,Institutes / Clinic,,Core Markets,Germany,NRW - Ulrike,Company 1,,NRW Ulrike,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29024,"Parfümerie Pieper, Herne",Kerstin,Kerstin,Institutes / Clinic,,Core Markets,Germany,North,Company 1,,North,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,NKD25,,,2026.03.18
+29023,Lukas Mann Friseur u. Kosmetik,Sibylle,Sibylle,Institutes / Clinic,Yes,Core Markets,Germany,South West,Company 1,,South West,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,NKD25,,,2026.03.18
+29025,Kosmetik am Park; Julia Sporer,Sibylle,Sibylle,Institutes / Clinic,Yes,Core Markets,Germany,South West,Company 1,,South West,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,NKD25,,,2026.03.18
+29027,Hautzentrum Dr. Pfeifer,Sibylle,Sibylle,Institutes / Clinic,Yes,Core Markets,Germany,South West,Company 1,,South West,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,NKD25,,,2026.03.18
+29021,Vitaleen GmbH; Dr. Roger Eisen,I. Papoulias,I. Papoulias,Institutes / Clinic,,Core Markets,Germany,Bayern,Company 1,,Bayern,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,NKD25,,,2026.03.18
+29028,Hautnah by Tiziana; Tiziana Schwarz,I. Papoulias,I. Papoulias,Institutes / Clinic,,Core Markets,Germany,Bayern,Company 1,,Bayern,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,NKD25,,,2026.03.18
+23116,Skinprove; Marilyn de Jong,Marjelein,Marjelein,Institutes / Clinic,,Core Markets,Benelux,NL Central,Company 1,,NL Central,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,NKD25,,,2026.03.18
+23121,PUUR Huidinstituut Breda,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD24,,,2026.03.18
+23117,Clinique Cosmetique; Emmie Weekers,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+23118,Aqua Beautycare; Wendy Schotting,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+23119,Cosmetic Heroes;  Dr. Hero Zijlker,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+23120,Juuls Clinic BV; Julia Ahmed Mews,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+23122,Doolaards Beauty,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+24034,Bar a Beauté; Lies Vervaele,Gabrielle,Gabrielle,Institutes / Clinic,Yes,Core Markets,Benelux,NL Other + BL,Company 1,,NL Other_Belgium,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD25,,,2026.03.18
+21114,Esteticaline AG; Institut; Natalia Weisinger,Christiane,Christiane,Institutes / Clinic,,Core Markets,Switzerland,German Switzerland,Company 1,,Switzerland DE,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD25,,,2026.03.18
+21116,Cresta Palace Hotel Celerina AG,Christiane,Christiane,Institutes / Clinic,,Core Markets,Switzerland,German Switzerland,Company 1,,Switzerland DE,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD25,,,2026.03.18
+21117,Medi Groupe Sarl,Elena,Elena,Institutes / Clinic,,Core Markets,Switzerland,French Switzerland,Company 1,,Switzerland FR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,NKD25,,,2026.03.18
+27046,SAS Le Saint Rémy,Yannick,Yannick,Institutes / Clinic,No,Core Markets,France,France South,Company 1,,France South,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD25,,,2026.03.18
+27047,Innovert SARL,Yannick,Yannick,Institutes / Clinic,No,Core Markets,France,France South,Company 1,,France South,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD25,,,2026.03.18
+28500,Enamour Cosmetics di Matteo Carpeggiani; Italien,Elena,Elena,Institutes / Clinic,Yes,Core Markets,Italy,Italy,Company 1,,Italy,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Italy,Other EU,NKD25,,,2026.03.18
+26015,"Instituto de Belleza Milfey, S.L.; Málaga",Montse,Montse,Institutes / Clinic,Yes,Core Markets,Spain,Spain,Company 1,,Spain,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD25,,,2026.03.18
+26016,Beauty by Willeke; Spain,Montse,Montse,Institutes / Clinic,Yes,Core Markets,Spain,Spain,Company 1,,Spain,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD25,,,2026.03.18
+-26,New doors 2026,Montse,Montse,,5,Core Markets,Spain,Spain,Company 1,new_2026,Spain,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD26,,,2026.03.18
+10033,Flughafen München eurotrade,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Retail,Germany,0,,,2026.03.18
+20001,"Heike Stein, moderne Kosmetik",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20004,Susanne Dreier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20005,Heike Kreutzburg,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20007,Birgit Kraft,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,CC,,,2026.03.18
+20009,Parfümerie Flair,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BB,,,2026.03.18
+20018,Susanne Gollmer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20020,Amenta Cosmetic GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20022,Karin Martin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20024,Gudrun Möderl,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AB,,,2026.03.18
+20025,Gabriel Cosmetics GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20030,Britta Bork; inaktiv seit 07/2021,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20035,Wir-Für-Sie Parfümerie Kretschmer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+20040,Lena Parfümerie GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20042,Gaby Wichterich,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20043,Annette Backhaus-F.;inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20058,Arno Doell,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20059,Nicole Kayser,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20066,Erika Becker,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20069,Ursula Nauke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+20070,"Bettina Gebhardt(LIANE BOTT,",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20071,Sultan Wolff; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20072,Parf.Ruschmeyer; inaktiv ab 09.2020,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20073,Jeanette Jost,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,CC,,,2026.03.18
+20079,Magret Timm,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20080,Parfümerie Thomas Lehr,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20082,Parfümerie H.C.,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20083,Anja Post:verstorben;,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20085,Perry Pritchard; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20093,Susanne Thomsen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CC,,,2026.03.18
+20097,Heidi Sönksen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20104,Madeleine Tast,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20106,Susanne Alltschekow,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20108,Petra Pott,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20109,"Uschi Eberle, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20110,Sabine Mauermann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20115,Pia Eikemeier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20121,Albrecht GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20128,Thomas Venus,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20129,Friseur-Erlebnis GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20130,Henry Eichhorn,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20131,Hannelore Mader,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20132,Katja Wilk,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20134,Petra Schmidt,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20136,Petra Penning,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20138,Jane Scheffler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20141,Ingrid Jürgensen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20142,Florence Vogelgesang,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AB,,,2026.03.18
+20143,Marlies Koch,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20145,Gerti Volkmer Kosmetik e.K.,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20147,Ursula Heidemann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20148,Karin Tippelt,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20150,Susanne Gaßmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20152,Regina Ahlert; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20153,Silke Smets,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20155,Carmen Perthold,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20156,Petra Selle-Tiedemann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20160,"Marc Cain, Suennen",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20161,Liane Kurth,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BB,,,2026.03.18
+20162,Andrea Könecke; inaktiv ab 17.06.2021,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20163,Manuela Nestmeier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AB,,,2026.03.18
+20164,Irene Hospes,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20168,Marion Meidenbauer-Gruber,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20169,Monika Sebetzky,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20171,Katrin Wille; Bartholomé,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20172,Charlotte Eggers,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AB,,,2026.03.18
+20173,Marianne Peter,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20188,Andrea Nussbaum,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20194,Claudia Käufer; inaktiv ab 08.09.2020,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20198,Simone Irion,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20201,Tanja Beisel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20206,Apricot Cosmetic; Tabea Buchhart,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20223,Gaby Hartl; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20227,Danuta Bruckhaus,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20230,"Casa Bella Moers, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20231,Ulla Schaetz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20232,Carmen Wollmering,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+20234,Edith Ebe,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20236,Vida Leitner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20238,Andrea Riezler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20245,Christel Gierth-Makarievski,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20246,Concetta Lucchese,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20251,Esther Wohlfahrt-Maley,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20252,"Huong Linh Vuong,inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20253,Jeanette Ziegler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CC,,,2026.03.18
+20255,"Gregor Wiese, Le Visage",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20257,Karin Hollatz; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20263,Brigitte Preikschat,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20266,Frauke Hinz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20269,Bettina Heide,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20270,Susanne Schwidden,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20272,Christine Lembeck,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20276,Claudia Golinski,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20284,"Ruth Russo, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20285,Elke Piltz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20294,Irma Krichely,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20295,Birgit Schlagenhof-Braun,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20300,Hilde Jansen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20301,Margrit Feddersen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20302,Sabine Eibl,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20309,I & C Nebel GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AB,,,2026.03.18
+20312,Mirca Gönner-Javorsky,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20313,Luna De Seth,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AB,,,2026.03.18
+20316,Manuela Schnurrer; PflegeReich,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20317,Christine Hillinger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AB,,,2026.03.18
+20318,Vollmar GmbH/Hergarten,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20322,Ulrike Biller; inaktiv 06.08.2021,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20325,Manuel Levinger e.K.,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20326,Oskar Weinfurtner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20331,Sylvia Scherrer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20332,Anna Cho,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20333,Christina Papoulia,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20334,Marion Schlereth,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20336,Viola Riewe; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20337,Ingeborg Maasch; verstorben,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20340,Parfümerie W. Liebe GmbH & Co KG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BB,,,2026.03.18
+20344,Inge Bieber,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20345,Annemarie Schwendtke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AB,,,2026.03.18
+20346,Susanne Krämer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+20347,Frauke Beierle-Wittern,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BC,,,2026.03.18
+20348,Katja Brandt; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20349,Simone Maschmeyer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20350,Dina Nitzsche,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20351,Medical Beauty Spa Rief GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20353,Sabine Winter (vorm.Scheibe),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20357,Indra Girsig,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20358,Eva-Maria Munique-Solinas,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20360,Anna Tsekeridu,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20363,Birthe Sommer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20364,Martina Burgard,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20369,"Kosmetikinstitut Luthmann, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20370,Birgit Henning,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20371,Wir-Für-Sie Parfümerie Kirchner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20374,Joanna Schiele,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20376,Barbara Gugel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20386,Barbara Beutner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20388,Sabine Eisebraun; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20393,Jutta Brandmaier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20395,Top Parfümerie Manegold,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20402,Christiane Prien GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20404,Doris Röhrig; Ende 31.01.2021,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20413,Monika Rödl,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20414,Astrid Christmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20417,Silke Heiden,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BC,,,2026.03.18
+20429,Jana Roßmann-Schneider,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20431,Edeltrud Stark,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20433,Kosmetikinstitut Lenz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AB,,,2026.03.18
+20434,Carmen Heinz-Gottwald,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20439,Margit Hünebeck,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20441,Ursula Hohagen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BC,,,2026.03.18
+20443,Elke Hennig-Fausel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20444,Carola Rudolf,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20445,Agnes Peltzer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AC,,,2026.03.18
+20447,Arja Schule; inaktiv-Ende 2020,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20448,Wir-Für-Sie Parfümerie Oberpriller,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BA,,,2026.03.18
+20449,Marion Thenhausen-Tenzler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20452,Carmen Seegers,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20454,Michaela Stefan-Lehnert,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BC,,,2026.03.18
+20460,Karin Ittlinger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20472,Estela Bär,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CB,,,2026.03.18
+20475,Jürgen Kappei,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CB,,,2026.03.18
+20477,Ellen Jlussi inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20503,Sabine Fischer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20505,Petra Jung,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20507,Heidi Sprafke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20509,Elke Blidon,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20511,Jana Jungblut,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BC,,,2026.03.18
+20513,Silke Wulf,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20516,Maria Scherer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20517,Marita Hess,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20519,Besime Celik,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20523,Andrea Gretter,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20529,Cornelia Eydam (Wustrau),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20531,Heike Draha,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20532,Steffi Nebeler:; inaktiv 10.09.21,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20533,Wir-Für-Sie Parfümerie Wigger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20536,Horst Kirchberger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20539,Susanne Winter,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20540,"Anita Tönges, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20542,Elke Lepper,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20545,"Tobias Brandl,Ottobrunn",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20547,Silvia Hippe,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20550,"Schnitzler VST 046, Douglas GmbH, Düsseldorf",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20556,Simone Geng,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20568,Kathleen Drescher,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20569,Petronella Schmidt;verstorben;,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20570,Matthias Pfeiffer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20573,Martina Hohler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20576,Susanne Große,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BC,,,2026.03.18
+20577,Pia Philipps,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20580,Susanne Plettner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20590,Alexandra Eßer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20591,Monika Gmeiner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20592,Kristina Schulz (Frings),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20596,Maike Mutschler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20598,Parfümerie Schuback GmbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20599,Barbara Hofmann inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20601,Gabi Leunig,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20602,Jennifer Flesch; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20607,Nadine Bordino,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20610,Doris Wilke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20613,Sofia Gärtner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20615,Rosi Breisch(Zweigle),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AC,,,2026.03.18
+20617,Iris Leube,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20619,Gisela Gall,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20630,Monika Reitberger; -inaktiv-,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20635,Elke Popp; Kurfürsten-Parfumerie,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CB,,,2026.03.18
+20636,Christine Becher,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20641,"Brunhilde Brohl, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20645,Parfümerie Figge OHG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20646,Malgorzata Grobosch,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20653,Ebru Küveytli,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20656,"Robert Gabriel, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20657,Jessica Grieß; (ehem. Renner),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20658,Hotel Solthus am See,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20660,Petra Rauschenberger-inaktiv-(ehem.Rebhorn),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20666,Nicolette Hiemer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20668,Marion Schmitt / inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+20670,Margarete Malorne,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20672,"Corners Tabel,Hannover",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20674,Sonja Schreyer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20675,Lindner Parkhotel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20677,"Gabriele Scheller, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20678,Ella Roßat; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20679,Corinna Schröder,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20680,Eva Häfner-Hoffmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20681,Katerina Pesek-Brozova,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20684,IC Institut für Intensiv; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20688,Helga Gänsbauer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20691,Branka Beuermann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20693,Susanne Barke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20696,Martina Ronsberger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20697,Sonja Zgrabic,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20699,Larisa Shabaeva,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20700,"EDELWEISS, Berchtesgaden",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BA,,,2026.03.18
+20704,Parfümerie CB GmbH; inaktiv ab 04.03.22,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20706,"KaDeWe QMS, Berlin",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20707,Ilona Creutzburg,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20709,Lena Duerkop,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20710,Kai Köster,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AB,,,2026.03.18
+20713,"Schnitzler, Douglas VST 122, Düsseldorf",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20714,Gina Brunner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20716,"Ines Krämer, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20720,Ines Zelno,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20723,"Katrin Bellin, Jesus/ Ibiza",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,BA,,,2026.03.18
+20724,Farida Zaman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20725,Fadime Avci,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20727,Andrea Streubel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20728,Claudia Germerott,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20729,"Astrid Zaglmann, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20731,Margit Jox,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20732,Diana Settele; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20736,Sarah Benz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+20738,"Sandra Blickle, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20739,Petra Böslau-Voigt; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20741,Irina Seplyarskyy,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20742,Angela Henkel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20743,Ursula Hederer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20744,Yvonne Gloris,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20745,Diana Awanesow,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20746,Martina Born,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20749,"Ekaterina Stoyalovskaya, Mallorca",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,AA,,,2026.03.18
+20750,Oriana Adkonis,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20751,Marcella Rotter; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20752,"GRÜNEWELLE, insolvent",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20753,"sharipov, Hamburg; Ende 28.02.22",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20754,Parf.Akzente inaktiv Douglas VST 269,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20756,Beatrice Pankau,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20757,Anna Koseanski,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20759,Ute Volk,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BC,,,2026.03.18
+20761,Bettina Titze,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20762,"Judith Lang, body&care",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20764,Stephen Seligman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20765,Svetlana Grießner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20766,Claudia Sprinkart; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20767,Dagmar Haslbeck,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AC,,,2026.03.18
+20768,Ariane Dumke (ehem.Stüwe),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20769,Wiltrud Egetenmeier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,0,,,2026.03.18
+20772,SK Kosmetik; Sebastian Klitsch,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20774,Brigitte Probst,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20775,"Heike Assem, -inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20776,Franziska Kuhs,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20777,"Samira Kosmetik, Hofer",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20778,Ursula Feinbier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20779,Maria Raith,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20780,Conrad Rohde; Frisuren-Spezialisten,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20781,Claudia Brodersen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BA,,,2026.03.18
+20784,Iris Bayer; inaktiv ab 12.08.2021,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20785,Dr. Stedler GmbH (EVENA),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20787,Ulrike Bernhardt-Schubert; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20788,Irina Klingbeil,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20790,Karin Kunert,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20791,Wassana Marit,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BA,,,2026.03.18
+20793,Parf.Rook,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20794,Carmen Kühner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20795,Marion Gehrmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,0,,,2026.03.18
+20797,"Susanne Hellriegel-Knauf, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20798,Aleftina Jans,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20799,Dr. Roya Martens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20800,Kirsten Hofes; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20801,Silvia Schneider,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20802,Myra Georg (inaktiv),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20804,Grit Hempel-Schuble,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20806,Manuela Liebel-Schulz; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20807,Natalie Gabric,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20808,"ONDUA GmbH, Coss, Ondrusch",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20810,"Sophie Steinkühler, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20811,Agnes Hirschburger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20812,"E. von Ziegler, Adenau",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20814,K.Schisch(Werr),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20815,Irina Reznikova,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20818,"Tanja Hochholzer, Glanzhaft",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20822,Gabriele Waigand inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20823,Daniel + Kerstin Molitor,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20824,Marco Ulloth,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20825,Marisca Kugler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,NKD24,,,2026.03.18
+20826,Christiane Berghoff,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20828,Heike Hermann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BB,,,2026.03.18
+20829,Julia Dittrich,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20830,Tatjana Facher,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20832,Sonja Bilsing (ehem.Schelkle ),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20833,"Merx, catharina GmbH, Gräfelfing",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20834,Jörg Drescher,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20835,"Denise Frank, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20836,Kosmetikstudio Dermaplace; Fabiona Barnick,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20837,Petra Hecht,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20839,Uta Gierschke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20840,Kathrin Tissen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20841,Christina Hofmann; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20842,Renata Mikailov,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20844,"Alexandra  Sauermann, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20845,Cornelia Wielgosch,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,CC,,,2026.03.18
+20846,"Miamo, Anner, MO-INA; inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20847,Reiteralm Ansitz; Angela  Incorvaia,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20848,"Jan Kreuzer, feel beauty",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20849,Daniela Topalo (vormals C.Schneider),,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20850,Adriana de Koning,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20851,Bettina Märkle,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20852,Beate Papenbrock; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20853,Markus Schneider,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20854,Sandra Schorpp; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20855,"Silke Pietsch, Palazzo; inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20856,Birgit Heuschneider; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20857,Kerstin Vollmer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20858,"Violetta Luban, -inaktiv-",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20859,Grüne Welle/Yulia Kalaycheva,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20860,"Anett de Pablo, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20861,Anke Hohoff,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20862,"Diana Samir Muhamad, Peach Skin",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20863,Manuela Barny,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20864,"Stephanie Alex, dermabalance",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20865,Shima Sarvestani,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20866,Valentina Terre,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20868,Sylvia Galata; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20869,"Anne Binder, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20870,Dagmar Richter,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20871,Jacqueline Löwenthal,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20872,Mirsada Hülsemann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20873,Kristina Schönmair; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20874,Karin Arndt,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20875,Viktoria Pökelmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20876,Elena Philipps; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20877,Sandra Koschny,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BA,,,2026.03.18
+20878,Ilka Amrhein; -inaktiv-,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20879,Madeleine Paetzold,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20880,Savina Sasserath; inaktiv ab 22.10.21,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20881,"kosmetikfuchs, Schnitzler",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20882,Patricia Osenger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20883,"Peter Bischoff, inaktiv",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20884,Thea Rekic,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20885,Carola Kiesel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20886,Eugenia Tschernyschov,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20887,Irina Bergmayr; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20888,Diane Busljeta,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20889,Janet Eschweiler; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20890,Beate Bulang; inaktiv ab 22.10.21,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20891,Elena Schwarz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20892,Viktoria Adolf,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20893,Inna Kasemir,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20894,"Mario Klas, milk & honey",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20895,Hotel Adlon,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20896,Ute Jansen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20897,Petra Schwarzbauer; inaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20898,Karina Kipke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20899,Johann Schädler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20900,Irini Aktepe,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20901,Sabine Pargmann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,CA,,,2026.03.18
+20902,Renate Behling,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20903,Aliya Akhundova,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20904,"Oberpollinger QMS, München",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20905,"Alsterhaus QMS, Hamburg",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20906,"Dr. Ermuth & Dr. Löckermann, Singen",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20907,Vitalskin; Romy van Thoor,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,GG,,,2026.03.18
+20908,Lebensart; Sonja Dreisow,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20910,Isabella Faßbender,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20911,Andrea Funke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20912,Beauty Rausch;Rudolf Rauschenberger,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20913,Cernovolik; Olga Cernovolik,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20915,Nouvelle Belle Cosmetique;Mojgan Ghahramani,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20916,Saintly Skin; Frederika Van Hagen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,CB,,,2026.03.18
+20917,baslerbeauty GmbH & Co.KG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20918,Martina Becker,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20919,Wellness und Beauty Lounge by Meyriam Saror,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20920,von Carben Cosmetics;Bettina von Carben,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BB,,,2026.03.18
+20921,Veralice UG; Veronika Schuster,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20922,RTC Rose Travel Consulting GmbH & Co. KG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,GG,,,2026.03.18
+20923,No.1 Cosmetics GmbH; Dirk Brüggemann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,BA,,,2026.03.18
+20924,Dr. Brüggemann Cosmetics UG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CC,,,2026.03.18
+20925,Anadore; Anna Rajski,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20926,MF Beauté; Marina Fischer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,GG,,,2026.03.18
+20927,Capital Aesthetics; Dr.med Katharina Brüggemann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20928,Kosmetik 36; Lilija Kryzhanivska,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20929,Hotel Traube Tonbach; Renate Finkbeiner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20930,Priv. Kosmetikinstitut; Evelina Kühn,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20931,Cell Concept Lounge; Sara Gasser,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,GG,,,2026.03.18
+20932,Seehotel Überfahrt Hotelgesellschaft mbH,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,AA,,,2026.03.18
+20933,Beautywelt; Pascal Zieglmeier,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20934,Ästhetik Lounge; Alexandra Holmstoel-Müller,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,CB,,,2026.03.18
+20936,Rief Permanent; 2.Firma KEIN Neukd,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20937,My Beauty Box; Dilara Dirik,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CB,,,2026.03.18
+20939,Pearl Cosmetics; Sabine Rohnert,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20940,Beautymanufactur GmbH; Marco Dors,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,AA,,,2026.03.18
+20943,Haut Labor GmbH i.G.,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20947,Chieminger Beauty Stadl; Barbara Helfer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20948,MP Cosmetic; Milita Pernawas,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,AA,,,2026.03.18
+20949,Nilu Cosmetics; Nilu Radpour,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20952,Stadtschönheit; Rebecca Schanz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BC,,,2026.03.18
+20956,Kosmetiksalon Yelena Brückner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CC,,,2026.03.18
+20960,Hotel Obermühle GmbH; Christian Wolf,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,0,,,2026.03.18
+20962,House of Beauty (Douglas) nur Kabi Ware,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20963,Douglas; VST P209; f. Verk.Ware,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20964,Cozy by Zey; Zeynep Tekin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+20966,Sagatti; Mariya Alifyan,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,CC,,,2026.03.18
+20968,Fish Spa & More GmbH; Kadir Yücel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20969,Skinfactory Laura Pfluegler,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BA,,,2026.03.18
+20975,Fritsche Cosmetics im Beauty Loft,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20978,Monika Schwarz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20979,Melanie Meiritz; Freiburg,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20981,Maleko Kosmetik; Maria Lebeth,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BB,,,2026.03.18
+20982,Suyas Beauty; Melissa Arisoy,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,CC,,,2026.03.18
+20983,Anna Heistermann,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+20984,"Kosmetik am Park, Meike Ewens",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20985,Kalyana-by-K;Kerstin Leonard;Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,AA,,,2026.03.18
+20986,Beletage; Nora Medyan,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BA,,,2026.03.18
+20987,Beautyconnection GmbH; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20989,Petra Jansen; Interessentin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20990,Hotel Das Achental,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,BC,,,2026.03.18
+20991,Ceres Hotel; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20992,Patrizia Miceli; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+20993,Nadja Russ; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20994,SPA at the Andaz; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20995,Long Time Liner; Annett Roeder; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,North,Germany,CC,,,2026.03.18
+20997,Martina Borowski Body Concept,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,NKD24,,,2026.03.18
+20998,"Art of Beauty, Selina Zimmermann; Interessent",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+20999,Benen-Diken-Hof; Interessent; Anja Johannsen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23000,Permanent Beauty; Ilona Inceman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23001,"Cryon, Evyo; Christine Geldtmeijer",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+23002,Helemaal Huid Huid; Janine van Rossum,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BC,,,2026.03.18
+23003,Cyelle; Coby Bette,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23004,"Dermaskin, inaktiv 01.22 Marian Janssen",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23005,Beauty Reflection;Connie Kraak,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23006,Taiger Rambhadjan,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23007,"Moooi en zo, Angelique van Oosten",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23008,"Beauté, Vincent van Schijndel",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,GG,,,2026.03.18
+23009,"Dehcos, Désirée Zelissen",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+23010,Dermacosmetic; Kimberley Solisa,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BB,,,2026.03.18
+23011,Orange Beauty; Peggy Peters,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23012,Blush Institute; Myrthe Feijen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23013,Salon Esthétique; José Meuleners,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23014,Huidverzorging; Vera van Velzen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23015,Davi Skin; Vivian de Rijke,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23016,FARLA Skin Care; Claire Farla,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23017,Younique Xperience; Clarinda von Doorn,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23018,Het huis van Hermens BV; Robin Hermens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BB,,,2026.03.18
+23019,Huidinstituut de orchidee; Saskia Spee,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23020,Beauty Center Anke; Rotterdam; Anke Slegtenhorst,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AB,,,2026.03.18
+23021,Beauty Center Anke Carnisselande B. V.; Anke Slegtenhorst,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23022,SkinLab Maastricht; Keshia Houben,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23023,Belle & Beau Medicosmetics; Sabine Verschut van Hamersveld,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23024,Salon la Coquille; Pieta Koning,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BC,,,2026.03.18
+23025,Marielle van Helvoort-inaktiv-,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23026,Huidinstituut Le Blush; Claudia Nijmaninaktiv,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23027,Bloy Institute; Lindsay van der Looij,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23028,UNDICI Skin Care Institute; Petra Schonbrodt,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23029,Beautien schoonheidssalon; Bartine Siekman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AC,,,2026.03.18
+23031,Delia Skin Clinic B.V.; Sylvia van der Graaf,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23035,Jackelin Frank,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23037,Schoonheidsinstituut Puur/Beauty,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BB,,,2026.03.18
+23038,Skin Terneuzen; Barbara Langerak,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+23039,USKIN the Clinic; Esther Louwerse,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23040,Charline; Charlotte Wierenga,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,GG,,,2026.03.18
+23041,Skinzza Store; Maria Magalhaes,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,NKD24,,,2026.03.18
+23042,Le Noble Skin Care;inaktiv 03.08.21 Noble,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23043,Lalana; Yvonne de Vries,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23044,Najade Beauty Professionals;Katy Zaman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23045,Beauty for You; Ingrid Huffmeijer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23047,Marieke Skin; Marieke v. d. Heijden,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD24,,,2026.03.18
+23048,AU-BAIN MARIEKE; Anjola Dam,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23049,vanBeurden health & beauty,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23050,Giselene medisch&cosmetisch instituut,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23051,Malika Skin; Liefersperre,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23055,The Skin; Zizi Hijmans,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,0,,,2026.03.18
+23056,Marion Beautysalon,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23057,Skinfo;Schoonheidssalon Simone,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23058,Skin Studio Suuz; Suzanne van den Berg,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23061,Agua - Spa Health Beauty,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23062,Salon Willeke Skincare; Willeke Hendriks,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23063,Quindy's; Jessica Dirks,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BB,,,2026.03.18
+23064,Grand Hotel Huis ter Duin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23065,Jolique,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23066,Studio-Ka; Karen de Laat,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23067,Nina's Schoonheidssalon; Nina Janssens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+23068,Colours skincare; Marie-José Paulus,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+23069,Skinz medSkin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23073,Huidinstituut Marjon Laheij,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23076,SCHOONHEIDSINSTITUUT PUUR!,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23078,Caméléon Huidcentrum; Monique,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BB,,,2026.03.18
+23080,Het Cosmedisch Ambacht,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23082,Reflex Resort; Edita Saracevic Kovacevic,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BC,,,2026.03.18
+23083,Huid Visie; Francis Mooren,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+23084,Beleza Pura; Maartje Boonen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23085,Schoonheid Be Different; Ana Cristea,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BC,,,2026.03.18
+23086,LJ Beauty Instituut; Linda Jakobs,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+23087,EE Praktijk voor Huidverbetering; Edith Esselink,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BB,,,2026.03.18
+23088,ik! skin and more,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23089,Marscha Keijers Beauty Amersfoort,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23090,Mooi Instituut; Kitty Scherff,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BB,,,2026.03.18
+23092,Jess Body Care; inaktiv; Lara Calvo,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23093,SKINSY Comfort your skin; Samanta Buschman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+23094,Huidkliniek DermaPuur; Samantha Kool,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23095,Beautysalon in Balance; Astrid Hartveld,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,GG,,,2026.03.18
+23096,Delia Skin B.V.; Delia Erdogan,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23097,Huidpraktijk Limburg; Tanja Stuart,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,NKD24,,,2026.03.18
+23098,Infinity; Blanca Oguz,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23099,Skin Investments; Christiana Klynstra,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,CC,,,2026.03.18
+23100,Dees skincare; Daisy Mastenbroek,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,0,,,2026.03.18
+23101,Skin Boutique Vanessa Karreman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23102,"&C Media B.V.; Marco Geeratz, Romée",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23103,Pur Skin Institute; Britt van de Laar,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,GG,,,2026.03.18
+23104,Vievermans Huidkliniek; Venray,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BA,,,2026.03.18
+23105,Vievermans Huidkliniek; Eindhoven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23106,The Beauty Room by Irene,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,BB,,,2026.03.18
+23107,The Exclusiv complete skin; Wendy Wynhoven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23108,Cosmaria Beauty Almere; Maria Magalhães,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23110,Fallachi B.V.; Matee Aman,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,0,,,2026.03.18
+23111,Avance; Lara Hiddema,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,AA,,,2026.03.18
+23112,Si Beauty by Cynthia; Andel,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,NKD24,,,2026.03.18
+23114,Jössefors Beauty; Sabine Verschut-van Hamersveld; Schweden,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+23115,Clien Skin; Eline Hartogs; Eindhoven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Central,Benelux,NKD24,,,2026.03.18
+24000,Esthetiek Vicky Michiels,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AB,,,2026.03.18
+24001,Instituut Janne; Janne Huys,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24002,Schoonheidssalon Christel; Christel Janssen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24003,Cybo Cybel; Stefanie Vandererfven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+24004,Het Stille Seizoen;-inaktiv Sofie Dewitte,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24005,Mosa Nostra BVBA; INAKTIV; Mireille Stevens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24007,"Apprenza Cosmetisch Instituut, Maartje van Loon",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24009,BV Argenteuil: Lieve Decuypere,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24012,Sessibo Huidinstituut; Beckers Inge,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24013,DeAge Anti Ageing; Nicole Vlastuin,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+24014,Beauty and Care; Beatrix Joosten,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BB,,,2026.03.18
+24016,Maison Pur; Leen Ryckaert,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24017,Schoonheidsinst.Natuurlijk JongerSofie Vergoten,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+24021,Instituut Una; Elke Goossens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24022,El Naturelle; Natalie Plevoets,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+24023,Els De Fré; verstorben 12/21,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24025,Consiliario BV; FIRM Clinic,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24026,Sibella; Steffi Van Kerkhoven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24027,Mooi bij Lotte; Lotte Geusens,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,AA,,,2026.03.18
+24028,Love for Body and Feet; Karien de Naeyer,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+24029,La Beauté Unique; Sibel Car,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BC,,,2026.03.18
+24030,Sun & Nail Art; Isabel van de Casteele,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+24031,Vitality; Vivianne Latten,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BA,,,2026.03.18
+24032,"Angelique C""; Angelique Cools",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,BC,,,2026.03.18
+24033,Strig BV; Stephanie Neven,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Netherlands Other / Belgium,Benelux,GG,,,2026.03.18
+26001,Fussion Cosmetic S.L..; Tenerife,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,CC,,,2026.03.18
+26002,Buyin Exclusive S.L.; Albolote-Granada,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,BA,,,2026.03.18
+26003,Phuntsek S.L.; Carmen Navarro;  Madrid,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,0,,,2026.03.18
+26004,Skinpharmacy; Lucia Altozano; Madrid,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,BA,,,2026.03.18
+26005,Neori Labs SL; Bilbao,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,CC,,,2026.03.18
+26006,Jantvari SL; Barcelona,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,CC,,,2026.03.18
+26007,"Karina Kova, Pontevedra; Interessent",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD24,,,2026.03.18
+26008,Verónica Guerra; Gijón; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+26009,Harmonie Estética Avanzada; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+26010,Carmen Gallén; Interessent; Castellón,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD24,,,2026.03.18
+26011,Pasión por la Cosmética; Alicante; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD24,,,2026.03.18
+26012,Estetica Avanzada Reychel; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD24,,,2026.03.18
+26013,Sophie´s Skin Lab; Sophie Radcliffe; Ibiza,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,NKD24,,,2026.03.18
+26014,Anantara Villa Marbella Resort; Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+27000,SAS SRP; Karima Dallal; France,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,CC,,,2026.03.18
+27001,Manaya Medical SPA; France,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,CB,,,2026.03.18
+27002,Les Dessous de Corinthe SPA; France,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD25,,,2026.03.18
+27015,Hôtel des Remparts; FR,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD24,,,2026.03.18
+27042,Villa Gallici; Interessent; FR,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+27044,SAS Hôtels Charme&Design Carcassonne,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD24,,,2026.03.18
+27045,"Mont D´Arbois, Four Seasons H.; Megéve",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,France,Other EU,NKD24,,,2026.03.18
+27100,Statek Oblik - TKC - Interessent,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29000,Luciana Müller; Sinzheim,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BB,,,2026.03.18
+29001,"Nadia Ruß, Rutesheim",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,BA,,,2026.03.18
+29002,"Rubedo Spa, Monica Galletti",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,0,,,2026.03.18
+29003,Malorne Cosmetics; Tessa,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,BC,,,2026.03.18
+29004,Parfümerie Niendorf; Interessent; OG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD25,,,2026.03.18
+29005,Parfümerie Weber; Interessent; OG,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29007,Gabriele Lösel; Interessent; Roßtal,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29008,Brigitta Nagy; Interessent; Tübingen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29009,"Carina Kessler, Interessent; Raubling",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29010,"Parf. Boll; Interessent, Neuenburg",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+29011,"Sabine Nania, Interessent; Stuttg.",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South West,Germany,NKD24,,,2026.03.18
+29012,Sebastian Kirsch; Riezlern,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,South East / Bayern,Germany,NKD24,,,2026.03.18
+29013,Beauty Arc GmbH; Ron Kühn; Köln,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD24,,,2026.03.18
+29014,"GA Laserstudio, Celal Altintas; Wuppertal",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD24,,,2026.03.18
+29015,"Auszeit, Maria Schomaker, Lingen",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD24,,,2026.03.18
+29016,"Bellessa-Academy, Elke Single",,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD24,,,2026.03.18
+29017,SeCos-Kosmetik; Sevgi Cosguner,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,NRW,Germany,NKD24,,,2026.03.18
+30065,KaDeWe QMS Behandlungen,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+30066,KaDeWe QMS Konsignment Abr.,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Retail,Germany,AA,,,2026.03.18
+30676,Oberpollinger QMS Konsignationsrechnung,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Retail,Germany,AA,,,2026.03.18
+30678,Alsterhaus QMS Konsignationsrechnung,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Retail,Germany,AA,,,2026.03.18
+35946,SO Sotogrande; Spanien,,,,,,,,,,Combined Budget 2025 EUR,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,Spain,Other EU,BB,,,2026.03.18
+21002,Hotel Arc-en-Ciel; Carol Seewer,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,CC,,,2026.03.18
+21006,"Arlette Carabelli, Basel",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21007,"Elvira Vonbank, Schaan",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21008,"Jeannette Forrer GmbH, Wil SG",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21009,"Elle M. Beauty, Luana Michele",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21010,"Yvonne Casutt, Biberist",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21011,"Evelyn Vogel,Chill & Style",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21012,"Denise Mella, Eich",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21013,Elisabeth von Ziegler,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21014,"Brigitte Riillo, Horgen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21015,"Bellissima I.Nardozza, Schaffhausen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21016,"Beau Soleil Regula Klein, Hergiswil NW",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21020,"Franca Fuentes GmbH, Netstal",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21021,Iris Gräppi,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,CC,,,2026.03.18
+21022,"Sandra Heinzle, Altstätten SG",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21024,"Beauty Center Alpina,Thüler, Klosters",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21025,Cosmetic Care Christine; Liechtenstein,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21026,"Bettina Zellweger, Zug",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21027,"Kosmetik am Bohl, St. Gallen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21028,"Les Bains de la Gruyère, Fr. Ambühl",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21029,"Petra Breiter,  Schaffhausen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21032,"Anneli Suter, Sutz",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21034,"Zentrum-Apotheke, Buchs SG",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21035,"Beauty Salon Orea, Widnau",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21036,"Erika Lobeck, Bad Ragaz",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21037,"SIE & ER Kosmetik, Bern",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21038,"Cosmetics Brand, Luzern",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21041,"Megi Portmann, Grenchen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,CC,,,2026.03.18
+21042,"Kosmetik Giovanna,Casellini,Chur",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21044,"Hildegard Eckert, Andelfingen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21045,Beauty Line; Nicole Froidevaux,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,CC,,,2026.03.18
+21047,"Bellezza (Dietiker-Gonzalez), Dulliken",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21049,"Edina Szeleczki, Zürich",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21050,"Center of Beauty, Märki",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21052,Miriam Gräis,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21053,"Renate Geiger, Wetzikon ZH",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21054,"Elena Huber, Winterthur",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,0,,,2026.03.18
+21057,medical,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,0,,,2026.03.18
+21058,"Prisca Degen, Solothurn",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21059,"Lucie Widmer, Wilen bei Wollerau",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21061,"Sabrina Reich, Ascona",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AB,,,2026.03.18
+21063,Parfümerie Spitzenhaus AG,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AB,,,2026.03.18
+21064,Hotel Giardino Mountain St. Moritz,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21066,"Katja Gyorgyevits (ROMA) , Zürich",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AC,,,2026.03.18
+21067,"Olga Demarmels, Chur",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21068,Giardino Ascona,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21069,"Christa Meyer, Luzern",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AB,,,2026.03.18
+21072,"BE - Beautiful GmbH, Zürich",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,CB,,,2026.03.18
+21073,"Felicia Glaser, Basel",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21074,"estomed clinics, Zürich",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AB,,,2026.03.18
+21075,"estomed clinics, Bad Ragaz",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BC,,,2026.03.18
+21078,"Body Secret GmbH,Procopio",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21081,"Ortho-Aging, Dr.Christine Pfeiffer, Luzern",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21082,"Radisson Blu, Hotel Reussen",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21083,Nicole Chudy,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21084,Fabienne Zanon,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21085,Medical Beauty Park Lakeside; Rösinger,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21086,"Art of Beauty, Saliha Cantekin, Zug",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21087,Dany´s Nails & Beauty,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21088,Beautyca; Brigitte Nogara;Wädenswil,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+21089,KosmetikWerkstatt 1000 schön; Dominique Baumil,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21090,Lausanne Palace; Delphine Quargnul,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21091,Ama Tè; Claudia Napoletano,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21092,The fine Art of Beauty; Simone Casanova,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21094,Pura Bellezza; Stefania Nuzzo,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21095,podo vita; Zoran Vucinic; Zürich,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,0,,,2026.03.18
+21096,Le Grand Bellevue S.A.; Britta Spohr,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21097,"Hotel Adula, Flims",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21098,Art of Beauty; Fatima Arm,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BB,,,2026.03.18
+21100,"Sophie Romig, Natürlich Schön",,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,0,0,0,,,2026.03.18
+21101,Institut Freya Beauté; Baya Clivaz,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,CC,,,2026.03.18
+21102,Maison Fleurs de Coton; Catherine Cerezo; Genève,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,BB,,,2026.03.18
+21103,Sobeauty´s Home Institut; Soraya Slama,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,CC,,,2026.03.18
+21104,ea Evelyne Ammann-Siegrist,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21105,Maison du Laser; Servan Haidar,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,BA,,,2026.03.18
+21106,World of Bonnie; Monica Burkard,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,AA,,,2026.03.18
+21107,Coralie Garnier; La Clinique Genéve,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,CC,,,2026.03.18
+21108,Nur Schoen Kosmetik; Zürich,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21109,Gabriella Wittwer; Meggen,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21110,Sense of ViVi; Manuela Gyorgy,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21111,LashandBrow Bar; Xheneta Berisha,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21112,Podo-VITA,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21113,Kosmetik Jeannette; Maryna Rudolf,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,NKD24,,,2026.03.18
+21800,Zuzana Michalikova,,,,,,,,,,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,German Switzerland,Switzerland,GG,,,2026.03.18
+-25,,,,,,,,,,new_2025,Combined Budget 2025 CHF,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,core_markets_budget,French Switzerland,Switzerland,NKD25,,,2026.03.18
