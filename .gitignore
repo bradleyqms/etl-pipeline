@@ -49,3 +49,13 @@ local.settings.json
 # OS
 .DS_Store
 Thumbs.db
+~$*
+
+# Generated outputs (charts, validation exports, HTML renders)
+data/outputs/
+
+# Scratch / ad-hoc investigation scripts
+scratch/
+
+# Gold validation exports
+gold_validation_*.xlsx

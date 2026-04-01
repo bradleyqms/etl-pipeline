@@ -1,0 +1,35 @@
+table 'Time Intelligence'
+	lineageTag: 578086c2-58bf-4598-b35a-0f48fd744b1b
+
+	/// Calculation group for legacy flat report comparisons across current year, budget, YTD, and variance percent.
+	calculationGroup
+		precedence: 20
+
+		/// 2026 actuals for the selected measure.
+		calculationItem 2026A = CALCULATE(SELECTEDMEASURE(), KEEPFILTERS('Dim Date'[Year] = 2026))
+
+		/// 2026 budget for the current context.
+		calculationItem 2026B = CALCULATE([Budget 26 EUR], KEEPFILTERS('Dim Date'[Year] = 2026))
+
+		/// 2026 YTD actuals for the selected measure.
+		calculationItem '2026A YTD' = CALCULATE(TOTALYTD(SELECTEDMEASURE(), 'Dim Date'[Date]), KEEPFILTERS('Dim Date'[Year] = 2026))
+
+		/// (2026 actual - 2026 budget) / 2026 budget.
+		calculationItem '26A vs 26B %' = DIVIDE(CALCULATE(SELECTEDMEASURE(), KEEPFILTERS('Dim Date'[Year] = 2026)) - CALCULATE([Budget 26 EUR], KEEPFILTERS('Dim Date'[Year] = 2026)), CALCULATE([Budget 26 EUR], KEEPFILTERS('Dim Date'[Year] = 2026)))
+
+			formatStringDefinition = "0.0%"
+
+		/// 2026 budget YTD prorated through the latest visible date using elapsed days in the current month.
+		calculationItem '2026B YTD' = VAR _maxVisibleDate = MAX('Dim Date'[Date]) VAR _year = YEAR(_maxVisibleDate) VAR _month = MONTH(_maxVisibleDate) VAR _startOfMonth = DATE(_year, _month, 1) VAR _endOfMonth = EOMONTH(_maxVisibleDate, 0) VAR _daysElapsed = DAY(_maxVisibleDate) VAR _daysInMonth = DAY(_endOfMonth) VAR _fullMonthsBudget = CALCULATE([Budget 26 EUR], FILTER(ALL('Dim Date'), 'Dim Date'[Year] = 2026 && 'Dim Date'[Date] < _startOfMonth)) VAR _currentMonthBudget = CALCULATE([Budget 26 EUR], FILTER(ALL('Dim Date'), 'Dim Date'[Date] >= _startOfMonth && 'Dim Date'[Date] <= _endOfMonth)) RETURN _fullMonthsBudget + DIVIDE(_currentMonthBudget * _daysElapsed, _daysInMonth)
+
+		/// (2026 actual YTD - 2026 budget YTD prorata) / 2026 budget YTD prorata.
+		calculationItem '26A vs 26B YTD %' = VAR _actualYTD = CALCULATE(TOTALYTD(SELECTEDMEASURE(), 'Dim Date'[Date]), KEEPFILTERS('Dim Date'[Year] = 2026)) VAR _maxVisibleDate = MAX('Dim Date'[Date]) VAR _year = YEAR(_maxVisibleDate) VAR _month = MONTH(_maxVisibleDate) VAR _startOfMonth = DATE(_year, _month, 1) VAR _endOfMonth = EOMONTH(_maxVisibleDate, 0) VAR _daysElapsed = DAY(_maxVisibleDate) VAR _daysInMonth = DAY(_endOfMonth) VAR _fullMonthsBudget = CALCULATE([Budget 26 EUR], FILTER(ALL('Dim Date'), 'Dim Date'[Year] = 2026 && 'Dim Date'[Date] < _startOfMonth)) VAR _currentMonthBudget = CALCULATE([Budget 26 EUR], FILTER(ALL('Dim Date'), 'Dim Date'[Date] >= _startOfMonth && 'Dim Date'[Date] <= _endOfMonth)) VAR _budgetYTDProrata = _fullMonthsBudget + DIVIDE(_currentMonthBudget * _daysElapsed, _daysInMonth) RETURN DIVIDE(_actualYTD - _budgetYTDProrata, _budgetYTDProrata)
+
+			formatStringDefinition = "0.0%"
+
+	column 'Time Intelligence'
+		dataType: string
+		lineageTag: 39d73852-687c-4373-89b4-2b780510f417
+
+	partition 'Partition_Time Intelligence' = calculationGroup
+

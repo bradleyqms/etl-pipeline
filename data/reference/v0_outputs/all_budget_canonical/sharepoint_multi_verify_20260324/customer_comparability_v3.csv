@@ -1,0 +1,9 @@
+canonical_entity,crosswalk_status,rows
+Export,unified_only,6
+GmbH,fact_only,249
+UK,mapping_only,28
+UK,match_all_three,12
+UK,unified_fact_only,2
+US,mapping_only,63
+US,match_all_three,19
+US,unified_fact_only,1

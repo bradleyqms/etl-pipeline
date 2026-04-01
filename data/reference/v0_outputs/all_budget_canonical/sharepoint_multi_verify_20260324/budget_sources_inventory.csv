@@ -1,0 +1,6 @@
+workbook_type,market_group,workbook_file,sheet_name,grain,currency_home,monthly_available,salesperson_available,rows_2026,notes
+us_budget,USA,2026.01.22 US Spa Sales Budget 2026 FINAL.xlsx,Central|Northeast|Other|Southeast|West,customer_month,USD,True,True,732,Monthly customer rows sourced from US regional tabs.
+uk_budget,UK,2026.01.19 UK Sales Budget 2026 FINAL.xlsx,Global eTailer Budget|UK Retail Budget|UK Spa Budget,customer_month,GBP,True,False,300,Monthly customer rows sourced from UK budget tabs.
+core_markets_budget,Core Markets,2026.03.18 Core Markets Sales Budget 2026 New Regions FINAL.xlsx,Bayern|France North|France South|Golden Girls DE|Golden Girls NL|Italy|NL Central|NL Other_Belgium|NRW Marina|NRW Ulrike|North|North East|Retail|South West|Spain|Switzerland DE|Switzerland FR,customer_month,EUR/CHF,True,True,5160,Monthly customer rows sourced from regional tabs; Swiss DE is in CHF.
+export_budget,Export,2025.09.24 Export Sales Budget 2026 vSU.xlsx,Co. 1_2 Export Sales,customer_month + report_month,EUR,True,False,98,2026 customer monthly rows derived from group phasing and annual plan.
+group_budget,Group,22025.11.06 QMS Detailed Budget v1.xlsx,,line_level_json + report_month,EUR,True,False,0,Source workbook for group report lines and export phasing inputs.

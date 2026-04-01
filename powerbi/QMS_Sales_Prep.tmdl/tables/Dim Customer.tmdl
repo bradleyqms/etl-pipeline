@@ -1,0 +1,125 @@
+table 'Dim Customer'
+	lineageTag: 2d85385e-1c62-4925-9ab5-7c8f9d680d49
+
+	column 'Customer Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 450745c2-4a61-44a0-a858-1be71ac9ab79
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity
+		dataType: string
+		lineageTag: a59ebadb-c020-4007-aeca-6d4933c7c145
+		summarizeBy: none
+		sourceColumn: entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Card Code'
+		dataType: string
+		lineageTag: ffb65cdc-eb17-4311-af4b-c2bb61b3fda0
+		summarizeBy: none
+		sourceColumn: card_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Card Name'
+		dataType: string
+		lineageTag: bb6be2ba-9cfb-4f5e-9ce7-a618ac1aeae8
+		summarizeBy: none
+		sourceColumn: card_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Market Group'
+		dataType: string
+		lineageTag: a0719de5-68f5-4bd3-b202-3a7f939ecf75
+		summarizeBy: none
+		sourceColumn: market_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 1731d586-29c1-46fe-9181-fa7f4bf1f3c3
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 77f20bb3-bc05-4c7c-b6b7-ae01e5d11c50
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Company Group'
+		dataType: string
+		lineageTag: 21e2c98a-43e7-42e5-8dcf-69e7eee1dbf9
+		summarizeBy: none
+		sourceColumn: company_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Active'
+		dataType: string
+		lineageTag: 90712677-bcb6-4e2a-9d82-286f5a76c3e4
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Bill To Country'
+		dataType: string
+		lineageTag: cd24d9a5-8d19-4bea-be5d-7ededcd7c15b
+		summarizeBy: none
+		sourceColumn: bill_to_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column slp_code
+		dataType: int64
+		formatString: 0
+		lineageTag: 757edb7a-15c3-4f34-a8c0-b89436cd583b
+		summarizeBy: sum
+		sourceColumn: slp_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesperson_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dceb2fd-c033-4428-bf85-f4be9bfe1ce5
+		summarizeBy: none
+		sourceColumn: salesperson_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub_region
+		dataType: string
+		lineageTag: 5cb157fc-bcf7-47ed-b032-5c7ca51e24d4
+		summarizeBy: none
+		sourceColumn: sub_region
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_customer = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://stqmssaledatalakeprod.dfs.core.windows.net/"),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Folder Path] = "https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/")),
+				    #"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_customer parquet" = #"Filtered Rows"{[#"Folder Path"="https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/",Name="dim_customer.parquet"]}[Content],
+				    #"Imported Parquet" = Parquet.Document(#"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_customer parquet")
+				in
+				    #"Imported Parquet"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

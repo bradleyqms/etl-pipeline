@@ -1,0 +1,9 @@
+market_group,fill_status,rows
+Core Markets,filled_via_slp_assignment,3799
+Core Markets,no_dim_customer_for_slp_code,14
+Core Markets,no_slp_lookup_match,22
+Export,no_match,37
+UK,already_had_code,40
+UK,filled_unique_exact,3
+USA,already_had_code,82
+USA,filled_unique_exact,2

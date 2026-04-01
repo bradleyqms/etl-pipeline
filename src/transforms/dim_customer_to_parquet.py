@@ -155,6 +155,13 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
     if "card_code" in df.columns:
         df["card_code"] = df["card_code"].map(lambda value: None if pd.isna(value) else str(value)).astype(object)
 
+    # Fill null card_name with card_code (SAP occasionally exports incomplete master records)
+    if "card_name" in df.columns and "card_code" in df.columns:
+        mask = df["card_name"].isna() | (df["card_name"].astype(str).str.strip() == "")
+        if mask.any():
+            log.warning("dim_customer: %d row(s) with null card_name — filling with card_code", mask.sum())
+            df.loc[mask, "card_name"] = df.loc[mask, "card_code"].astype(str)
+
     # entity as category (low cardinality: GmbH, UK, US, AG)
     if "entity" in df.columns:
         df["entity"] = df["entity"].astype("category")

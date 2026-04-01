@@ -1,0 +1,12 @@
+market_group,match_status,keys,budget_native,actual_native
+Core Markets,actual_only,140,0.0,202936.72
+Core Markets,both,73,173801.02745000002,63099.08
+Core Markets,budget_only,316,637554.19666,0.0
+Export,actual_only,54,0.0,279736.66
+Export,budget_only,7,209730.0,0.0
+UK,actual_only,18,0.0,19783.18
+UK,budget_only,21,38810.0,0.0
+USA,actual_only,22,0.0,91758.90000000001
+USA,both,14,35280.0,18708.06
+USA,budget_only,31,58880.0,0.0
+,actual_only,0,0.0,6265.1

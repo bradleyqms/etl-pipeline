@@ -1,0 +1,6 @@
+Region,Status,Workbook k,USA CSV k,Delta k,Notes
+Central,matched,16.74,21.74,-5.0,USA source column is labeled kUSD but behaves like whole USD values.
+Northeast,matched,8.91,13.91,-5.0,USA source column is labeled kUSD but behaves like whole USD values.
+Other,canonical_only,8.1,,,USA source column is labeled kUSD but behaves like whole USD values.
+Southeast,matched,15.48,29.93,-14.45,USA source column is labeled kUSD but behaves like whole USD values.
+West,matched,24.93,20.48,4.449999999999999,USA source column is labeled kUSD but behaves like whole USD values.

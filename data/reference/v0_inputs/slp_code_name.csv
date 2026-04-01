@@ -1,0 +1,102 @@
+Customer Group	Territory Name	Sales Person	Group Code	Territory ID	Slp Code
+Endverbraucher		e-commerce	103		7
+Endverbraucher		-Kein Vertriebsmitarbeiter-	103		-1
+Endverbraucher	eCommerce	e-commerce	103	8	7
+Endverbraucher	eCommerce	KaDeWe Endverbr.	103	8	37
+Konsolidierungsempfä		Interco	105		64
+Konsolidierungsempfä		-Kein Vertriebsmitarbeiter-	105		-1
+Kunde/Lieferant		-Kein Vertriebsmitarbeiter-	107		-1
+Kunden		Ch. Rose	100		79
+Kunden		descomed	100		23
+Kunden		Export	100		83
+Kunden		G. Russo	100		76
+Kunden		Innendienst	100		5
+Kunden		-Kein Vertriebsmitarbeiter-	100		-1
+Kunden		Rowan	100		32
+Kunden		Solveig Loresco	100		78
+Kunden		Solveig Loresco Neukd	100		56
+Kunden		Steve Byrom-Chadd	100		68
+Kunden	Belgien	G. van Eykern BE	100	15	86
+Kunden	Belgien	Innendienst	100	15	5
+Kunden	Belgien	-Kein Vertriebsmitarbeiter-	100	15	-1
+Kunden	DE Gebiet1	A. Gutierrez	100	2	91
+Kunden	DE Gebiet1	I. Papoulias	100	2	99
+Kunden	DE Gebiet1	Innendienst	100	2	5
+Kunden	DE Gebiet1	-Kein Vertriebsmitarbeiter-	100	2	-1
+Kunden	DE Gebiet10	Innendienst	100	23	5
+Kunden	DE Gebiet10	K. Brunbauer	100	23	66
+Kunden	DE Gebiet10	-Kein Vertriebsmitarbeiter-	100	23	-1
+Kunden	DE Gebiet2	Innendienst	100	3	5
+Kunden	DE Gebiet2	-Kein Vertriebsmitarbeiter-	100	3	-1
+Kunden	DE Gebiet2	S. Wöhrle	100	3	2
+Kunden	DE Gebiet2	S. Wöhrle Neukd	100	3	25
+Kunden	DE Gebiet3	Innendienst	100	4	5
+Kunden	DE Gebiet3	K. Brunbauer	100	4	66
+Kunden	DE Gebiet3	K. Brunbauer Neukd	100	4	67
+Kunden	DE Gebiet3	-Kein Vertriebsmitarbeiter-	100	4	-1
+Kunden	DE Gebiet3	M. Pfauch	100	4	73
+Kunden	DE Gebiet3	Steve Byrom-Chadd	100	4	68
+Kunden	DE Gebiet4	A. Gutierrez	100	5	91
+Kunden	DE Gebiet4	Innendienst	100	5	5
+Kunden	DE Gebiet4	-Kein Vertriebsmitarbeiter-	100	5	-1
+Kunden	DE Gebiet4	M. Pfauch	100	5	73
+Kunden	DE Gebiet4	M. Pfauch Neukd	100	5	74
+Kunden	DE Gebiet4	U. Bensmann	100	5	69
+Kunden	DE Gebiet7	Innendienst	100	9	5
+Kunden	DE Gebiet7	-Kein Vertriebsmitarbeiter-	100	9	-1
+Kunden	DE Gebiet9	A. Gutierrez	100	12	91
+Kunden	DE Gebiet9	A. Gutierrez Neukd	100	12	93
+Kunden	DE Gebiet9	Innendienst	100	12	5
+Kunden	DE Gebiet9	K. Brunbauer	100	12	66
+Kunden	DE Gebiet9	K. Brunbauer Neukd	100	12	67
+Kunden	DE Gebiet9	-Kein Vertriebsmitarbeiter-	100	12	-1
+Kunden	DE Gebiet9	Steve Byrom-Chadd	100	12	68
+Kunden	Deutschland	Steve Byrom-Chadd	100	14	68
+Kunden	Export	Export	100	26	83
+Kunden	Export	Solveig Loresco Neukd	100	26	56
+Kunden	Frankreich	G. Russo	100	24	76
+Kunden	Frankreich	Y. Januario FRA	100	24	80
+Kunden	Frankreich	Y. Januario Neukd FRA	100	24	81
+Kunden	Luxemburg	S. Wöhrle	100	13	2
+Kunden	Niederlande	-Kein Vertriebsmitarbeiter-	100	19	-1
+Kunden	NL Gebiet 1	Innendienst	100	21	5
+Kunden	NL Gebiet 1	M. Mijnheer NL	100	21	38
+Kunden	NL Gebiet 1	M. Mijnheer NL Neukd	100	21	54
+Kunden	NL Gebiet 2	C. da Costa Campos	100	22	96
+Kunden	NL Gebiet 2	G. van Eykern NL	100	22	85
+Kunden	Other EU	Solveig Loresco	100	28	78
+Kunden	Schweiz	Ch. Rose	100	1	79
+Kunden	Schweiz	Ch. Rose Neukd	100	1	77
+Kunden	Schweiz	Innendienst CH	100	1	88
+Kunden	Schweiz	Interco	100	1	64
+Kunden	Schweiz	Solveig Loresco	100	1	78
+Kunden	Spanien	descomed	100	11	23
+Kunden	Spanien	M. G. Fernández	100	11	75
+Kunden	Südwest-Europa	E. Grigoreva	100	27	100
+Kunden	Südwest-Europa	E. Grigoreva CH	100	27	94
+Kunden	Südwest-Europa	E. Grigoreva Neukd	100	27	101
+Kunden	Südwest-Europa	E. Grigoreva Neukd CH	100	27	95
+Kunden	Südwest-Europa	-Kein Vertriebsmitarbeiter-	100	27	-1
+Kunden	USA	-Kein Vertriebsmitarbeiter-	100	20	-1
+Mitarbeiter		-Kein Vertriebsmitarbeiter-	102		-1
+Mitarbeiter		Steve Byrom-Chadd	102		68
+Mitarbeiter	Albanien	-Kein Vertriebsmitarbeiter-	102	-2	-1
+Mitarbeiter	Belgien	-Kein Vertriebsmitarbeiter-	102	15	-1
+Mitarbeiter	DE Gebiet1	-Kein Vertriebsmitarbeiter-	102	2	-1
+Mitarbeiter	DE Gebiet4	-Kein Vertriebsmitarbeiter-	102	5	-1
+Mitarbeiter	DE Gebiet5	-Kein Vertriebsmitarbeiter-	102	6	-1
+Mitarbeiter	DE Gebiet9	-Kein Vertriebsmitarbeiter-	102	12	-1
+Mitarbeiter	Frankreich	-Kein Vertriebsmitarbeiter-	102	24	-1
+Mitarbeiter	NL Gebiet 1	-Kein Vertriebsmitarbeiter-	102	21	-1
+Mitarbeiter	NL Gebiet 2	-Kein Vertriebsmitarbeiter-	102	22	-1
+Mitarbeiter	Schweiz	-Kein Vertriebsmitarbeiter-	102	1	-1
+Mitarbeiter	Spanien	-Kein Vertriebsmitarbeiter-	102	11	-1
+Vertrieb		Clare Morgan	104		72
+Vertrieb		descomed	104		23
+Vertrieb		Export	104		83
+Vertrieb		-Kein Vertriebsmitarbeiter-	104		-1
+Vertrieb	Export	Export	104	26	83
+Vertrieb	Export	Solveig Loresco	104	26	78
+Vertrieb	Export	Solveig Loresco Neukd	104	26	56
+Vertrieb	Spanien	M. G. Fernández	104	11	75
+Vertrieb	Süd-Korea	Export	104	16	83

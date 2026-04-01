@@ -25,9 +25,11 @@ Functions:
   13. parquet_dim_tables_timer  — Timer (Mon-Fri 07:35 UTC): All Dim CSVs → Parquet
   14. parquet_dim_tables_http   — HTTP manual trigger
   15. health                    — HTTP GET: Health check / status
+    16. build_gold_timer          — Timer (Mon-Fri 07:40 UTC): Silver → Gold Parquet
+    17. build_gold_http           — HTTP manual trigger
 
 Architecture:
-  SAP B1 (CRON) → Email → Graph API → Bronze (CSV) → Silver (Parquet) → Power BI
+    SAP B1 (CRON) → Email → Graph API → Bronze (CSV) → Silver (Parquet) → Gold (Parquet) → Power BI
   State tracking via blob: bronze/state/{pipeline}_state.json
   Fact sales daily uses 30-day rolling UpdateDate window to bridge monthly cold extracts.
 
@@ -119,6 +121,7 @@ def _run_ingest(pipeline_name: str, include_processed: bool = False,
 
 def _run_transform(pipeline_name: str, date: str | None = None) -> dict:
     """Run a Bronze → Silver transform by name."""
+    from src.transforms import build_gold
     from src.transforms import cold_extract_to_parquet
     from src.transforms import dim_tables_to_parquet
     from src.transforms import fact_sales_daily_to_parquet
@@ -127,6 +130,7 @@ def _run_transform(pipeline_name: str, date: str | None = None) -> dict:
         "cold_extract":     cold_extract_to_parquet.transform,
         "fact_sales_daily": fact_sales_daily_to_parquet.transform,
         "dim_tables":       dim_tables_to_parquet.transform,
+        "build_gold":       build_gold.transform,
     }
     fn = transform_map[pipeline_name]
     result = fn(date=date)
@@ -192,6 +196,37 @@ def fact_sales_daily_http(req: func.HttpRequest) -> func.HttpResponse:
                                  mimetype="application/json", status_code=200)
     except Exception as e:
         log.exception("fact_sales_daily_http — FAILED: %s", e)
+        return func.HttpResponse(json.dumps({"error": str(e)}),
+                                 mimetype="application/json", status_code=500)
+
+
+# ═════════════════════════════════════════════
+# INGEST: Dim Tables (all dims in one email)
+# ═════════════════════════════════════════════
+
+@app.timer_trigger(schedule="0 30 7 * * 1-5", arg_name="timer", run_on_startup=False)
+def dim_tables_timer(timer: func.TimerRequest) -> None:
+    """dim_tables email → Bronze blob (timer, Mon-Fri 07:30 UTC)."""
+    log.info("dim_tables_timer — START (past_due=%s)", timer.past_due)
+    try:
+        stats = _run_ingest("dim_tables")
+        log.info("dim_tables_timer — DONE: %d emails, %d files, %d errors",
+                 stats["emails_processed"], stats["files_uploaded"], len(stats["errors"]))
+    except Exception as e:
+        log.exception("dim_tables_timer — FAILED: %s", e)
+        raise
+
+
+@app.route(route="dim-tables", methods=["POST", "GET"], auth_level=func.AuthLevel.FUNCTION)
+def dim_tables_http(req: func.HttpRequest) -> func.HttpResponse:
+    """dim_tables email → Bronze blob (HTTP manual)."""
+    include_all = req.params.get("all", "").lower() in ("true", "1", "yes")
+    try:
+        stats = _run_ingest("dim_tables", include_processed=include_all)
+        return func.HttpResponse(json.dumps(stats, indent=2, default=str),
+                                 mimetype="application/json", status_code=200)
+    except Exception as e:
+        log.exception("dim_tables_http — FAILED: %s", e)
         return func.HttpResponse(json.dumps({"error": str(e)}),
                                  mimetype="application/json", status_code=500)
 
@@ -321,6 +356,37 @@ def parquet_daily_http(req: func.HttpRequest) -> func.HttpResponse:
 
 
 # ═════════════════════════════════════════════
+# TRANSFORM: Dim Tables → Parquet
+# ═════════════════════════════════════════════
+
+@app.timer_trigger(schedule="0 35 7 * * 1-5", arg_name="timer", run_on_startup=False)
+def parquet_dim_tables_timer(timer: func.TimerRequest) -> None:
+    """Dim tables CSV → Silver Parquet (timer, Mon-Fri 07:35 UTC — safety net after ingest)."""
+    log.info("parquet_dim_tables_timer — START (past_due=%s)", timer.past_due)
+    try:
+        result = _run_transform("dim_tables")
+        log.info("parquet_dim_tables_timer — DONE: %s, %d files, %d rows",
+                 result["status"], result.get("files_converted", 0), result.get("total_rows", 0))
+    except Exception as e:
+        log.exception("parquet_dim_tables_timer — FAILED: %s", e)
+        raise
+
+
+@app.route(route="parquet-dim-tables", methods=["POST", "GET"], auth_level=func.AuthLevel.FUNCTION)
+def parquet_dim_tables_http(req: func.HttpRequest) -> func.HttpResponse:
+    """Dim tables CSV → Silver Parquet (HTTP manual)."""
+    date = req.params.get("date")
+    try:
+        result = _run_transform("dim_tables", date=date)
+        return func.HttpResponse(json.dumps(result, indent=2, default=str),
+                                 mimetype="application/json", status_code=200)
+    except Exception as e:
+        log.exception("parquet_dim_tables_http — FAILED: %s", e)
+        return func.HttpResponse(json.dumps({"error": str(e)}),
+                                 mimetype="application/json", status_code=500)
+
+
+# ═════════════════════════════════════════════
 # TRANSFORM: Dim Customer → Parquet
 # ═════════════════════════════════════════════
 
@@ -378,6 +444,38 @@ def parquet_dim_product_http(req: func.HttpRequest) -> func.HttpResponse:
                                  mimetype="application/json", status_code=200)
     except Exception as e:
         log.exception("parquet_dim_product_http — FAILED: %s", e)
+        return func.HttpResponse(json.dumps({"error": str(e)}),
+                                 mimetype="application/json", status_code=500)
+
+
+# ═════════════════════════════════════════════
+# TRANSFORM: Silver → Gold
+# ═════════════════════════════════════════════
+
+@app.timer_trigger(schedule="0 40 7 * * 1-5", arg_name="timer", run_on_startup=False)
+def build_gold_timer(timer: func.TimerRequest) -> None:
+    """Build gold star schema parquet tables (timer, Mon-Fri 07:40 UTC)."""
+    log.info("build_gold_timer — START (past_due=%s)", timer.past_due)
+    try:
+        result = _run_transform("build_gold")
+        log.info("build_gold_timer — DONE: %s", result.get("status", "unknown"))
+    except Exception as e:
+        log.exception("build_gold_timer — FAILED: %s", e)
+        raise
+
+
+@app.route(route="build-gold", methods=["POST", "GET"], auth_level=func.AuthLevel.FUNCTION)
+def build_gold_http(req: func.HttpRequest) -> func.HttpResponse:
+    """Build gold star schema parquet tables (HTTP manual)."""
+    try:
+        result = _run_transform("build_gold")
+        return func.HttpResponse(
+            json.dumps(result, indent=2, default=str),
+            mimetype="application/json",
+            status_code=200,
+        )
+    except Exception as e:
+        log.exception("build_gold_http — FAILED: %s", e)
         return func.HttpResponse(json.dumps({"error": str(e)}),
                                  mimetype="application/json", status_code=500)
 

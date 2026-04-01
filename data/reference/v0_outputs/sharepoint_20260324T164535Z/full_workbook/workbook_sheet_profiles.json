@@ -1,0 +1,121 @@
+[
+  {
+    "sheet_name": "Summary",
+    "header_row": 3,
+    "raw_rows": 26,
+    "raw_cols": 50,
+    "data_rows": 23
+  },
+  {
+    "sheet_name": "Definition",
+    "header_row": 1,
+    "raw_rows": 9,
+    "raw_cols": 2,
+    "data_rows": 8
+  },
+  {
+    "sheet_name": "Northeast",
+    "header_row": 2,
+    "raw_rows": 15,
+    "raw_cols": 49,
+    "data_rows": 13
+  },
+  {
+    "sheet_name": "Central",
+    "header_row": 2,
+    "raw_rows": 19,
+    "raw_cols": 49,
+    "data_rows": 17
+  },
+  {
+    "sheet_name": "West",
+    "header_row": 2,
+    "raw_rows": 26,
+    "raw_cols": 49,
+    "data_rows": 24
+  },
+  {
+    "sheet_name": "Southeast",
+    "header_row": 2,
+    "raw_rows": 22,
+    "raw_cols": 49,
+    "data_rows": 20
+  },
+  {
+    "sheet_name": "Other",
+    "header_row": 2,
+    "raw_rows": 10,
+    "raw_cols": 38,
+    "data_rows": 8
+  },
+  {
+    "sheet_name": "Lost",
+    "header_row": 2,
+    "raw_rows": 19,
+    "raw_cols": 26,
+    "data_rows": 17
+  },
+  {
+    "sheet_name": "Performance data",
+    "header_row": 2,
+    "raw_rows": 70,
+    "raw_cols": 35,
+    "data_rows": 68
+  },
+  {
+    "sheet_name": "Spa",
+    "header_row": 2,
+    "raw_rows": 71,
+    "raw_cols": 18,
+    "data_rows": 69
+  },
+  {
+    "sheet_name": "2022",
+    "header_row": 10,
+    "raw_rows": 61,
+    "raw_cols": 34,
+    "data_rows": 51
+  },
+  {
+    "sheet_name": "2023",
+    "header_row": 10,
+    "raw_rows": 61,
+    "raw_cols": 34,
+    "data_rows": 51
+  },
+  {
+    "sheet_name": "2024",
+    "header_row": 10,
+    "raw_rows": 61,
+    "raw_cols": 34,
+    "data_rows": 51
+  },
+  {
+    "sheet_name": "2025",
+    "header_row": 11,
+    "raw_rows": 79,
+    "raw_cols": 34,
+    "data_rows": 68
+  },
+  {
+    "sheet_name": "2025B",
+    "header_row": 10,
+    "raw_rows": 65,
+    "raw_cols": 34,
+    "data_rows": 55
+  },
+  {
+    "sheet_name": "2025 budget doc",
+    "header_row": 9,
+    "raw_rows": 58,
+    "raw_cols": 26,
+    "data_rows": 49
+  },
+  {
+    "sheet_name": "List",
+    "header_row": 1,
+    "raw_rows": 3,
+    "raw_cols": 2,
+    "data_rows": 2
+  }
+]

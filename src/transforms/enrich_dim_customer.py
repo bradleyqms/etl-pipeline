@@ -162,9 +162,21 @@ COUNTRY_MAP: dict[str, tuple[str, str]] = {
     "AU": ("Export",       "Distributor - APAC"),
     "GR": ("Export",       "Distributor - Other EU"),
     "CY": ("Export",       "Distributor - Other EU"),
+    "PT": ("Export",       "Distributor - Other EU"),
     "AL": ("Export",       "Export - Direct business"),
     "MV": ("Export",       "Distributor - Other ROW"),
     "VG": ("USA",          "Americas"),
+}
+
+# Per-country overrides for territory_id=26 ("Export - Other ROW") customers.
+# These countries exist in COUNTRY_MAP but their default mapping is wrong in a
+# distributor context (e.g. AT→Core Markets/Germany is correct for domestic
+# B2B trade, but an AT distributor belongs to Distributor - Austria).
+DISTRIBUTOR_COUNTRY_OVERRIDE: dict[str, tuple[str, str]] = {
+    "AT": ("Export", "Distributor - Austria"),
+    "IT": ("Export", "Distributor - Other EU"),
+    "DK": ("Export", "Distributor - Other ROW"),
+    "NO": ("Export", "Distributor - Other ROW"),
 }
 
 # group_name → channel
@@ -177,6 +189,24 @@ GROUP_NAME_CHANNEL: dict[str, str] = {
     "Kunde/Lieferant":"B2B Trade",       # customer/supplier hybrid
     "Konsolidierungsempfä": "Interco",   # intercompany consolidation
 }
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Per-card-code overrides (highest priority — beats entity_mappings and rules).
+# Format: card_code → (market_group, region)
+# Add entries here when a specific customer is systematically mis-classified by
+# the territory / country fallback logic.
+# ─────────────────────────────────────────────────────────────────────────────
+CARD_CODE_OVERRIDE: dict[str, tuple[str, str]] = {
+    # Eastern Europe distributors: territory-24 mis-classifies HR/HU as
+    # "Eastern Europe"; App (entity_mappings) calls them Distributor - Other EU.
+    "10049": ("Export", "Distributor - Other EU"),   # Biokozmetika D.O.O. (HR)
+    "10031": ("Export", "Distributor - Other EU"),   # SpaTrend Wellness Kft (HU)
+    # US webshop / eCommerce catch-all account
+    "40000": ("USA",    "eCommerce USA"),
+    # Shopify UK → eCommerce (shared EU+UK webshop pool), not UK/UK
+    "59100": ("Core Markets", "eCommerce EU (incl. UK)"),
+}
+
 
 # Card-code prefix → channel override (GmbH-specific patterns)
 # These take precedence over group_name for channel when present
@@ -260,7 +290,17 @@ def _derive_row(entity: str, card_code: str, group_name, territory_id, bill_to_c
 
     # ── Entity-level shortcuts ────────────────────────────────────────────
     if entity == "US":
-        return "USA", "B2B Trade", "USA", company_group
+        # Use bill_to_country to derive the correct market/region rather than
+        # always defaulting to USA.  This fixes US-entity accounts (e.g. German
+        # B2C webshop consumers) that are billed outside the US and should not
+        # count as USA sales.  entity_mappings wins at Step 3 of enrich(), so
+        # card_codes with an explicit mapping (25xxx spa, 40xxx eCommerce, etc.)
+        # are unaffected by this rule.
+        channel = GROUP_NAME_CHANNEL.get(group_name, "B2B Trade")
+        if bill_country in COUNTRY_MAP:
+            market_group, region = COUNTRY_MAP[bill_country]
+            return market_group, channel, region, company_group
+        return "USA", channel, "USA", company_group
 
     if entity == "AG":
         # Swiss entity — wholesale/spa Kunden (mostly DACH)
@@ -286,8 +326,38 @@ def _derive_row(entity: str, card_code: str, group_name, territory_id, bill_to_c
         channel = GROUP_NAME_CHANNEL.get(group_name, "B2B Trade")
 
     # 3. market_group + region from territory
+    #    Exception: if territory would classify as Export/International but
+    #    bill_to_country resolves to a known Core Markets country, trust the
+    #    country (more reliable geography than a catch-all territory assignment).
     if terr is not None and terr in TERRITORY_MAP:
         market_group, region = TERRITORY_MAP[terr]
+        # Exception 1: territory 3 ("Export/International") but country resolves
+        # to a known market — trust the country.
+        if market_group == "Export" and region == "International" and bill_country in COUNTRY_MAP:
+            market_group, region = COUNTRY_MAP[bill_country]
+        # Exception 2: territory 26/28 ("Export - Other ROW" / "Distributor - Other
+        # ROW") — use country to find the specific distributor region.  Check the
+        # override map first (for countries whose COUNTRY_MAP entry is wrong in a
+        # distributor context), then fall back to the standard COUNTRY_MAP.
+        elif region in ("Export - Other ROW", "Distributor - Other ROW"):
+            if bill_country in DISTRIBUTOR_COUNTRY_OVERRIDE:
+                market_group, region = DISTRIBUTOR_COUNTRY_OVERRIDE[bill_country]
+            elif bill_country in COUNTRY_MAP:
+                market_group, region = COUNTRY_MAP[bill_country]
+        # Exception 3: territory gives Core Markets/<region_A> but bill_to_country
+        # indicates Core Markets/<region_B>.  Territory reflects the sales rep
+        # assignment (organisational), country is the actual geography — trust it.
+        elif market_group == "Core Markets" and bill_country in COUNTRY_MAP:
+            country_mg, country_region = COUNTRY_MAP[bill_country]
+            if country_mg == "Core Markets" and country_region != region:
+                region = country_region
+        # Exception 4: territory gives Export/Eastern Europe but bill_to_country
+        # indicates a Core Markets country (e.g. French customers assigned to
+        # territory 24 for sales-org reasons).  Trust the country.
+        elif region == "Eastern Europe" and bill_country in COUNTRY_MAP:
+            country_mg, country_region = COUNTRY_MAP[bill_country]
+            if country_mg == "Core Markets":
+                market_group, region = country_mg, country_region
         return market_group, channel, region, company_group
 
     # 4. market_group + region from bill_to_country
@@ -345,6 +415,16 @@ def enrich(df: pd.DataFrame, entity_mappings: pd.DataFrame | None) -> pd.DataFra
     drop_cols = ["em_market_group", "em_channel", "em_region", "em_company_group",
                  "r_market_group",  "r_channel",  "r_region",  "r_company_group"]
     df.drop(columns=[c for c in drop_cols if c in df.columns], inplace=True)
+
+    # ── Step 4: per-card overrides (highest priority) ─────────────────────
+    if CARD_CODE_OVERRIDE:
+        ov_df = pd.DataFrame(
+            [{"card_code": k, "ov_mg": v[0], "ov_rg": v[1]} for k, v in CARD_CODE_OVERRIDE.items()]
+        )
+        df = df.merge(ov_df, on="card_code", how="left")
+        df["market_group"] = df["ov_mg"].combine_first(df["market_group"])
+        df["region"]       = df["ov_rg"].combine_first(df["region"])
+        df.drop(columns=["ov_mg", "ov_rg"], inplace=True)
 
     return df
 

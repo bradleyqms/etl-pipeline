@@ -1,0 +1,44 @@
+relationship 78780ec3-1081-4d32-bb10-26dc9ecc493f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Budget'.'Budget Month'
+	toColumn: LocalDateTable_881a7537-6cdc-4c57-862e-c916090118af.Date
+
+relationship 1c4d5a31-f0e7-4b1c-954f-1fd4452685d5
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Fact Sales'.'Doc Date'
+	toColumn: LocalDateTable_29d952fb-57e7-40c5-bab7-3e0a56d69bac.Date
+
+relationship 16e65dfb-4970-48e9-905d-670fdc6027d7
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'Dim Date'.Date
+	toColumn: LocalDateTable_1e8f56e3-4db6-4cf4-bde7-801dcc9520c7.Date
+
+relationship a1210b94-f1f5-a464-02ae-be9586e3e41a
+	fromColumn: 'Fact Sales'.'Date Key'
+	toColumn: 'Dim Date'.'Date Key'
+
+relationship 75866d45-bd00-d139-0044-2f52187220c5
+	fromColumn: 'Fact Sales'.'Customer Key'
+	toColumn: 'Dim Customer'.'Customer Key'
+
+relationship 7f89bbd7-a6a0-1a9c-b90e-7dc1c986a85d
+	fromColumn: 'Fact Sales'.'Product Key'
+	toColumn: 'Dim Product'.'Product Key'
+
+relationship bbe6713b-3a97-4b9a-76d2-1cce429edc15
+	isActive: false
+	fromColumn: 'Fact Sales'.'Salesperson Key'
+	toColumn: 'Dim Salesperson'.'Salesperson Key'
+
+relationship 8633f4bc-222f-702d-3d1e-85ebba5e0aff
+	fromColumn: 'Fact Budget'.'Date Key'
+	toColumn: 'Dim Date'.'Date Key'
+
+relationship 6ffba3b5-d906-00fb-7db2-a07856fa1e8f
+	fromColumn: 'Fact Budget'.'Customer Key'
+	toColumn: 'Dim Customer'.'Customer Key'
+
+relationship AutoDetected_9e1a3979-992b-41bb-b142-cfa680bae288
+	fromColumn: 'Dim Customer'.salesperson_key
+	toColumn: 'Dim Salesperson'.'Salesperson Key'
+

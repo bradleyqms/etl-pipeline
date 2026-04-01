@@ -1,0 +1,7 @@
+canonical_entity,fill_status,rows
+Export,no_match,47
+GmbH,no_match,61
+UK,already_had_code,40
+UK,filled_unique_exact,3
+US,already_had_code,82
+US,filled_unique_exact,2

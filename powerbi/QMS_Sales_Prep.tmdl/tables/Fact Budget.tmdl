@@ -1,0 +1,162 @@
+table 'Fact Budget'
+	lineageTag: 24a1ea32-69d6-4777-af08-bc8b3c78f3e6
+
+	column 'Date Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 39586f22-c167-47c8-9ed9-e554f82efdb4
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Key'
+		dataType: int64
+		lineageTag: 3ec25b7c-19dc-4fea-8945-ea17d3f297bc
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Salesperson Key'
+		dataType: double
+		lineageTag: be97ced6-fdb0-4961-ae6f-d826fcba64ff
+		summarizeBy: count
+		sourceColumn: salesperson_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Entity
+		dataType: string
+		lineageTag: 25c5f94b-b124-4545-a182-718e966339fc
+		summarizeBy: none
+		sourceColumn: entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget Amount Native'
+		dataType: double
+		lineageTag: da94b518-9aa6-4612-8d5e-7b27045ff516
+		summarizeBy: sum
+		sourceColumn: budget_amount_native
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Budget Amount EUR'
+		dataType: double
+		lineageTag: 2c5fafd5-70ae-4bc6-a12c-130acc93d59c
+		summarizeBy: sum
+		sourceColumn: budget_amount_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Currency Code'
+		dataType: string
+		lineageTag: beeaffed-1bd2-4d52-86c0-25f88b8d7a5b
+		summarizeBy: none
+		sourceColumn: currency_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Workbook Type'
+		dataType: string
+		lineageTag: 89f5b85e-ca75-4445-b56c-36247dddc857
+		summarizeBy: none
+		sourceColumn: workbook_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Market Group'
+		dataType: string
+		lineageTag: 400ef543-409d-49a4-9b43-1d319255d8d4
+		summarizeBy: none
+		sourceColumn: market_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: 7f06a4c5-7320-4946-9fae-ab47ffd70108
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sub Region'
+		dataType: string
+		lineageTag: a76466e8-9a82-4d0f-a30d-409dacc6cdb2
+		summarizeBy: none
+		sourceColumn: sub_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: a7d69307-198b-4c5c-aec1-df7f619fe51f
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Code'
+		dataType: string
+		lineageTag: 2733ee0f-ec0f-4247-8dea-ccadc8f700eb
+		summarizeBy: none
+		sourceColumn: customer_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: 58338e63-bafc-412e-83a1-04148b3ff9b6
+		summarizeBy: none
+		sourceColumn: customer_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Sales Person'
+		dataType: string
+		lineageTag: a980e407-23f6-4a98-a35e-0c2105e0d4f8
+		summarizeBy: none
+		sourceColumn: sales_person
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Budget Month'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 642ccce5-8774-45e4-a780-8577b244d662
+		summarizeBy: none
+		sourceColumn: budget_month
+
+		variation Variation
+			isDefault
+			relationship: 78780ec3-1081-4d32-bb10-26dc9ecc493f
+			defaultHierarchy: LocalDateTable_881a7537-6cdc-4c57-862e-c916090118af.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_budget = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://stqmssaledatalakeprod.dfs.core.windows.net/"),
+				    #"Sorted Rows" = Table.Sort(Source,{{"Folder Path", Order.Ascending}, {"Date modified", Order.Descending}}),
+				    #"Filtered Rows" = Table.SelectRows(#"Sorted Rows", each ([Folder Path] = "https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/")),
+				    #"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_fact_budget parquet" = #"Filtered Rows"{[#"Folder Path"="https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/",Name="fact_budget.parquet"]}[Content],
+				    #"Imported Parquet" = Parquet.Document(#"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_fact_budget parquet")
+				in
+				    #"Imported Parquet"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,108 @@
+table 'Dim Product'
+	lineageTag: 522d4bc3-c777-4e97-a001-fd646ffa4186
+
+	column 'Product Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3dfd2f68-2aec-4441-a77d-d814ceca309d
+		summarizeBy: none
+		sourceColumn: product_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity
+		dataType: string
+		lineageTag: 887031be-46bd-49c9-9fb0-80d544cbc97a
+		summarizeBy: none
+		sourceColumn: entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Code'
+		dataType: string
+		lineageTag: f7308cf3-7366-460f-a01c-cbb00f9d2cf5
+		summarizeBy: none
+		sourceColumn: item_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Name EN'
+		dataType: string
+		lineageTag: 2697f633-1b9b-42f4-be5a-d22aff4f0ac5
+		summarizeBy: none
+		sourceColumn: name_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: d0dab2a1-fde0-4f35-ad2c-36fa1dce1ec6
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Line'
+		dataType: string
+		lineageTag: baee6c8a-55c4-43ce-a06c-ad7f1b0dcc35
+		summarizeBy: none
+		sourceColumn: product_line_clean
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Category'
+		dataType: string
+		lineageTag: 6e0660bb-9703-4141-8151-375b1aa0ed51
+		summarizeBy: none
+		sourceColumn: product_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SKU Type'
+		dataType: string
+		lineageTag: 2ba99c19-a349-4337-9c4d-5e4273f82081
+		summarizeBy: none
+		sourceColumn: sku_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SKU Channel'
+		dataType: string
+		lineageTag: 8e4ec432-a5fd-4f0f-9de8-bf12e0355754
+		summarizeBy: none
+		sourceColumn: sku_channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Sellable'
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: a4857f6d-91d7-4a11-8aff-cba38b130c7e
+		summarizeBy: none
+		sourceColumn: is_sellable
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Is Active'
+		dataType: string
+		lineageTag: 2b5d604f-7e9d-4924-9b04-62aeed0e02a5
+		summarizeBy: none
+		sourceColumn: is_active
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_product = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://stqmssaledatalakeprod.dfs.core.windows.net/"),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Folder Path] = "https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/")),
+				    #"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_product parquet" = #"Filtered Rows"{[#"Folder Path"="https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/",Name="dim_product.parquet"]}[Content],
+				    #"Imported Parquet" = Parquet.Document(#"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_dim_product parquet")
+				in
+				    #"Imported Parquet"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

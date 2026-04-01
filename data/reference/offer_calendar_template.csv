@@ -1,0 +1,2 @@
+offer_code,offer_name,valid_from,valid_to,expected_orders,expected_customers,expected_revenue_eur,qualifying_item_codes
+A26012,Cleanse System 20% Discount,2026-04-01,2026-04-30,120,100,25000,"2088100;2001100;2115100;2002100;2158100;2116100"

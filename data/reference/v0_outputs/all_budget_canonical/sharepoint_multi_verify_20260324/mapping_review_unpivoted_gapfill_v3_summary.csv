@@ -1,0 +1,12 @@
+canonical_entity,fill_status,rows
+AG,filled_via_slp_assignment,74
+AG,no_dim_customer_for_slp_code,3
+AG,no_slp_lookup_match,5
+Export,no_match,37
+GmbH,filled_via_slp_assignment,3725
+GmbH,no_dim_customer_for_slp_code,11
+GmbH,no_slp_lookup_match,17
+UK,already_had_code,40
+UK,filled_unique_exact,3
+US,already_had_code,82
+US,filled_unique_exact,2

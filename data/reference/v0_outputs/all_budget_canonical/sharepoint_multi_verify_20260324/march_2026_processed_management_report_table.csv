@@ -1,0 +1,25 @@
+Market Group,Region,Workbook View,Status,Workbook k (Mar-2026),CSV k (Mar-2026),Delta k (Workbook-CSV)
+Core Markets,Benelux,core_markets_budget,matched,197.0,211.0,-14.0
+Core Markets,France,core_markets_budget,matched,8.0,14.0,-6.0
+Core Markets,Germany,core_markets_budget,matched,460.0,470.0,-10.0
+Core Markets,Italy,core_markets_budget,matched,2.0,6.0,-4.0
+Core Markets,Spain,core_markets_budget,matched,18.0,22.0,-4.0
+Core Markets,Switzerland,core_markets_budget,matched,71.0,83.0,-12.0
+Export,Distributor - APAC,export_budget,matched,0.0,0.0,0.0
+Export,Distributor - Austria,export_budget,matched,39.0,39.0,0.0
+Export,Distributor - China,export_budget,matched,26.0,26.0,0.0
+Export,Distributor - Middle East,export_budget,matched,18.0,18.0,0.0
+Export,Distributor - New,export_budget,matched,0.0,0.0,0.0
+Export,Distributor - Other EU,export_budget,matched,46.0,46.0,0.0
+Export,Distributor - Other ROW,export_budget,matched,3.0,3.0,0.0
+Export,Distributor - Russia,export_budget,matched,0.0,0.0,0.0
+Export,Distributor - South Africa,export_budget,matched,75.0,75.0,0.0
+Export,Export - Direct business,export_budget,matched,3.0,3.0,0.0
+UK,Global eTailers,uk_budget,matched,3.0,3.0,0.0
+UK,Retail,uk_budget,matched,26.0,26.0,0.0
+UK,Spa,uk_budget,matched,16.0,16.0,0.0
+USA,Amazon,,reference_only,,9.0,
+USA,Own eCommerce,,reference_only,,34.0,
+USA,Retail,,reference_only,,2.0,
+USA,Spa,,reference_only,,80.0,
+eCommerce,eCommerce (excl. USA),,reference_only,,61.0,

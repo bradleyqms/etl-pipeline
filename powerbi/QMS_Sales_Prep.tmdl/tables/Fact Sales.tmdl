@@ -1,0 +1,185 @@
+table 'Fact Sales'
+	lineageTag: b888bad0-49a5-47aa-b238-07bd37699339
+
+	column 'Date Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: 952e443d-e41c-4b26-a2a1-e719ce1b9da2
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Key'
+		dataType: double
+		lineageTag: 1030183a-f5c0-42c1-9431-24db314540b7
+		summarizeBy: none
+		sourceColumn: customer_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Product Key'
+		dataType: double
+		lineageTag: 0f4ae34f-23d9-4567-8993-9ed1a55722be
+		summarizeBy: none
+		sourceColumn: product_key
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Salesperson Key'
+		dataType: int64
+		formatString: 0
+		lineageTag: d9395f7a-1ede-4fcd-b670-a9f1d6071fd3
+		summarizeBy: count
+		sourceColumn: salesperson_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column Entity
+		dataType: string
+		lineageTag: 58c01548-5aa1-4206-b5ad-acd937ec8b4c
+		summarizeBy: none
+		sourceColumn: entity
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc Num'
+		dataType: int64
+		formatString: 0
+		lineageTag: 12c04940-0ad3-4e31-bef8-53197ea89c7d
+		summarizeBy: sum
+		sourceColumn: doc_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc Entry'
+		dataType: int64
+		formatString: 0
+		lineageTag: f7c5c991-4202-4aff-a2fe-d717679d2acc
+		summarizeBy: sum
+		sourceColumn: doc_entry
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Line Num'
+		dataType: int64
+		formatString: 0
+		lineageTag: cf76093e-ba2c-480c-adcc-68daea544bff
+		summarizeBy: sum
+		sourceColumn: line_num
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc Type'
+		dataType: string
+		lineageTag: 5fabf94b-aad1-432a-b97a-f25c6bfd91d5
+		summarizeBy: none
+		sourceColumn: doc_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: double
+		lineageTag: 101252e7-7fba-4129-8b66-c085c0ebb422
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Net Revenue'
+		dataType: double
+		lineageTag: ba085abe-ac42-4142-8701-5ac1b6a639bc
+		summarizeBy: sum
+		sourceColumn: net_revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Revenue EUR'
+		dataType: double
+		lineageTag: de4e445e-a3fb-4b41-b380-b80be5f34c1e
+		summarizeBy: sum
+		sourceColumn: revenue_eur
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Currency
+		dataType: string
+		lineageTag: b45eb4e0-a201-4700-b19b-1be22dd1b077
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Card Code'
+		dataType: string
+		lineageTag: b1249024-d69d-468c-a503-dda6b19b7eb1
+		summarizeBy: none
+		sourceColumn: card_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Item Code'
+		dataType: string
+		lineageTag: 5d05b8d8-8790-4361-b433-75aecf7c2000
+		summarizeBy: none
+		sourceColumn: item_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SLP Code'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c71c14c-a607-4574-be79-d3a461d747af
+		summarizeBy: count
+		sourceColumn: slp_code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Doc Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 881e480a-9528-4318-80d8-9e17abbb3c67
+		summarizeBy: none
+		sourceColumn: doc_date
+
+		variation Variation
+			isDefault
+			relationship: 1c4d5a31-f0e7-4b1c-954f-1fd4452685d5
+			defaultHierarchy: LocalDateTable_29d952fb-57e7-40c5-bab7-3e0a56d69bac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_bonus_credit
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 0f5d0ec1-d765-47d9-bd50-8d8a6ce44118
+		summarizeBy: none
+		sourceColumn: is_bonus_credit
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_sales = m
+		mode: import
+		source =
+				let
+				    Source = AzureStorage.DataLake("https://stqmssaledatalakeprod.dfs.core.windows.net/"),
+				    #"Filtered Rows" = Table.SelectRows(Source, each ([Folder Path] = "https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/")),
+				    #"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_fact_sales parquet" = #"Filtered Rows"{[#"Folder Path"="https://stqmssaledatalakeprod.dfs.core.windows.net/bronze/gold/",Name="fact_sales.parquet"]}[Content],
+				    #"Imported Parquet" = Parquet.Document(#"https://stqmssaledatalakeprod dfs core windows net/bronze/gold/_fact_sales parquet")
+				in
+				    #"Imported Parquet"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
