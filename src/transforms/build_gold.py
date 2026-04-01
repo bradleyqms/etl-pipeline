@@ -975,7 +975,7 @@ def _prepare_fact_budget(
     out_cols = [
         "date_key", "customer_key", "salesperson_key", "entity", "budget_amount_native",
         "budget_amount_eur", "currency_code", "workbook_type", "market_group", "region", "sub_region", "channel",
-        "customer_code", "customer_name", "sales_person", "budget_month",
+        "customer_code", "customer_name", "sales_person", "sheet_name", "budget_month",
     ]
     for col in out_cols:
         if col not in work.columns:
