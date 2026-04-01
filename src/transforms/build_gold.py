@@ -1011,7 +1011,7 @@ def _prepare_fact_budget(
 
     out = _allocate_export_distributor_budgets_final(out, dim_customer, fact_sales)
     out = out.drop_duplicates(
-        subset=["entity", "customer_code", "budget_month", "workbook_type", "market_group"]
+        subset=["entity", "customer_code", "budget_month", "workbook_type", "market_group", "region", "channel"]
     )
     return out
 
