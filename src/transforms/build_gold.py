@@ -884,6 +884,11 @@ def _prepare_fact_budget(
 
     work["sales_person"] = work["sales_person"].replace({"": pd.NA})
 
+    if "sheet_name" not in work.columns:
+        work["sheet_name"] = pd.NA
+
+    work["sheet_name"] = work["sheet_name"].replace({"": pd.NA})
+
     # Build name-based preferred code lookup before key join
     name_base = (
         dim_customer[["entity", "card_name", "card_code"]]
