@@ -296,6 +296,9 @@ def _append_budget_only_customers(dim_customer: pd.DataFrame, budget_df: pd.Data
 
     work = _apply_distributor_customer_name_mapping(budget_df)
     work["entity"] = work["market_group"].map(_MARKET_GROUP_ENTITY).fillna("GmbH")
+    # Switzerland budget-only customers are AG entity (CHF, 21xxx card codes)
+    _bonly_ch = work.get("region", pd.Series([""] * len(work))).astype(str).str.contains("Switzerland", case=False, na=False)
+    work.loc[_bonly_ch, "entity"] = "AG"
     work["card_code"] = _normalise_customer_code(work.get("customer_code", pd.Series([pd.NA] * len(work))))
     work["card_name"] = work.get("customer_name", pd.Series([pd.NA] * len(work)))
     work["region"] = work.get("region", pd.Series([pd.NA] * len(work)))
@@ -403,7 +406,30 @@ def _normalise_hierarchy_values(work: pd.DataFrame) -> pd.DataFrame:
         w.loc[_ilg, "channel"]       = "Interco"
         w.loc[_ilg, "market_group"]  = "UK"
         w.loc[_ilg, "region"]        = "Interco"
-        w.loc[_ilg, "company_group"] = pd.NA
+        w.loc[_ilg, "company_group"] = "Company 1"
+
+        # 1b. QMS AG CH service-fee account (GmbH 21990) – interco service charge, not spa revenue
+        _svc_ag = is_gmbh & (_cc == "21990")
+        w.loc[_svc_ag, "channel"]       = "Interco"
+        w.loc[_svc_ag, "market_group"]  = "Core Markets"
+        w.loc[_svc_ag, "region"]        = "Switzerland"
+        w.loc[_svc_ag, "company_group"] = "Company 1"
+
+        # 1c. DESCOMED Ltd service account (GmbH 51600) – interco service charge
+        _svc_uk = is_gmbh & (_cc == "51600")
+        w.loc[_svc_uk, "channel"]       = "Interco"
+        w.loc[_svc_uk, "market_group"]  = "UK"
+        w.loc[_svc_uk, "region"]        = "Interco"
+        w.loc[_svc_uk, "company_group"] = "Company 1"
+
+        # 1d. Consignment settlement accounts (KaDeWe 30066, Oberpollinger 30676,
+        #     Alsterhaus 30678) – SAP marks these BP as "Internal" which maps to
+        #     Interco, but they are real retail revenue settled by Steve Byrom-Chadd.
+        _konsi = is_gmbh & _cc.isin({"30066", "30676", "30678"})
+        w.loc[_konsi, "channel"]       = "Retail"
+        w.loc[_konsi, "market_group"]  = "Core Markets"
+        w.loc[_konsi, "region"]        = "Germany"
+        w.loc[_konsi, "company_group"] = "Company 1"
 
         # 2. GmbH 21xxx – Swiss spa/institute cards incorrectly assigned to APAC
         _ch_mask = in_apac & _cc.str.match(r"^21\d{3,}$")
@@ -767,11 +793,16 @@ def _prepare_fact_sales(
         on=["entity", "card_code"],
         how="left",
     )
-    fact = fact.merge(
-        dim_product[["entity", "item_code", "product_key"]],
-        on=["entity", "item_code"],
-        how="left",
+    # Normalise item_code: strip accidental float suffix (e.g. "1003100.0" → "1003100")
+    # that appears when non-GmbH entities are parsed from CSV/Excel via float columns.
+    fact["item_code"] = fact["item_code"].astype(str).str.replace(r"\.0$", "", regex=True).str.strip()
+    # Product join is entity-agnostic: all entities share the QMS catalog and only
+    # GmbH has a product master loaded.  Dedup to unique item_code → product_key.
+    _prod_lookup = (
+        dim_product[["item_code", "product_key"]]
+        .drop_duplicates(subset="item_code", keep="first")
     )
+    fact = fact.merge(_prod_lookup, on="item_code", how="left")
     fact = fact.merge(
         dim_salesperson[["entity", "slp_code", "salesperson_key"]],
         on=["entity", "slp_code"],
@@ -820,6 +851,14 @@ def _prepare_fact_budget(
     work["entity"] = work["market_group"].map(_MARKET_GROUP_ENTITY).fillna("GmbH")
 
     work["currency_code"] = work.get("currency_code", pd.Series(["EUR"] * len(work))).astype(str)
+
+    # Switzerland budget rows are recorded by the AG entity in CHF.
+    # _MARKET_GROUP_ENTITY maps "Core Markets" → "GmbH" which would produce the
+    # wrong customer_key for 21xxx card codes.  Override with "AG" using the
+    # CHF currency signal (Switzerland DE and FR sheets are always in CHF).
+    _ch_currency = work["currency_code"].str.upper() == "CHF"
+    _ch_region   = work.get("region", pd.Series([""] * len(work))).astype(str).str.contains("Switzerland", case=False, na=False)
+    work.loc[_ch_currency | _ch_region, "entity"] = "AG"
 
     # Use pre-computed EUR values from canonical; fall back to native*fx
     if "budget_amount_eur_compare" in work.columns:

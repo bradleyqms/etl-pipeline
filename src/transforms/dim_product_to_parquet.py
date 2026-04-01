@@ -173,6 +173,13 @@ def clean_dataframe(df: pd.DataFrame, source_file: str) -> pd.DataFrame:
         if col in df.columns:
             df[col] = df[col].astype(str).replace({"nan": None, "None": None})
 
+    # Fill null description with item_code (SAP occasionally exports items without a name)
+    if "description" in df.columns and "item_code" in df.columns:
+        mask = df["description"].isna() | (df["description"].astype(str).str.strip().isin(["", "nan", "None"]))
+        if mask.any():
+            log.warning("dim_product: %d row(s) with null description — filling with item_code", mask.sum())
+            df.loc[mask, "description"] = df.loc[mask, "item_code"].astype(str)
+
     # Source metadata
     df["_source_file"] = Path(source_file).name
 

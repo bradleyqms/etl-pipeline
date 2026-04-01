@@ -1,11 +1,18 @@
 """
-Sankey diagram of net revenue YTD 2026
+Sankey diagram of net revenue for a given calendar year.
 Flow: Company Group → Market Group → Region → Sub Region (where set) → Channel
+
+Usage:
+    python -m analysis.sankey_ytd          # defaults to full-year 2025
+    python -m analysis.sankey_ytd 2026     # YTD 2026
 """
 import io
+import sys
 import pandas as pd
 import plotly.graph_objects as go
 from src.transforms.build_gold import GOLD_PATHS, get_container_client
+
+YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2025
 
 client = get_container_client()
 
@@ -15,14 +22,18 @@ def rp(p):
 fact  = rp(GOLD_PATHS["fact_sales"])
 dim_c = rp(GOLD_PATHS["dim_customer"])
 
-# ── YTD 2026 ──────────────────────────────────────────────────────────────────
-ytd = fact[fact["doc_date"].dt.year == 2026].copy()
+# ── filter to chosen year ────────────────────────────────────────────────────
+ytd = fact[fact["doc_date"].dt.year == YEAR].copy()
 
 hier = dim_c[["customer_key", "company_group", "market_group", "region", "sub_region", "channel"]].drop_duplicates("customer_key")
 ytd = ytd.merge(hier, on="customer_key", how="left")
 
 for col in ["company_group", "market_group", "region", "channel"]:
     ytd[col] = ytd[col].fillna("Unknown")
+
+# ── Exclude interco flows from the net revenue view ───────────────────────────
+ytd = ytd[ytd["channel"] != "Interco"]
+
 # sub_region stays NaN where not set — used to decide routing
 ytd["sub_region"] = ytd["sub_region"].where(ytd["sub_region"].notna() & ytd["sub_region"].astype(str).str.strip().ne(""), None)
 
@@ -153,7 +164,7 @@ fig = go.Figure(go.Sankey(
 fig.update_layout(
     title=dict(
         text=(
-            f"<b>QMS Net Revenue YTD 2026</b>  —  Total: €{total:,.0f}"
+            f"<b>QMS Net Revenue {YEAR}</b>  —  Total: €{total:,.0f}"
             "  |  Company Group → Market Group → Region → Sub Region → Channel"
         ),
         font=dict(size=14),
@@ -163,7 +174,7 @@ fig.update_layout(
     paper_bgcolor="white",
 )
 
-out_path = "data/outputs/sankey_revenue_ytd_2026.html"
+out_path = f"data/outputs/sankey_revenue_{YEAR}.html"
 import os; os.makedirs("data/outputs", exist_ok=True)
 fig.write_html(out_path, include_plotlyjs="cdn")
-print(f"Saved: {out_path}  |  Total YTD €{total:,.0f}")
+print(f"Saved: {out_path}  |  Total {YEAR} €{total:,.0f}")

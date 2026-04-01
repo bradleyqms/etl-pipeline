@@ -212,7 +212,12 @@ SLP_DISPLAY_NAME: dict[tuple[str, int], str] = {
     ("GmbH", -1): "DE Other",
     ("GmbH",  2): "Sibylle",            # S. Wöhrle
     ("GmbH",  5): "DE Other",           # Innendienst
+    ("GmbH", 11): "DE Other",           # no GVL
+    ("GmbH", 21): "DE Other",           # Vertrieb generic
+    ("GmbH", 22): "Retail",             # KaDeWe direct
+    ("GmbH", 23): "Interco",            # descomed
     ("GmbH", 25): "Sibylle",            # S. Wöhrle Neukd
+    ("GmbH", 37): "Retail",             # KaDeWe Endverbraucher
     ("GmbH", 48): "Export",             # Jerome Dubarry
     ("GmbH", 50): "Interco",            # Asia Cilek
     ("GmbH", 66): "Kerstin",            # K. Brunbauer
@@ -226,6 +231,7 @@ SLP_DISPLAY_NAME: dict[tuple[str, int], str] = {
     ("GmbH", 74): "Marina",             # M. Pfauch Neukd
     ("GmbH", 82): "Melanie",            # M. Meiritz Neukd
     ("GmbH", 84): "Retail",             # Rainer Anskinewitsch
+    ("GmbH", 87): "Larissa",            # Larissa Scherer
     ("GmbH", 89): "Iannis",             # Bayern
     ("GmbH", 91): "Aracelli",           # A. Gutierrez
     ("GmbH", 93): "Aracelli",           # A. Gutierrez Neukd
@@ -243,7 +249,9 @@ SLP_DISPLAY_NAME: dict[tuple[str, int], str] = {
     ("GmbH", 92): "Benelux - Other",    # C. da Costa Campos Neukd
     ("GmbH", 96): "Benelux - Other",    # C. da Costa Campos
     ("GmbH", 98): "Gabrielle",          # G. van Eykern BE Neukd
-    # ── GmbH Switzerland (interco entries display as Interco) ───────────
+    # ── GmbH Interco cross-entity ───────────────────────────────────────
+    ("GmbH", 32): "Interco",            # Rowan (UK↔GmbH cross-entity)
+    ("GmbH", 64): "Interco",            # USA↔GmbH interco
     ("GmbH", 77): "Interco",            # Ch. Rose Neukd (GmbH→AG)
     ("GmbH", 79): "Interco",            # Ch. Rose (GmbH→AG)
     ("GmbH", 88): "Interco",            # Innendienst CH (GmbH→AG)
@@ -259,8 +267,16 @@ SLP_DISPLAY_NAME: dict[tuple[str, int], str] = {
     # ── GmbH eCommerce ──────────────────────────────────────────────────
     ("GmbH",  7): "eCommerce EU (incl. UK)",  # matches App Sales_Employee_Cleaned label
     # ── GmbH Export ─────────────────────────────────────────────────────
-    ("GmbH", 78): "Interco",            # Solveig Loresco → Interco in App
+    ("GmbH", 56): "Export",             # Solveig Loresco Neukd
+    ("GmbH", 78): "Export",             # Solveig Loresco – all accounts are external distributors
     ("GmbH", 83): "Export",
+    # ── GmbH Italy ──────────────────────────────────────────────────────
+    ("GmbH", 100): "Italy",             # E. Grigoreva Italy
+    ("GmbH", 101): "Italy",             # E. Grigoreva Neukd Italy
+    # ── UK ──────────────────────────────────────────────────────────────
+    ("UK",   -1): "UK Other",           # No Sales Employee UK
+    ("UK",    1): "UK Other",           # placeholder
+    ("UK",    2): "eCommerce UK",       # UK e-commerce
     # ── US / Inc. ────────────────────────────────────────────────────────
     ("US",   -1): "No Sales Employee",  # eCommerce / Amazon catch-all
     ("US",    1): "Asia",               # Asia Cilek

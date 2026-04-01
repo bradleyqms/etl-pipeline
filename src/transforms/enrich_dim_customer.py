@@ -162,6 +162,7 @@ COUNTRY_MAP: dict[str, tuple[str, str]] = {
     "AU": ("Export",       "Distributor - APAC"),
     "GR": ("Export",       "Distributor - Other EU"),
     "CY": ("Export",       "Distributor - Other EU"),
+    "PT": ("Export",       "Distributor - Other EU"),
     "AL": ("Export",       "Export - Direct business"),
     "MV": ("Export",       "Distributor - Other ROW"),
     "VG": ("USA",          "Americas"),
@@ -334,11 +335,11 @@ def _derive_row(entity: str, card_code: str, group_name, territory_id, bill_to_c
         # to a known market — trust the country.
         if market_group == "Export" and region == "International" and bill_country in COUNTRY_MAP:
             market_group, region = COUNTRY_MAP[bill_country]
-        # Exception 2: territory 26 ("Export - Other ROW") — use country to find
-        # the specific distributor region.  Check the override map first (for
-        # countries whose COUNTRY_MAP entry is wrong in a distributor context),
-        # then fall back to the standard COUNTRY_MAP.
-        elif region == "Export - Other ROW":
+        # Exception 2: territory 26/28 ("Export - Other ROW" / "Distributor - Other
+        # ROW") — use country to find the specific distributor region.  Check the
+        # override map first (for countries whose COUNTRY_MAP entry is wrong in a
+        # distributor context), then fall back to the standard COUNTRY_MAP.
+        elif region in ("Export - Other ROW", "Distributor - Other ROW"):
             if bill_country in DISTRIBUTOR_COUNTRY_OVERRIDE:
                 market_group, region = DISTRIBUTOR_COUNTRY_OVERRIDE[bill_country]
             elif bill_country in COUNTRY_MAP:
