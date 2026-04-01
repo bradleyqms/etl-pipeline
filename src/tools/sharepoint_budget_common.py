@@ -79,8 +79,12 @@ def list_folder_files(token: str, drive_id: str, folder_path: str) -> list[dict[
     for candidate in dict.fromkeys(candidates):
         try:
             url = f"{GRAPH_BASE}/drives/{drive_id}/root:/{candidate}:/children?$top=200"
-            data = _graph_get(token, url)
-            return [item for item in data.get("value", []) if "file" in item]
+            files: list[dict] = []
+            while url:
+                data = _graph_get(token, url)
+                files.extend(item for item in data.get("value", []) if "file" in item)
+                url = data.get("@odata.nextLink")
+            return files
         except Exception as exc:
             last_exc = exc
 

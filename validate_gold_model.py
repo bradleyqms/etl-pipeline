@@ -64,9 +64,13 @@ def main() -> None:
     cust_keys = set(tables["dim_customer"]["customer_key"].dropna().tolist())
     prod_keys = set(tables["dim_product"]["product_key"].dropna().tolist())
     slp_keys = set(tables["dim_salesperson"]["salesperson_key"].dropna().tolist())
-    print(f"customer_key orphans: {(~fact_sales['customer_key'].isin(cust_keys)).sum():,}")
-    print(f"product_key orphans : {(~fact_sales['product_key'].isin(prod_keys)).sum():,}")
-    print(f"salesperson orphans : {(~fact_sales['salesperson_key'].isin(slp_keys)).sum():,}")
+    # Exclude null FKs from orphan count — null is reported separately via fill % above
+    fs_cust = fact_sales["customer_key"].dropna()
+    fs_prod = fact_sales["product_key"].dropna()
+    fs_slp  = fact_sales["salesperson_key"].dropna()
+    print(f"customer_key orphans: {(~fs_cust.isin(cust_keys)).sum():,}  (null: {fact_sales['customer_key'].isna().sum():,})")
+    print(f"product_key orphans : {(~fs_prod.isin(prod_keys)).sum():,}  (null: {fact_sales['product_key'].isna().sum():,})")
+    print(f"salesperson orphans : {(~fs_slp.isin(slp_keys)).sum():,}  (null: {fact_sales['salesperson_key'].isna().sum():,})")
 
     customer_sales = fact_sales[fact_sales["card_code"].astype(str) == CUSTOMER_CODE].copy()
     customer_budget = fact_budget[fact_budget["customer_code"].astype(str) == CUSTOMER_CODE].copy()

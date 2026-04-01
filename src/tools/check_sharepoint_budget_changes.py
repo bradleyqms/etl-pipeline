@@ -32,7 +32,11 @@ def _state_path() -> Path:
 def _load_state() -> dict:
     p = _state_path()
     if p.exists():
-        return json.loads(p.read_text(encoding="utf-8"))
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as exc:
+            import logging
+            logging.getLogger(__name__).warning("State file unreadable (%s) — starting fresh", exc)
     return {}
 
 

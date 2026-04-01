@@ -53,7 +53,11 @@ def _sha256(data: bytes) -> str:
 def _load_state() -> dict:
     path = _state_path()
     if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError) as exc:
+            import logging
+            logging.getLogger(__name__).warning("State file unreadable (%s) — starting fresh", exc)
     return {}
 
 
